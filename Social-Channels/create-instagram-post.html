@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Post</title>
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom Css -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <!-- Font Css -->
+    <link href="assets/css/stylesheet.css" rel="stylesheet">
+    <!-- Whatsapp Css -->
+    <link href="assets/css/whatsapp.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Dashboard Container -->
+    <div class="dashboard-container">
+        <!-- Left Sidebar -->
+        <aside class="dashboard-sidebar" id="dashboardSidebar">
+            <div class="">
+                <!-- Logo -->
+                <div class="logo-card d-flex align-items-center justify-content-center">
+                    <div class="sidebar-logo">
+                        <img src="assets/images/svg/logo.svg" alt="Ranax Social Logo" />
+                    </div>
+                </div>
+                <div class="sidebar-content">
+                    <div class="d-flex flex-column gap-3 post-button">
+                        <!-- Add WhatsApp Button (initially hidden) -->
+                        <div class="whatsapp-add-button instagram-add p-0" id="whatsappAddButton">
+                            <a href="create-instagram-post.html"
+                                class="sidebar-create-btn font-14 regular w-100 text-white border-0 d-flex align-items-center justify-content-center gap-2">
+                                <img src="assets/images/svg/plus.svg" alt="Plus" width="16" height="16">
+                                Create Posts
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Whatsaap connected buttons -->
+                    <div class="after-connected-whatsapp d-flex flex-column gap-3 d-none-init" id="afterConnectedDiv">
+                        <div class="d-flex flex-column gap-3">
+                            <!-- Add WhatsApp Button (initially hidden) -->
+                            <div class="whatsapp-add-button instagram-add" id="whatsappAddButton">
+                                <a href="connect-instagram.html"
+                                    class="sidebar-create-btn font-14 regular w-100 text-white border-0 d-flex align-items-center justify-content-center gap-2">
+                                    <img src="assets/images/svg/plus.svg" alt="Plus" width="16" height="16">
+                                    Add Instagram
+                                </a>
+                            </div>
+
+                            <!-- Connected User Profile (initially hidden) -->
+                            <div class="connected-user-profile instagram-profile" id="whatsappConnectedProfile">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="profile-image">
+                                        <img src="assets/images/svg/avatar.svg" alt="Profile"
+                                            class="rounded-circle user-img" height="30" width="30">
+                                    </div>
+                                    <div class="profile-info flex-grow-1">
+                                        <div class="font-14 regular text-white" id="connectedUserName">Rahul Kumar</div>
+
+                                    </div>
+                                    <img src="assets/images/svg/profile-arrow.svg" alt="Arrow"
+                                        class="ms-auto profile-arrow" width="14" height="14">
+                                </div>
+                            </div>
+                            <div class="connected-user-profile profile-muted" id="whatsappConnectedProfile">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="profile-image">
+                                        <img src="assets/images/svg/avatar.svg" alt="Profile"
+                                            class="rounded-circle user-img" height="30" width="30">
+                                    </div>
+                                    <div class="profile-info flex-grow-1">
+                                        <div class="font-14 regular textColor" id="connectedUserName">Rahul Kumar</div>
+
+                                    </div>
+                                    <img src="assets/images/svg/profile-arrow.svg" alt="Arrow" class="ms-auto"
+                                        width="14" height="14">
+                                </div>
+                            </div>
+                            <h6 class="font-14 regular textLightColor text-center mb-0 cursor-pointer">View All</h6>
+                        </div>
+                    </div>
+                      <hr style="color: #E1E1E1;">
+                    <!-- Social Channels Section -->
+                    <div class="sidebar-section">
+                        <h6 class="font-16 medium mb-2 p-2 black">Social Channels</h6>
+
+                        <div class="social-channels-list d-flex flex-column gap-3">
+                            <a href="#"
+                                class="social-channel-item font-14 medium d-flex align-items-center gap-3 textColor">
+                                <img src="assets/images/png/whatsApp.png" alt="WhatsApp" class="social-channel-icon">
+                                <span>WhatsApp</span>
+                                <img src="assets/images/svg/profile-arrow.svg" alt="Arrow" class="ms-auto" width="14"
+                                    height="14">
+                            </a>
+
+                            <a href="#"
+                                class="social-channel-item font-14 medium d-flex align-items-center gap-3 textColor">
+                                <img src="assets/images/png/instagram.png" alt="Instagram" class="social-channel-icon">
+                                <span>Instagram</span>
+                                <img src="assets/images/svg/profile-arrow.svg" alt="Arrow" class="ms-auto" width="14"
+                                    height="14">
+                            </a>
+
+                            <a href="#"
+                                class="social-channel-item font-14 medium d-flex align-items-center gap-3 textColor">
+                                <img src="assets/images/png/Facebook.png" alt="Facebook" class="social-channel-icon">
+                                <span>Facebook</span>
+                                <img src="assets/images/svg/profile-arrow.svg" alt="Arrow" class="ms-auto" width="14"
+                                    height="14">
+                            </a>
+
+                            <a href="#"
+                                class="social-channel-item font-14 medium d-flex align-items-center gap-3 textColor">
+                                <img src="assets/images/png/Linkedin.png" alt="LinkedIn" class="social-channel-icon">
+                                <span>LinkedIn</span>
+                                <img src="assets/images/svg/profile-arrow.svg" alt="Arrow" class="ms-auto" width="14"
+                                    height="14">
+                            </a>
+
+                            <a href="#"
+                                class="social-channel-item font-14 medium d-flex align-items-center gap-3 textColor">
+                                <img src="assets/images/png/Telegram.png" alt="YouTube" class="social-channel-icon">
+                                <span>Telegram</span>
+                                <img src="assets/images/svg/profile-arrow.svg" alt="Arrow" class="ms-auto" width="14"
+                                    height="14">
+                            </a>
+                            <button
+                                class="view-more-btn font-14 medium w-100 text-center mt-3 bg-transparent border-0">View
+                                More</button>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Right Content Area -->
+        <div class="dashboard-content">
+             <!-- Navbar Section -->
+            <div class="position-relative">
+                <header class="navbar">
+                    <div class="container-fluid">
+                        <div class="nav-container">
+                            <!-- navbar list -->
+                            <nav class="nav-menu" id="navMenu">
+                                <div class="navbar-list">
+                                    <a class="nav-link-list font-14 regular" href="home.html">Home</a>
+                                    <a class="nav-link-list font-14 regular" href="junction.html">Junction</a>
+                                    <a class="nav-link-list font-14 regular" href="team.html">Team</a>
+                                    <a class="nav-link-list font-14 regular" href="ai-automation.html">Ai Automation</a>
+                                    <a class="nav-link-list font-14 regular" href="reports.html">Reports</a>
+                                </div>
+                            </nav>
+                            <div class="d-flex align-items-center justify-content-between gap-3 w-100">
+                                <!-- Dropdown -->
+                                <div class="d-flex align-items-center gap-3 position-relative">
+                                    <!-- Sidebar Toggle Button -->
+                                    <button class="sidebar-toggle-btn d-lg-none" type="button" id="sidebarToggle">
+                                        <div class="nav-toggle">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </button>
+                                </div>
+                                <div class="d-flex align-items-center gap-3">
+                                    <!-- Desktop Right Side Actions -->
+                                    <div class="d-flex align-items-center gap-4">
+                                        <!-- Social icon -->
+                                        <div class="social-icons-mobile">
+                                            <div class="d-flex align-items-center gap-3">
+                                                <!-- Notifications -->
+                                                <div class="dashboard-icon">
+                                                    <img src="assets/images/svg/notifications.svg" alt="Notifications"
+                                                        width="20" height="20">
+                                                </div>
+
+                                                <!-- Settings -->
+                                                <div class="dashboard-icon">
+                                                    <img src="assets/images/svg/setting.svg" alt="Settings" width="20"
+                                                        height="20">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Profile Dropdown -->
+                                        <div class="dropdown custom-profile">
+                                            <div class="dashboard-profile dropdown-toggle d-flex justify-content-center align-items-center"
+                                                data-bs-toggle="dropdown" aria-expanded="false" id="profileDropdown">
+                                                <span class="font-14 semibold">RS</span>
+                                            </div>
+                                            <ul class="dropdown-menu dropdown-menu-end profile-dropdown"
+                                                aria-labelledby="profileDropdown">
+                                                <li class="dropdown-header">
+                                                    <div class="d-flex align-items-center">
+                                                        <div
+                                                            class="profile-avatar me-3 semibold d-flex justify-content-center align-items-center text-white">
+                                                            <span class="font-12 semibold">RS</span>
+                                                        </div>
+                                                        <div>
+                                                            <div class="font-14 semibold text-dark">Ranax Social</div>
+                                                            <div class="font-12 text-muted">user@example.com</div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+
+                                                <li><a class="dropdown-item font-14 medium" href="#">
+                                                        <svg width="16" height="16" class="me-3" fill="currentColor"
+                                                            viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                                                        </svg>
+                                                        Profile
+                                                    </a></li>
+                                                <li><a class="dropdown-item font-14 medium" href="#">
+                                                        <svg width="16" height="16" class="me-3" fill="currentColor"
+                                                            viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
+                                                            <path
+                                                                d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z" />
+                                                        </svg>
+                                                        Settings
+                                                    </a></li>
+                                                <li>
+                                                    <hr class="dropdown-divider">
+                                                </li>
+                                                <li><a class="dropdown-item font-14 medium text-danger" href="#">
+                                                        <svg width="16" height="16" class="me-3" fill="currentColor"
+                                                            viewBox="0 0 16 16">
+                                                            <path fill-rule="evenodd"
+                                                                d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z" />
+                                                            <path fill-rule="evenodd"
+                                                                d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+                                                        </svg>
+                                                        Logout
+                                                    </a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- toggle button -->
+                                        <div class="d-flex align-items-center gap-4">
+                                            <div class="nav-toggle" id="navToggle">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </header>
+            </div>
+
+            <!--  Main Content -->
+            <main class="dashboard-main">
+                <!-- Header section -->
+                <div class="welcome-section d-flex flex-column gap-1 mb-4">
+                    <h1 class="font-30 medium textColor mb-0">Create Post</h1>
+                    <p class="font-16 regular textLightColor mb-0">Create and publish engaging content across all your connected social media channels from one powerful workspace.</p>
+                </div>
+                <div class="row gy-4">
+                    <div class="col-md-8">
+                        <div class="d-flex flex-column gap-4">
+                            <!-- Post Create -->
+                            <div class="dashboard-card post-detail-card">
+                                <div class="d-flex flex-column gap-3 p-3">
+                                    <!-- User Info Row -->
+                                    <div class="d-flex align-items-start justify-content-between">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <img src="assets/images/png/user-img.png" alt="User" width="44" height="44"
+                                                class="rounded-circle post-user-avatar">
+                                            <div>
+                                                <div class="font-14 semibold textColor">Ashok Kumar</div>
+                                                <div class="font-12 regular grayDark">@Rahul.kumar01</div>
+                                            </div>
+                                        </div>
+                                        <!-- Visibility Dropdown -->
+                                        <div class="dropdown">
+                                            <button
+                                                class="btn d-flex align-items-center gap-1 font-13 regular textColor border-0 p-0"
+                                                type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <img src="assets/images/svg/globe.svg" height="24">
+                                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <polyline points="6 9 12 15 18 9" />
+                                                </svg>
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-end p-3 visibility-dropdown-menu">
+                                                <!-- Public -->
+                                                <label class="d-flex align-items-center gap-3 py-2 visibility-label">
+                                                    <div
+                                                        class="visibility-icon-wrap d-flex align-items-center justify-content-center rounded-circle">
+                                                        <img src="assets/images/svg/globe.svg" height="24">
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <div class="font-14 semibold textColor">Public</div>
+                                                        <div class="font-10 regular textLightColor">Share and discuss
+                                                            All the positive trends building Collaboration and more
+                                                        </div>
+                                                    </div>
+                                                    <input type="radio" name="postVisibility" value="public" checked
+                                                        class="visibility-radio">
+                                                </label>
+                                                <!-- Specific Friends -->
+                                                <label class="d-flex align-items-center gap-3 py-2 visibility-label">
+                                                    <div
+                                                        class="visibility-icon-wrap d-flex align-items-center justify-content-center rounded-circle">
+                                                        <img src="assets/images/svg/friends-icon.svg" height="20">
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <div class="font-14 semibold textColor">Specific Friends</div>
+                                                        <div class="font-10 regular textLightColor">Share and discuss
+                                                            All the positive trends building Collaboration and more
+                                                        </div>
+                                                    </div>
+                                                    <input type="radio" name="postVisibility" value="friends"
+                                                        class="visibility-radio">
+                                                </label>
+                                                <!-- Only Me -->
+                                                <label class="d-flex align-items-center gap-3 py-2 visibility-label">
+                                                    <div
+                                                        class="visibility-icon-wrap d-flex align-items-center justify-content-center rounded-circle">
+                                                        <img src="assets/images/svg/Lock_fill.svg" height="24">
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <div class="font-14 semibold textColor">Only Me</div>
+                                                        <div class="font-10 regular textLightColor">Share and discuss
+                                                            All the positive trends building Collaboration and more
+                                                        </div>
+                                                    </div>
+                                                    <input type="radio" name="postVisibility" value="only-me"
+                                                        class="visibility-radio">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Caption Textarea -->
+                                    <div class="post-caption-box">
+                                        <textarea
+                                            class="form-control border-0 font-14 regular textLightColor post-caption-textarea"
+                                            rows="3" placeholder="Write your caption..."></textarea>
+                                    </div>
+
+                                    <!-- Suggestions from AI Section -->
+                                    <div class="d-flex flex-column gap-2 py-2">
+                                        <!-- Header with Dropdown and Regenerate -->
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <img src="assets/images/svg/post-ai.svg" alt="AI" width="18"
+                                                    height="18">
+                                                <button
+                                                    class="btn d-flex align-items-center gap-2 font-13 medium textColor border-0 p-0"
+                                                    type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    Suggestions from AI
+                                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="3">
+                                                        <polyline points="6 9 12 15 18 9" />
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <button
+                                                class="btn d-flex align-items-center gap-2 font-12 regular text-danger border-0 p-0">
+                                                <img src="assets/images/svg/regenerate.svg" alt="Regenerate" width="14"
+                                                    height="14">
+                                                Regenerate
+                                            </button>
+                                        </div>
+
+                                        <!-- Suggested Hashtags -->
+                                        <div class="d-flex flex-column gap-1">
+                                            <h6 class="font-14 regular textColor mb-0">Suggested Hashtags</h6>
+                                            <div class="d-flex flex-wrap gap-2 mt-3">
+                                                <button
+                                                    class="hashtag-btn font-11 regular textLightColor border-0 rounded-3 px-3 py-1">#Sunset</button>
+                                                <button
+                                                    class="hashtag-btn font-11 regular textLightColor border-0 rounded-3 px-3 py-1">#BeachLife</button>
+                                                <button
+                                                    class="hashtag-btn font-11 regular textLightColor border-0 rounded-3 px-3 py-1">#OceanView</button>
+                                                <button
+                                                    class="hashtag-btn font-11 regular textLightColor border-0 rounded-3 px-3 py-1">#TravelGram</button>
+                                                <button
+                                                    class="hashtag-btn font-11 regular textLightColor border-0 rounded-3 px-3 py-1">#NaturePhotography</button>
+                                                <button
+                                                    class="hashtag-btn font-11 regular textLightColor border-0 rounded-3 px-3 py-1">#SunsetPhotography</button>
+                                                <button
+                                                    class="hashtag-btn font-11 regular textLightColor border-0 rounded-3 px-3 py-1">#Wanderlust</button>
+                                                <button
+                                                    class="hashtag-btn font-11 regular textLightColor border-0 rounded-3 px-3 py-1">#Paradise</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Image Preview -->
+                                    <div id="postImagePreviewWrap"
+                                        class="mb-3 d-none position-relative post-img-preview-wrap">
+                                        <img id="postImagePreview" src="" alt="Preview"
+                                            class="rounded-3 w-100 post-img-preview">
+                                        <button onclick="removePostImage()"
+                                            class="p-0 border-0 position-absolute top-0 end-0 m-1 d-flex justify-content-center align-items-center post-img-remove-btn">
+                                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff"
+                                                stroke-width="2.5">
+                                                <line x1="18" y1="6" x2="6" y2="18" />
+                                                <line x1="6" y1="6" x2="18" y2="18" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Bottom Actions Row -->
+                                <div class="d-flex align-items-center justify-content-between py-2 px-3 borderTop">
+                                    <!-- Media Icons -->
+                                    <div class="d-flex align-items-center gap-1">
+                                        <label class="btn p-1 border-0 mb-0 post-media-label" title="Add Image">
+                                            <img src="assets/images/svg/black-album.svg" height="18">
+                                            <input type="file" accept="image/*" id="postImageInput" class="d-none"
+                                                onchange="previewPostImage(event)">
+                                        </label>
+                                        <button class="btn p-1 border-0" title="Add Emoji">
+                                            <img src="assets/images/svg/emoji.svg" height="18">
+                                        </button>
+                                    </div>
+                                    <!-- Action Buttons -->
+                                    <div class="d-flex  gap-2">
+                                        <button
+                                            class="font-12 border-0 regular d-flex align-items-center gap-2 px-3 py-1 text-white rounded-2 schedule-btn"
+                                            data-bs-toggle="modal" data-bs-target="#scheduleModal">
+                                            <img src="assets/images/svg/calendar-edit.svg" class="white-filter2"
+                                                height="14">
+                                            Schedule
+                                        </button>
+                                        <button
+                                            class="next-btn font-12 regular d-flex align-items-center gap-2 px-3 py-1 border-0 text-white rounded-2">
+                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2">
+                                                <line x1="22" y1="2" x2="11" y2="13" />
+                                                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                                            </svg>
+                                            Post Now
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Preview Section -->
+                            <div class="d-flex flex-column gap-3">
+                                <h2 class="font-30 medium text-dark mb-0">Preview</h2>
+                                <div class="dashboard-card post-preview-card p-4 rounded-4">
+                                    <!-- Instagram Post Preview -->
+                                    <div class="instagram-preview-wrapper">
+                                        <!-- Post Header -->
+                                        <div class="d-flex align-items-center justify-content-between mb-3">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <img src="assets/images/png/user-img.png" alt="User" width="36"
+                                                    height="36" class="rounded-circle">
+                                                <div>
+                                                    <div class="font-13 semibold textColor">Ashok Kumar</div>
+                                                </div>
+                                            </div>
+                                            <div class="three-dot-menu cursor-pointer">
+                                                <span class="three-dot"></span>
+                                                <span class="three-dot"></span>
+                                                <span class="three-dot"></span>
+                                            </div>
+                                        </div>
+
+                                        <!-- Post Image -->
+                                        <div class="post-preview-image-wrapper mb-2 rounded-3 overflow-hidden">
+                                            <img id="previewPostImage" src="assets/images/png/post-img.webp"
+                                                alt="Post Preview" class="w-100 post-preview-image">
+                                        </div>
+
+                                        <!-- Post Actions -->
+                                        <div class="d-flex align-items-center justify-content-between mb-1">
+                                            <div class="d-flex align-items-center gap-3">
+                                                <button class="btn p-0 border-0 d-flex align-items-center gap-1">
+                                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="#707070"
+                                                        stroke="currentColor" stroke-width="2">
+                                                        <path
+                                                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                                                    </svg>
+                                                    <span class="font-12 regular textLightColor">12.5k</span>
+                                                </button>
+                                                <button class="btn p-0 border-0 d-flex align-items-center gap-1">
+                                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2">
+                                                        <path
+                                                            d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                                                    </svg>
+                                                    <span class="font-12 regular textLightColor">234</span>
+                                                </button>
+                                                <button class="btn p-0 border-0 d-flex align-items-center gap-1">
+                                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2">
+                                                        <polyline points="17 1 21 5 17 9"></polyline>
+                                                        <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+                                                        <polyline points="7 23 3 19 7 15"></polyline>
+                                                        <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+                                                    </svg>
+                                                    <span class="font-12 regular textLightColor">125</span>
+                                                </button>
+                                                <button class="btn p-0 border-0 d-flex align-items-center gap-1">
+                                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2">
+                                                        <line x1="22" y1="2" x2="11" y2="13" />
+                                                        <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                                                    </svg>
+                                                    <span class="font-12 regular textLightColor">Send</span>
+                                                </button>
+                                            </div>
+                                            <button class="btn p-0 border-0">
+                                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
+                                                </svg>
+                                            </button>
+                                        </div>
+
+                                        <!-- Post Caption -->
+                                        <div class="d-flex flex-column gap-1">
+                                            <div class="font-12 regular textColor">
+                                                <span class="semibold">ashok.kumar01</span>
+                                                <span class="textLightColor"> Streamline all conversations from multiple
+                                                    Instagram account in a unified dashboard</span>
+                                            </div>
+                                            <div class="font-11 regular textLightColor">View all 45 comments</div>
+                                            <div class="font-10 regular textLightColor">2 hours ago</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Resent activity -->
+                            <div class="d-flex flex-column gap-3">
+                                <h2 class="font-30 medium text-dark mb-0">Recent Activity</h2>
+                                <div class="dashboard-card post-detail-card p-3">
+                                    <div class="d-flex gap-3 post-content">
+                                        <!-- Post Image -->
+                                        <img src="assets/images/png/recent-post1.png" class="post-detail-img"
+                                            alt="Post">
+                                        <!-- Post Info -->
+                                        <div class="d-flex flex-column flex-grow-1">
+                                            <!-- Row 1: Name | Badge -->
+                                            <div class="d-flex align-items-start justify-content-between">
+                                                <span class="font-18 semibold textColor">Rahul Kumar</span>
+                                                <span class="post-status-badge font-10 medium"
+                                                    style="background-color: #0596691A;  color: #05B723;">Published</span>
+                                            </div>
+                                            <!-- Row 2: Handle | Stats -->
+                                            <div class="d-flex align-items-start justify-content-between mt-1">
+                                                <span class="font-12 regular grayDark">@Rahul.kumar01</span>
+                                                <div class="d-flex align-items-center  social-icons">
+                                                    <span
+                                                        class="d-flex align-items-center gap-1 font-12 regular grayDark">
+                                                        <svg width="13" height="13" viewBox="0 0 24 24" fill="#707070"
+                                                            stroke="currentColor" stroke-width="2">
+                                                            <path
+                                                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                                                        </svg>12,345
+                                                    </span>
+                                                    <span
+                                                        class="d-flex align-items-center gap-1 font-12 regular grayDark">
+                                                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                                                            stroke="currentColor" stroke-width="2">
+                                                            <path
+                                                                d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                                                        </svg>821
+                                                    </span>
+                                                    <span
+                                                        class="d-flex align-items-center gap-1 font-12 regular grayDark">
+                                                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                                                            stroke="currentColor" stroke-width="2">
+                                                            <polyline points="17 1 21 5 17 9" />
+                                                            <path d="M3 11V9a4 4 0 0 1 4-4h14" />
+                                                            <polyline points="7 23 3 19 7 15" />
+                                                            <path d="M21 13v2a4 4 0 0 1-4 4H3" />
+                                                        </svg>125
+                                                    </span>
+                                                    <span
+                                                        class="d-flex align-items-center gap-1 font-12 regular grayDark">
+                                                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                                                            stroke="currentColor" stroke-width="2">
+                                                            <line x1="22" y1="2" x2="11" y2="13" />
+                                                            <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                                                        </svg>821
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- Row 3: Caption -->
+                                            <div class="d-flex flex-column">
+                                                <span class="font-16 regular textColor">Office Vibes</span>
+                                                <span class="font-14 regular grayDark">How do you take your coffee?
+                                                    #coffee #office #eveningvibes</span>
+                                            </div>
+                                            <!-- Divider -->
+                                            <hr class="insights-divider my-2">
+                                            <!-- Row 4: Date + Actions -->
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <span class="d-flex align-items-center gap-1 font-12 regular grayDark">
+                                                    <img src="assets/images/svg/calendar-edit.svg" width="14"
+                                                        height="14" alt="date">
+                                                    Apr 19 at 9:24 pm
+                                                </span>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <button
+                                                        class="post-action-btn font-12 medium d-flex align-items-center gap-1">
+                                                        Analytics
+                                                        <img src="assets/images/svg/analytics.svg" height="10"
+                                                            width="10">
+                                                    </button>
+                                                    <button
+                                                        class="post-action-btn font-12 medium d-flex align-items-center gap-1">
+                                                        Edit
+                                                        <img src="assets/images/svg/edit-icon.svg" height="14"
+                                                            width="10">
+                                                    </button>
+                                                    <div class="three-dot-menu cursor-pointer">
+                                                        <img src="assets/images/svg/dropdown-icon-dot.svg">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dashboard-card post-detail-card p-3">
+                                    <div class="d-flex gap-3 post-content">
+                                        <!-- Post Image -->
+                                        <img src="assets/images/png/recent-post1.png" class="post-detail-img"
+                                            alt="Post">
+                                        <!-- Post Info -->
+                                        <div class="d-flex flex-column flex-grow-1">
+                                            <!-- Row 1: Name | Badge -->
+                                            <div class="d-flex align-items-start justify-content-between">
+                                                <span class="font-18 semibold textColor">Rahul Kumar</span>
+                                                <h3
+                                                    class="font-14 regular textLightColor d-flex align-items-center gap-2">
+                                                    Post on: <span class="post-status-badge font-10 medium"
+                                                        style="background-color: #F5BB5C4D;  color: #FA8F21;">12-mar-2026</span>
+                                                </h3>
+                                            </div>
+                                            <!-- Row 2: Handle | Stats -->
+                                            <div class="d-flex align-items-start justify-content-between mt-1">
+                                                <span class="font-12 regular grayDark">@Rahul.kumar01</span>
+                                                <div class="d-flex align-items-center  social-icons">
+                                                    <span
+                                                        class="d-flex align-items-center gap-1 font-12 regular grayDark">
+                                                        <svg width="13" height="13" viewBox="0 0 24 24" fill="#707070"
+                                                            stroke="currentColor" stroke-width="2">
+                                                            <path
+                                                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                                            </path>
+                                                        </svg>0
+                                                    </span>
+                                                    <span
+                                                        class="d-flex align-items-center gap-1 font-12 regular grayDark">
+                                                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                                                            stroke="currentColor" stroke-width="2">
+                                                            <path
+                                                                d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z">
+                                                            </path>
+                                                        </svg>0
+                                                    </span>
+                                                    <span
+                                                        class="d-flex align-items-center gap-1 font-12 regular grayDark">
+                                                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                                                            stroke="currentColor" stroke-width="2">
+                                                            <polyline points="17 1 21 5 17 9"></polyline>
+                                                            <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+                                                            <polyline points="7 23 3 19 7 15"></polyline>
+                                                            <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+                                                        </svg>0
+                                                    </span>
+                                                    <span
+                                                        class="d-flex align-items-center gap-1 font-12 regular grayDark">
+                                                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                                                            stroke="currentColor" stroke-width="2">
+                                                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                                                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                                        </svg>0
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- Row 3: Caption -->
+                                            <div class="d-flex flex-column">
+                                                <span class="font-16 regular textColor">Office Vibes</span>
+                                                <span class="font-14 regular grayDark">How do you take your coffee?
+                                                    #coffee #office #eveningvibes</span>
+                                            </div>
+                                            <!-- Divider -->
+                                            <hr class="insights-divider my-2">
+                                            <!-- Row 4: Date + Actions -->
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <span class="d-flex align-items-center gap-1 font-12 regular grayDark">
+                                                    <img src="assets/images/svg/calendar-edit.svg" width="14"
+                                                        height="14" alt="date">
+                                                    Apr 19 at 9:24 pm
+                                                </span>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <button
+                                                        class="post-action-btn font-12 medium d-flex align-items-center gap-1">
+                                                        Analytics
+                                                        <img src="assets/images/svg/analytics.svg" height="10"
+                                                            width="10">
+                                                    </button>
+                                                    <button
+                                                        class="post-action-btn font-12 medium d-flex align-items-center gap-1">
+                                                        Edit
+                                                        <img src="assets/images/svg/edit-icon.svg" height="14"
+                                                            width="10">
+                                                    </button>
+                                                    <div class="three-dot-menu cursor-pointer">
+                                                        <img src="assets/images/svg/dropdown-icon-dot.svg">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="d-flex flex-column gap-4">
+                            <!-- Insights -->
+                            <div class="dashboard-card p-4 rounded-4 d-flex flex-column gap-3">
+                                <!-- Header -->
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h4 class="font-20 semibold textColor mb-0">Insights</h4>
+                                    <div class="three-dot-menu cursor-pointer">
+                                        <span class="three-dot"></span>
+                                        <span class="three-dot"></span>
+                                        <span class="three-dot"></span>
+                                    </div>
+                                </div>
+                                <!-- Stat 1 -->
+                                <div class="d-flex flex-column gap-1">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <h3 class="font-30 medium textColor mb-0">234</h3>
+                                        <div class="d-flex align-items-center gap-1">
+                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5 1L9 9H1L5 1Z" fill="#05CD99" />
+                                            </svg>
+                                            <span class="font-14 medium greenText">+2.45%</span>
+                                        </div>
+                                    </div>
+                                    <p class="font-14 regular textLightColor mb-0">This week</p>
+                                </div>
+                                <!-- Divider -->
+                                <hr class="insights-divider m-0">
+                                <!-- Stat 2 -->
+                                <div class="d-flex flex-column gap-1">
+                                    <h5 class="font-20 semibold textColor mb-0">Total Engagement</h5>
+                                    <div class="d-flex align-items-center gap-2 mt-1">
+                                        <h3 class="font-30 medium textColor mb-0">18.2k</h3>
+                                        <div class="d-flex align-items-center gap-1">
+                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5 1L9 9H1L5 1Z" fill="#05CD99" />
+                                            </svg>
+                                            <span class="font-14 medium greenText">+2.45%</span>
+                                        </div>
+                                    </div>
+                                    <p class="font-14 regular textLightColor mb-0">This week</p>
+                                </div>
+                            </div>
+
+                            <!-- Top Performing Posts -->
+                            <div class="dashboard-card rounded-4 d-flex flex-column">
+                                <div class="py-3 px-4 d-flex flex-column gap-3">
+                                    <h4 class="font-18 medium textColor mb-0">Top Performing Posts</h4>
+                                    <div class="row g-2">
+                                        <div class="col-4">
+                                            <div class="top-post-item"><img src="assets/images/png/recent-post3.png"
+                                                    class="top-post-img" alt="Post"></div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="top-post-item"><img src="assets/images/png/recent-post2.png"
+                                                    class="top-post-img" alt="Post"></div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="top-post-item"><img src="assets/images/png/recent-post1.png"
+                                                    class="top-post-img" alt="Post"></div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="top-post-item"><img src="assets/images/png/recent-post3.png"
+                                                    class="top-post-img" alt="Post"></div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="top-post-item"><img src="assets/images/png/recent-post1.png"
+                                                    class="top-post-img" alt="Post"></div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="top-post-item"><img src="assets/images/png/recent-post2.png"
+                                                    class="top-post-img" alt="Post"></div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="top-post-item"><img src="assets/images/png/recent-post3.png"
+                                                    class="top-post-img" alt="Post"></div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="top-post-item"><img src="assets/images/png/recent-post2.png"
+                                                    class="top-post-img" alt="Post"></div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="top-post-item"><img src="assets/images/png/recent-post1.png"
+                                                    class="top-post-img" alt="Post"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="insights-divider border-top  text-center">
+                                    <a href="recent-instagram-post.html"
+                                        class="font-14 semibold textColor d-inline-flex align-items-center gap-1 py-2">View
+                                        All <img src="assets/images/svg/arrow-right.svg" width="10" height="10"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+
+
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+    <!-- Schedule Post Modal -->
+    <div class="modal fade" id="scheduleModal" tabindex="-1" aria-labelledby="scheduleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered schedule-modal-dialog">
+            <div class="modal-content border-0 rounded-4">
+                <!-- Header -->
+                <div class="modal-header border-0 p-3">
+                    <h5 class="font-20 medium textColor mb-0" id="scheduleModalLabel">Schedule post</h5>
+                    <button type="button" class="btn-close font-14" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <!-- Body -->
+                <div class="modal-body pt-3 pb-2 borderTop d-flex flex-column justify-content-between"
+                    style="height: 130px;">
+                    <div class="d-flex align-items-center gap-3 mb-2">
+                        <!-- Select Date -->
+                        <div class="position-relative">
+                            <button
+                                class="d-flex align-items-center gap-2 font-14 regular bg-white textColor rounded-3 justify-content-between px-4 py-2 schedule-picker-btn"
+                                onclick="document.getElementById('scheduleDateInput').showPicker()">
+                                <span class="d-flex align-items-center gap-2">
+                                    <img src="assets/images/svg/calendar-edit.svg" height="16">
+                                    <span id="scheduleDateLabel">Select Date</span>
+                                </span>
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="6 9 12 15 18 9" />
+                                </svg>
+                            </button>
+                            <input type="date" id="scheduleDateInput"
+                                class="position-absolute opacity-0 schedule-input-hidden"
+                                onchange="document.getElementById('scheduleDateLabel').textContent = this.value || 'Select Date'">
+                        </div>
+                        <!-- Select Time -->
+                        <div class="position-relative">
+                            <button
+                                class="d-flex align-items-center gap-2 font-14 regular bg-white textColor rounded-3 justify-content-between px-4 py-2 schedule-picker-btn"
+                                onclick="document.getElementById('scheduleTimeInput').showPicker()">
+                                <span class="d-flex align-items-center gap-2">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <polyline points="12 6 12 12 16 14" />
+                                    </svg>
+                                    <span id="scheduleTimeLabel">Select Time</span>
+                                </span>
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="6 9 12 15 18 9" />
+                                </svg>
+                            </button>
+                            <input type="time" id="scheduleTimeInput"
+                                class="position-absolute opacity-0 schedule-input-hidden"
+                                onchange="document.getElementById('scheduleTimeLabel').textContent = this.value || 'Select Time'">
+                        </div>
+                    </div>
+                    <!-- Info text -->
+                    <p class="font-14 regular grayDark text-center mb-0">Your post will be automatically published
+                        on the schedule date and time</p>
+                </div>
+                <!-- Footer -->
+                <div class="border-0 p-3 d-flex justify-content-end gap-3">
+                    <button type="button" class="font-12 medium px-4 py-2 rounded-2 text-white schedule-btn border-0"
+                        data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" id="confirmScheduleBtn"
+                        class="next-btn font-12 medium px-4 py-2 rounded-2 border-0 text-white">Schedule</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Post Scheduled Success Modal -->
+    <div class="modal fade" id="postScheduledModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="max-width: 520px;">
+            <div class="modal-content border-0 rounded-4 p-0">
+                <div class="d-flex align-items-start gap-3 p-3">
+                    <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                        style="width:48px;height:48px;background:#059669;">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                    </div>
+                    <div class="flex-grow-1">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <h6 class="font-24 medium textColor mb-1">Post scheduled!</h6>
+                            <button type="button" class="btn-close font-14" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <p class="font-14 regular grayDark mb-0" id="scheduledSummaryText">
+                            Your post has been successfully scheduled for April 25th 2026 at 11:00 AM
+                        </p>
+                    </div>
+                </div>
+                <hr class="my-2">
+                <div class="d-flex justify-content-end gap-2 p-3">
+                    <button type="button" class="font-12 regular px-4 py-2 rounded-2  bg-white view-scheduled-btn">View
+                        all scheduled</button>
+                    <button type="button" class="font-12 regular px-4 py-2 rounded-2 border-0 text-white next-btn"
+                        data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/sidebar.js"></script>
+
+    <script>
+        document.getElementById('confirmScheduleBtn').addEventListener('click', function () {
+            var dateVal = document.getElementById('scheduleDateLabel').textContent;
+            var timeVal = document.getElementById('scheduleTimeLabel').textContent;
+
+            var summary = 'Your post has been successfully scheduled for April 25th 2026 at 11:00 AM.';
+            if (dateVal !== 'Select Date' && timeVal !== 'Select Time') {
+                summary = 'Your post has been successfully scheduled for ' + dateVal + ' at ' + timeVal + '.';
+            } else if (dateVal !== 'Select Date') {
+                summary = 'Your post has been successfully scheduled for ' + dateVal + '.';
+            }
+            document.getElementById('scheduledSummaryText').textContent = summary;
+
+            var scheduleModal = bootstrap.Modal.getInstance(document.getElementById('scheduleModal'));
+            scheduleModal.hide();
+
+            document.getElementById('scheduleModal').addEventListener('hidden.bs.modal', function showSuccess() {
+                var successModal = new bootstrap.Modal(document.getElementById('postScheduledModal'));
+                successModal.show();
+                document.getElementById('scheduleModal').removeEventListener('hidden.bs.modal', showSuccess);
+            });
+        });
+
+        function previewPostImage(event) {
+            var file = event.target.files[0];
+            if (!file) return;
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                document.getElementById('postImagePreview').src = e.target.result;
+                document.getElementById('postImagePreviewWrap').classList.remove('d-none');
+            };
+            reader.readAsDataURL(file);
+        }
+        function removePostImage() {
+            document.getElementById('postImagePreview').src = '';
+            document.getElementById('postImagePreviewWrap').classList.add('d-none');
+            document.getElementById('postImageInput').value = '';
+        }
+    </script>
+
+</body>
+
+</html>e

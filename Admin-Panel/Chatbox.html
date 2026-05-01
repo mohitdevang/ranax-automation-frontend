@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Subscriptions</title>
+    <!-- Fonts css -->
+    <link href="assets/css/stylesheet.css" rel="stylesheet">
+    <!-- Custom css -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <!-- Whatsapp Css -->
+    <link href="assets/css/whatsapp.css" rel="stylesheet">
+    <!-- Bootstrap css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- DASHBOARD -->
+    <div class="d-flex align-items-start h-100 sidebar-container">
+        <!-- SIDEBAR -->
+        <div class="sidebar h-100 collapsed" id="sidebar">
+            <div class="logo-collapsed">
+                <div class="d-flex justify-content-center">
+                    <img src="assets/images/svg/logo-mini.svg" class="logo-mini">
+                </div>
+            </div>
+            <div class="logo-sidebar">
+                <div class="d-flex justify-content-center">
+                    <img src="assets/images/svg/logo.svg" class="sidebar-logo">
+                </div>
+            </div>
+
+            <ul class="menu d-flex flex-column justify-content-between gap-3 mb-0">
+                <!-- top icon -->
+                <div class="d-flex flex-column justify-content-between gap-2">
+                    <!-- Dashboard -->
+                    <li class="">
+                        <a href="dashboard.html" class="d-flex align-items-center gap-3">
+                            <div class="sidebar-icon">
+                                <img src="assets/images/svg/home.svg">
+                            </div>
+                            <span class="menu-text singleLine">Dashboard</span>
+                        </a>
+                    </li>
+                    <!-- Registrations -->
+                    <li>
+                        <a href="registrations.html" class="d-flex align-items-center gap-3">
+                            <div class="sidebar-icon">
+                                <img src="assets/images/svg/registrations.svg">
+                            </div>
+                            <span class="menu-text singleLine">Registrations</span>
+                        </a>
+                    </li>
+                    <!-- Subscriptions -->
+                    <li class="has-submenu">
+                        <a href="#" class="d-flex align-items-center gap-3 justify-content-between" onclick="toggleSubmenu(event, this)">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="sidebar-icon">
+                                    <img src="assets/images/svg/subscriptions.svg">
+                                </div>
+                                <span class="menu-text singleLine">Subscriptions</span>
+                            </div>
+                            <svg class="submenu-arrow menu-text" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="manage-subscriptions.html" class="d-flex align-items-center gap-3">
+                                    <span class="menu-text singleLine">Manage Subscriptions</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="subscriptions-user.html" class="d-flex align-items-center gap-3">
+                                    <span class="menu-text singleLine">Subscriptions User</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="gst-details.html" class="d-flex align-items-center gap-3">
+                                    <span class="menu-text singleLine">User GST Details</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Chat Box -->
+                    <li class="active">
+                        <a href="Chatbox.html" class="d-flex align-items-center gap-3">
+                            <div class="sidebar-icon">
+                                <img src="assets/images/svg/chatBox.svg">
+                            </div>
+                            <span class="menu-text singleLine">Chat Box</span>
+                        </a>
+                    </li>
+                 
+                    <!-- Settings -->
+                    <li>
+                        <a href="settings.html" class="d-flex align-items-center gap-3">
+                            <div class="sidebar-icon">
+                                <img src="assets/images/svg/setting.svg">
+                            </div>
+                            <span class="menu-text singleLine">Settings</span>
+                        </a>
+                    </li>
+                </div>
+                <!-- bottom icon -->
+                <div class="d-flex flex-column justify-content-between gap-3">
+                    <li data-bs-target="#logout" data-bs-toggle="modal" class="cursor-pointer">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="sidebar-icon">
+                                <svg class="svg-color" xmlns="http://www.w3.org/2000/svg" width="25" height="24"
+                                    viewBox="0 0 25 24" fill="none">
+                                    <path
+                                        d="M12.5 20C8.6365 20 5.5 16.859 5.5 12.9788C5.5 10.8985 6.40068 9.031 7.83456 7.7443C8.2456 7.3754 8.27979 6.7431 7.91092 6.3321C7.54205 5.9211 6.90981 5.8869 6.49877 6.2557C4.65932 7.9065 3.5 10.3078 3.5 12.9788C3.5 17.9586 7.52694 22 12.5 22C17.4731 22 21.5 17.9586 21.5 12.9788C21.5 10.3078 20.3407 7.9065 18.5012 6.2557C18.0902 5.8869 17.4579 5.9211 17.0891 6.3321C16.7202 6.7431 16.7544 7.3754 17.1654 7.7443C18.5993 9.031 19.5 10.8985 19.5 12.9788C19.5 16.859 16.3635 20 12.5 20Z"
+                                        fill="#111111" />
+                                    <path
+                                        d="M9.79292 4.2929C9.50692 4.5789 9.42137 5.009 9.57615 5.3827C9.73093 5.7564 10.0956 6 10.5 6L11.5 6L11.5 12C11.5 12.5523 11.9477 13 12.5 13C13.0523 13 13.5 12.5523 13.5 12L13.5 6L14.5 6C14.9045 6 15.2691 5.7564 15.4239 5.3827C15.5787 5.009 15.4931 4.5789 15.2071 4.2929L13.2071 2.2929C12.8166 1.9024 12.1834 1.9024 11.7929 2.2929L9.79292 4.2929Z"
+                                        fill="#111111" />
+                                </svg>
+                            </div>
+                            <span class="menu-text singleLine">Logout</span>
+                        </div>
+                    </li>
+                </div>
+            </ul>
+        </div>
+        <!-- MAIN CONTENT -->
+        <div class="main-content w-100 h-100 d-flex flex-column">
+            <!-- NAVBAR -->
+            <div class="navBar d-flex justify-content-between align-items-center sticky-top">
+                <!-- TOGGLE BUTTON -->
+                <div class="iconBackground" onclick="toggleSidebar()">
+                    <svg class="toggle-btn" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        viewBox="0 0 20 20" fill="none">
+                        <path class="fill-icon"
+                            d="M14.4936 1.56269H2.34333C1.04409 1.51308 1.04409 3.48792 2.34333 3.43831H14.4451C15.7208 3.48792 15.7704 1.56269 14.4947 1.56269H14.4936ZM2.34333 9.06283C1.09369 9.06283 1.09369 10.9373 2.34333 10.9373H9.19385C10.4695 10.9373 10.4695 9.06283 9.19385 9.06283H2.34333ZM2.34333 16.563C1.09369 16.563 1.09369 18.4374 2.34333 18.4374H17.6944C18.944 18.4374 18.944 16.563 17.6944 16.563H2.34333Z"
+                            fill="#115E68" />
+                    </svg>
+                </div>
+
+                <!-- PROFILE DROPDOWN -->
+                <div class="profile-dropdown">
+                    <div class="d-flex align-items-center gap-3 dropdown-toggle profile-background" type="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="assets/images/svg/Avatar.svg" width="42px" height="42px">
+                        <div class="profile-hide">
+                            <div class="d-flex flex-column gap-1">
+                                <h4 class="mb-0 text-white font-14 regular text-nowrap">Wade Warren </h4>
+                                <h5 class="mb-0  whiteLightColor font-12 regular">Super Admin</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu p-3 mt-1">
+                        <div class="d-flex flex-column gap-12">
+                            <div class="d-flex align-items-center gap-2 borderBottom pb-2">
+                                <img src="assets/images/svg/Avatar.svg" width="42px" height="42px">
+                                <div class="d-flex flex-column gap-1">
+                                    <h4 class="mb-0 font-14 regular textColor text-nowrap">Wade Warren </h4>
+                                    <h5 class="mb-0  font-12 regular subTextColor">Admin</h5>
+                                </div>
+                            </div>
+                            <div class="borderBottom py-1 d-flex flex-column gap-2">
+                                <a href="profile.html"
+                                    class="d-flex align-items-center gap-2 p-2 rounded-1 cursor-pointer profile-dropdown-list">
+                                    <svg class="svg-stroke" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                        viewBox="0 0 25 25" fill="none">
+                                        <path
+                                            d="M12.5 13.4316C15.2614 13.4316 17.5 11.1931 17.5 8.43164C17.5 5.67022 15.2614 3.43164 12.5 3.43164C9.73858 3.43164 7.5 5.67022 7.5 8.43164C7.5 11.1931 9.73858 13.4316 12.5 13.4316Z"
+                                            stroke="#737373" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                        <path
+                                            d="M20.5 21.4316C20.5 19.3099 19.6571 17.2751 18.1569 15.7748C16.6566 14.2745 14.6217 13.4316 12.5 13.4316C10.3783 13.4316 8.34344 14.2745 6.84315 15.7748C5.34285 17.2751 4.5 19.3099 4.5 21.4316"
+                                            stroke="#737373" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                    </svg>
+                                    <h6 class="mb-0 font-14 medium grayColor">
+                                        Profile </h6>
+                                </a>
+
+                            </div>
+
+                            <h4 class=" text-center font-14 medium  mb-0 cursor-pointer p-2 mt-1 rounded-1 cursor-pointer logout"
+                                data-bs-target="#logout" data-bs-toggle="modal" class="cursor-pointer"
+                                style="color: #FF3535;">
+                                Logout</h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- MIDDLE CONTENT -->
+            <div class="d-flex flex-column gap-3 middle-content">
+
+                <div class="d-flex flex-column gap-2 mb-sm-3 mb-0">
+                    <h4 class="primaryColor font-24 medium mb-0">Manage conversations with Chat Box</h4>
+                 
+                </div>
+                <!-- ChatBox -->
+                <div class="chat-container">
+                    <!-- Conversations Sidebar -->
+                    <div class="conversations-sidebar">
+                        <div class="conversations-header d-flex justify-content-between align-items-center">
+                            <h3 class="sidebar-title mb-0">Inbox</h3>
+                        </div>
+                        <!-- Search & Dropdown -->
+                        <div class="p-3 d-flex flex-column gap-2">
+                            <div class="d-flex align-items-center gap-2">
+                                <!-- Search & Filter -->
+                                <div class="chat-search">
+                                    <img src="assets/images/svg/search.svg" alt="Search" class="search-icon">
+                                    <input type="text" placeholder="Search..." class="search-input">
+                                    <div class="filter-icon">
+                                        <div class="custom-select status-select">
+                                            <div class="select-trigger justify-content-between bg-transparent border-0">
+                                                <img src="assets/images/svg/filter.svg" alt="filter" class="">
+                                            </div>
+                                            <div class="select-options">
+                                                <div class="select-option" data-value="all">Filter by date</div>
+                                                <ul class="filter-list">
+                                                    <li class="font-14 light textLightColor cursor-pointer">Today
+                                                    </li>
+                                                    <li class="font-14 light textLightColor cursor-pointer">
+                                                        Yesterday</li>
+                                                    <li class="font-14 light textLightColor cursor-pointer">Last 7
+                                                        days</li>
+                                                    <li class="font-14 light textLightColor cursor-pointer">Last 30
+                                                        days
+                                                    </li>
+                                                </ul>
+                                                <div class="select-option" data-value="all">Conversation filter
+                                                </div>
+                                                <ul class="filter-list">
+                                                    <li class="font-14 light textLightColor cursor-pointer">
+                                                        Important chats
+                                                    </li>
+                                                    <li class="font-14 light textLightColor cursor-pointer">Unread
+                                                        chats
+                                                    </li>
+
+                                                </ul>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Dropdown -->
+                                <div class="filter-item h-100">
+                                    <div class="custom-select status-select h-100">
+                                        <div class="select-trigger bg-white h-100">
+                                            <img src="assets/images/svg/team.svg" height="20">
+                                            <img src="assets/images/svg/arrow.svg" alt="arrow" class="dropdown-arrow">
+                                        </div>
+                                        <div class="select-options">
+                                            <a href="table.html" class="select-option" data-value="all">Table</a>
+                                            <div class="select-option" data-value="unread"></div>
+                                            <div class="select-option" data-value="read"></div>
+                                            <div class="select-option" data-value="archived"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <!-- All -->
+                                <div class="filter-item">
+                                    <div class="custom-select status-select w-100">
+                                        <div class="select-trigger bg-white justify-content-between">
+                                            <span class="filter-label">All</span>
+                                            <img src="assets/images/svg/arrow.svg" alt="arrow" class="dropdown-arrow">
+                                        </div>
+                                        <div class="select-options">
+                                            <div class="select-option" data-value="all">All</div>
+                                            <div class="select-option" data-value="unread">Active</div>
+                                            <div class="select-option" data-value="read">Waiting</div>
+                                            <div class="select-option" data-value="archived">Closed</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="conversations-list d-flex flex-column gap-2 pt-0">
+                            <!-- Conversation Item 1 -->
+                            <div class="conversation-item active whatsapp-conversation" data-user="Tom Anderson">
+                                <div class="conversation-avatar">
+                                    <img src="assets/images/svg/avatar.svg" alt="Tom Anderson">
+                                    <span class="online-status"></span>
+                                </div>
+
+                                <div class="conversation-content">
+                                    <div class="conversation-header">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <h4 class="conversation-name">Tom Anderson</h4>
+
+                                        </div>
+                                        <span class="conversation-time">12:24 AM</span>
+                                    </div>
+                                    <p class="conversation-preview">Hello, I'm interested in this item...</p>
+
+                                </div>
+
+                            </div>
+
+                            <!-- Conversation Item 2 -->
+                            <div class="conversation-item" data-user="Luis Pittman">
+                                <div class="conversation-avatar">
+                                    <img src="assets/images/svg/avatar.svg" alt="Luis Pittman">
+                                    <span class="online-status online"></span>
+                                </div>
+                                <div class="conversation-content">
+                                    <div class="conversation-header">
+                                        <h4 class="conversation-name">Luis Pittman</h4>
+                                        <span class="conversation-time">10:50 AM</span>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <p class="conversation-preview">Hi, can I ask if there is anything...
+                                        </p>
+                                        <div
+                                            class="unread-badge d-flex align-items-center justify-content-center  text-center regular text-white">
+                                            1</div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- Conversation Item 3 -->
+                            <div class="conversation-item" data-user="Alisson Mack">
+                                <div class="conversation-avatar">
+                                    <img src="assets/images/svg/avatar.svg" alt="Alisson Mack">
+                                    <span class="online-status"></span>
+                                </div>
+                                <div class="conversation-content">
+                                    <div class="conversation-header">
+                                        <h4 class="conversation-name">Alisson Mack</h4>
+                                        <span class="conversation-time">Yesterday</span>
+                                    </div>
+                                    <p class="conversation-preview">I want to complain about item</p>
+                                </div>
+                            </div>
+
+                            <!-- Conversation Item 4 -->
+                            <div class="conversation-item" data-user="Barry George">
+                                <div class="conversation-avatar">
+                                    <img src="assets/images/svg/avatar.svg" alt="Barry George">
+                                    <span class="online-status"></span>
+                                </div>
+                                <div class="conversation-content">
+                                    <div class="conversation-header">
+                                        <h4 class="conversation-name">Barry George</h4>
+                                        <span class="conversation-time">09:54 AM</span>
+                                    </div>
+                                    <p class="conversation-preview">Is there any chance to get a refu...</p>
+                                </div>
+                            </div>
+
+                            <!-- Conversation Item 5 -->
+                            <div class="conversation-item" data-user="Jenny Lloyd">
+                                <div class="conversation-avatar">
+                                    <img src="assets/images/svg/avatar.svg" alt="Jenny Lloyd">
+                                    <span class="online-status"></span>
+                                </div>
+                                <div class="conversation-content">
+                                    <div class="conversation-header">
+                                        <h4 class="conversation-name">Jenny Lloyd</h4>
+                                        <span class="conversation-time">Yesterday</span>
+                                    </div>
+                                    <p class="conversation-preview">I'm not sure if this is what I want</p>
+                                </div>
+                            </div>
+
+                            <!-- Conversation Item 6 -->
+                            <div class="conversation-item" data-user="Andrew Larson">
+                                <div class="conversation-avatar">
+                                    <img src="assets/images/svg/avatar.svg" alt="Andrew Larson">
+                                    <span class="online-status"></span>
+                                </div>
+                                <div class="conversation-content">
+                                    <div class="conversation-header">
+                                        <h4 class="conversation-name">Andrew Larson</h4>
+                                        <span class="conversation-time">Yesterday</span>
+                                    </div>
+                                    <p class="conversation-preview">Can you help me choose from t...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chat Area -->
+                    <div class="chat-area">
+                        <!-- Priority and Status Filters -->
+                        <div class="conversations-header d-flex justify-content-between align-items-center">
+                            <h3 class="sidebar-title mb-0">Conversation </h3>
+                        </div>
+
+                        <!-- Chat Header -->
+                        <div class="chat-header">
+                            <button class="mobile-back-button" id="mobileBackBtn" onclick="goBackToConversations()">
+                                <img src="assets/images/svg/arrow.svg" alt="Back">
+                            </button>
+                            <div class="chat-user-info" onclick="openCustomerDetails()">
+                                <div class="d-flex align-items-center gap-3">
+                                    <img src="assets/images/svg/avatar.svg" alt="Luis Pittman" class="chat-avatar">
+                                    <div class="chat-user-details">
+                                        <h4 class="chat-user-name mb-0">Luis Pittman</h4>
+                                        <h5 class="chat-user-status online mb-0">Online</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat-actions">
+                                <button class="chat-action-btn">
+                                    <img src="assets/images/svg/Video.svg" alt="video" height="16">
+                                </button>
+                                <button class="chat-action-btn">
+                                    <img src="assets/images/svg/call.svg" alt="call" height="16">
+                                </button>
+                                <div class="custom-select status-select w-100">
+                                    <div class="select-trigger bg-transparent border-0 ">
+                                        <img src="assets/images/svg/dropdown-icon.svg" alt="dropdown" height="16">
+                                    </div>
+                                    <div class="select-options dropdown-menu">
+                                        <div class="select-option" data-value="all"><img
+                                                src="assets/images/svg/block.svg" height="18">Block user</div>
+                                        <div class="select-option" data-value="unread"><img
+                                                src="assets/images/svg/star.svg" height="16">Starred</div>
+                                        <div class="select-option delete-option" data-value="read">
+                                            <img src="assets/images/svg/delete.svg" height="16">Delete chat
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Chat Messages Container -->
+                        <div class="messages-container">
+                            <!-- Received Message -->
+                            <div class="message received">
+                                <img src="assets/images/svg/avatar.svg" alt="Luis Pittman" class="message-avatar">
+                                <div class="message-content">
+                                    <div class="message-bubble">
+                                        Hi, I wonder when if there is going to be anything new for spring?
+                                    </div>
+                                    <span class="message-time">12:45 AM</span>
+                                </div>
+                            </div>
+
+                            <!-- Sent Message -->
+                            <div class="message sent">
+                                <div class="message-content">
+                                    <div class="message-bubble whatsapp-message">
+                                        Hi Luis, can you please be more specific?
+                                    </div>
+                                    <span class="message-time">12:51 AM</span>
+                                </div>
+                                <img src="assets/images/svg/massage-sendar-user.svg" alt="You" class="message-avatar">
+                            </div>
+
+                            <!-- Received Message -->
+                            <div class="message received">
+                                <img src="assets/images/svg/avatar.svg" alt="Luis Pittman" class="message-avatar">
+                                <div class="message-content">
+                                    <div class="message-bubble">
+                                        Sure, I want to know when the new spring collection for men is coming
+                                    </div>
+                                    <span class="message-time">12:45 AM</span>
+                                </div>
+                            </div>
+
+                            <!-- Sent Message with attachment -->
+                            <div class="message sent">
+                                <div class="message-content">
+                                    <div class="message-bubble whatsapp-message">
+                                        Thank you for taking interest in our upcoming products. You can have a
+                                        look at
+                                        the upcoming collection in our blog post.
+                                        <div class="message-attachments">
+                                            <div class="attachment-item">
+                                                <img src="assets/images/png/post-bg-img.png" alt="Product 1"
+                                                    class="attachment-image">
+                                            </div>
+                                            <div class="attachment-item">
+                                                <img src="assets/images/png/social-media-bg-img.png" alt="Product 2"
+                                                    class="attachment-image">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="message-time">12:49 AM</span>
+                                </div>
+                                <img src="assets/images/svg/massage-sendar-user.svg" alt="You" class="message-avatar">
+                            </div>
+                        </div>
+
+                        <!-- Chat Bottom Message Input -->
+                        <div class="message-input-container d-flex flex-column gap-3">
+                            <!-- Image Preview Container -->
+                            <div class="image-preview-container" id="imagePreviewContainer">
+                                <div id="imagePreviews"></div>
+                            </div>
+
+                            <div class="message-input-wrapper">
+                                <!-- file -->
+                                <button class="attachment-btn whatsapp-attachment" id="attachmentBtn">
+                                    <img src="assets/images/svg/file.svg" alt="Attach">
+                                </button>
+                                <!-- input type -->
+                                <div class="position-relative w-100">
+                                    <img src="assets/images/svg/emoji.svg" height="18"
+                                        class="emoji-icon cursor-pointer">
+                                    <input type="text" placeholder="Your message..."
+                                        class=" search-input position-relative" id="messageInput">
+                                </div>
+                                <input type="file" class="image-upload-input" id="imageUpload" multiple=""
+                                    accept="image/*">
+
+                                <!-- Send button -->
+                                <button class="send-btn" id="sendBtn">
+                                    <img src="assets/images/svg/send.svg">
+                                </button>
+
+                            </div>
+                            <!-- Massege -->
+                            <div class="d-flex align-items-center gap-2">
+                                <h6 class="message-suggetion">Welcome Message</h6>
+                                <h6 class="message-suggetion">Follow Up Message</h6>
+                                <h6 class="message-suggetion">Order Confirmation</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/whatsapp.js"></script>
+
+
+    <!-- SIDEBAR collapsed -->
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('collapsed');
+        }
+
+        // Submenu toggle functionality
+        function toggleSubmenu(event, element) {
+            event.preventDefault();
+            const parentLi = element.closest('.has-submenu');
+            const sidebar = document.getElementById('sidebar');
+
+            // Only allow submenu toggle when sidebar is collapsed (expanded)
+            if (sidebar.classList.contains('collapsed')) {
+                // Normal toggle for opening/closing submenu
+                parentLi.classList.toggle('open');
+            }
+        }
+
+        // Initialize sidebar based on screen size
+        document.addEventListener('DOMContentLoaded', function () {
+            const sidebar = document.getElementById('sidebar');
+            
+            function initializeSidebar() {
+                if (window.innerWidth <= 992) {
+                    sidebar.classList.remove('collapsed');
+                } else {
+                    sidebar.classList.add('collapsed');
+                }
+            }
+            
+            initializeSidebar();
+            window.addEventListener('resize', initializeSidebar);
+
+            const activeSubmenuParent = document.querySelector('.has-submenu.active');
+            if (activeSubmenuParent && sidebar.classList.contains('collapsed')) {
+                activeSubmenuParent.classList.add('open');
+            }
+        });
+
+        // Close submenu when sidebar collapses
+        document.addEventListener('DOMContentLoaded', function () {
+            const sidebar = document.getElementById('sidebar');
+            const observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                    if (!sidebar.classList.contains('collapsed')) {
+                        // Close all submenus when sidebar collapses
+                        document.querySelectorAll('.has-submenu.open').forEach(item => {
+                            item.classList.remove('open');
+                        });
+                    }
+                });
+            });
+            
+            observer.observe(sidebar, { attributes: true, attributeFilter: ['class'] });
+
+            // Pricing toggle functionality
+            const pricingToggles = document.querySelectorAll('.pricing-toggle');
+
+            pricingToggles.forEach(toggle => {
+                toggle.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    // Remove active class from all buttons
+                    pricingToggles.forEach(btn => btn.classList.remove('active'));
+
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                });
+            });
+        });
+
+        // Mobile Chat Navigation
+        function goBackToConversations() {
+            const chatContainer = document.querySelector('.chat-container');
+            chatContainer.classList.remove('mobile-view-chat');
+            chatContainer.classList.add('mobile-view-conversations');
+        }
+
+        function showChatArea() {
+            const chatContainer = document.querySelector('.chat-container');
+            chatContainer.classList.remove('mobile-view-conversations');
+            chatContainer.classList.add('mobile-view-chat');
+        }
+
+        // Add click event to all conversation items
+        document.addEventListener('DOMContentLoaded', function() {
+            const conversationItems = document.querySelectorAll('.conversation-item');
+            
+            conversationItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // Only trigger on mobile screens
+                    if (window.innerWidth <= 768) {
+                        showChatArea();
+                    }
+                    
+                    // Remove active class from all items
+                    conversationItems.forEach(i => i.classList.remove('active'));
+                    
+                    // Add active class to clicked item
+                    this.classList.add('active');
+                });
+            });
+
+            // Initialize mobile view - show conversations by default on mobile
+            if (window.innerWidth <= 768) {
+                const chatContainer = document.querySelector('.chat-container');
+                chatContainer.classList.add('mobile-view-conversations');
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>

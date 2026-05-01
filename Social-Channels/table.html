@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ranax Social - Table</title>
+    <!-- Custom Css -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Css -->
+    <link href="assets/css/stylesheet.css" rel="stylesheet">
+    <!-- table css -->
+    <link href="assets/css/table.css" rel="stylesheet">
+    <!-- Whatsapp Css -->
+    <link href="assets/css/whatsapp.css" rel="stylesheet">
+    <!-- DataTables -->
+    <link href="https://cdn.datatables.net/2.3.5/css/dataTables.bootstrap5.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="table-page">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-3">
+                <a href="whatsapp-management.html"><img src="assets/images/svg/back-arrow.svg" height="20"></a>
+                <h6 class="font-30 medium textColor mb-0">WhatsApp Contacts</h6>
+            </div>
+            <div class="p-4 d-flex justify-content-end gap-2">
+                <div class="button-fill d-flex align-items-center gap-1">
+                    <img src="assets/images/svg/filter.svg" height="24">
+                    <h4 class="textColor font-14 medium mb-0">Filters</h4>
+                </div>
+                <div class="button-fill d-flex align-items-center gap-1">
+                    <img src="assets/images/svg/download.svg" height="24">
+                    <h4 class="textColor font-14 medium mb-0">Export</h4>
+                </div>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table id="contactsTable" class="table table-striped table-bordered w-100">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>City</th>
+                        <th>Country</th>
+                        <th>First Message</th>
+                        <th>Last Message</th>
+                        <th>Messages</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="d-flex align-items-center gap-2">
+                                <img src="assets/images/png/user-img.png" alt="Sarah Johnson"
+                                    class="user-avatar rounded-circle" width="40" height="40">
+                                <span class="font-14 semibold textColor">Sarah Johnson</span>
+                            </div>
+                        </td>
+                        <td class="font-14 textColor">sarah.johnson@email.com</td>
+                        <td class="font-14 textColor">+91 9876543210</td>
+                        <td class="font-14 textColor">Chicago</td>
+                        <td class="font-14 textColor">United States</td>
+                        <td>
+                            <div class="d-flex flex-column">
+                                <span class="font-14 regular textColor">Jan 31, 2020</span>
+                                <span class="font-14 regular textColor">14:23</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="d-flex flex-column">
+                                <span class="font-14 regular textColor">Jan 31, 2020</span>
+                                <span class="font-14 regular textColor">14:23</span>
+                            </div>
+                        </td>
+                        <td><span class="message-count">38</span></td>
+                        <td><span class="status-badge status-resolve">Resolve</span></td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="d-flex align-items-center gap-2">
+                                <img src="assets/images/png/user-img.png" alt="Michael Doe"
+                                    class="user-avatar rounded-circle" width="40" height="40">
+                                <span class="font-14 semibold textColor">Michael Doe</span>
+                            </div>
+                        </td>
+                        <td class="font-14 textColor">michael.doe@email.com</td>
+                        <td class="font-14 textColor">+91 9876543210</td>
+                        <td class="font-14 textColor">New Delhi</td>
+                        <td class="font-14 textColor">India</td>
+                        <td>
+                            <div class="d-flex flex-column">
+                                <span class="font-14 regular textColor">Jan 31, 2020</span>
+                                <span class="font-14 regular textColor">14:23</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="d-flex flex-column">
+                                <span class="font-14 regular textColor">Jan 31, 2020</span>
+                                <span class="font-14 regular textColor">14:23</span>
+                            </div>
+                        </td>
+                        <td><span class="message-count">52</span></td>
+                        <td><span class="status-badge status-inquery">Inquiry</span></td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="d-flex align-items-center gap-2">
+                                <img src="assets/images/png/user-img.png" alt="Emma Wilson"
+                                    class="user-avatar rounded-circle" width="40" height="40">
+                                <span class="font-14 semibold textColor">Emma Wilson</span>
+                            </div>
+                        </td>
+                        <td class="font-14 textColor">emma.wilson@email.com</td>
+                        <td class="font-14 textColor">+91 9876543210</td>
+                        <td class="font-14 textColor">Mumbai</td>
+                        <td class="font-14 textColor">India</td>
+                        <td>
+                            <div class="d-flex flex-column">
+                                <span class="font-14 regular textColor">Jan 31, 2020</span>
+                                <span class="font-14 regular textColor">14:23</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="d-flex flex-column">
+                                <span class="font-14 regular textColor">Jan 31, 2020</span>
+                                <span class="font-14 regular textColor">14:23</span>
+                            </div>
+                        </td>
+                        <td><span class="message-count">15</span></td>
+                        <td><span class="status-badge status-unverified">Unverified</span></td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="d-flex align-items-center gap-2">
+                                <img src="assets/images/png/user-img.png" alt="James Brown"
+                                    class="user-avatar rounded-circle" width="40" height="40">
+                                <span class="font-14 semibold textColor">James Brown</span>
+                            </div>
+                        </td>
+                        <td class="font-14 textColor">james.brown@email.com</td>
+                        <td class="font-14 textColor">+91 9876543210</td>
+                        <td class="font-14 textColor">Mumbai</td>
+                        <td class="font-14 textColor">India</td>
+                        <td>
+                            <div class="d-flex flex-column">
+                                <span class="font-14 regular textColor">Jan 31, 2020</span>
+                                <span class="font-14 regular textColor">14:23</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="d-flex flex-column">
+                                <span class="font-14 regular textColor">Jan 31, 2020</span>
+                                <span class="font-14 regular textColor">14:23</span>
+                            </div>
+                        </td>
+                        <td><span class="message-count">23</span></td>
+                        <td><span class="status-badge status-unverified">Unverified</span></td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="d-flex align-items-center gap-2">
+                                <img src="assets/images/png/user-img.png" alt="Lisa Davis"
+                                    class="user-avatar rounded-circle" width="40" height="40">
+                                <span class="font-14 semibold textColor">Lisa Davis</span>
+                            </div>
+                        </td>
+                        <td class="font-14 textColor">lisa.davis@email.com</td>
+                        <td class="font-14 textColor">+91 9876543210</td>
+                        <td class="font-14 textColor">Mumbai</td>
+                        <td class="font-14 textColor">India</td>
+                        <td>
+                            <div class="d-flex flex-column">
+                                <span class="font-14 regular textColor">Jan 31, 2020</span>
+                                <span class="font-14 regular textColor">14:23</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="d-flex flex-column">
+                                <span class="font-14 regular textColor">Jan 31, 2020</span>
+                                <span class="font-14 regular textColor">14:23</span>
+                            </div>
+                        </td>
+                        <td><span class="message-count">16</span></td>
+                        <td><span class="status-badge status-resolve">Resolve</span></td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="d-flex align-items-center gap-2">
+                                <img src="assets/images/png/user-img.png" alt="Robert Miller"
+                                    class="user-avatar rounded-circle" width="40" height="40">
+                                <span class="font-14 semibold textColor">Robert Miller</span>
+                            </div>
+                        </td>
+                        <td class="font-14 textColor">robert.miller@email.com</td>
+                        <td class="font-14 textColor">+91 9876543210</td>
+                        <td class="font-14 textColor">Mumbai</td>
+                        <td class="font-14 textColor">India</td>
+                        <td>
+                            <div class="d-flex flex-column">
+                                <span class="font-14 regular textColor">Jan 31, 2020</span>
+                                <span class="font-14 regular textColor">14:23</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="d-flex flex-column">
+                                <span class="font-14 regular textColor">Jan 31, 2020</span>
+                                <span class="font-14 regular textColor">14:23</span>
+                            </div>
+                        </td>
+                        <td><span class="message-count">9</span></td>
+                        <td><span class="status-badge status-inquery">Inquiry</span></td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="d-flex align-items-center gap-2">
+                                <img src="assets/images/png/user-img.png" alt="Jennifer Garcia"
+                                    class="user-avatar rounded-circle" width="40" height="40">
+                                <span class="font-14 semibold textColor">Jennifer Garcia</span>
+                            </div>
+                        </td>
+                        <td class="font-14 textColor">jennifer.garcia@email.com</td>
+                        <td class="font-14 textColor">+91 9876543210</td>
+                        <td class="font-14 textColor">Mumbai</td>
+                        <td class="font-14 textColor">India</td>
+                        <td>
+                            <div class="d-flex flex-column">
+                                <span class="font-14 regular textColor">Jan 31, 2020</span>
+                                <span class="font-14 regular textColor">14:23</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="d-flex flex-column">
+                                <span class="font-14 regular textColor">Jan 31, 2020</span>
+                                <span class="font-14 regular textColor">14:23</span>
+                            </div>
+                        </td>
+                        <td><span class="message-count">7</span></td>
+                        <td><span class="status-badge status-inquery">Inquiry</span></td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="d-flex align-items-center gap-2">
+                                <img src="assets/images/png/user-img.png" alt="David Martinez"
+                                    class="user-avatar rounded-circle" width="40" height="40">
+                                <span class="font-14 semibold textColor">David Martinez</span>
+                            </div>
+                        </td>
+                        <td class="font-14 textColor">david.martinez@email.com</td>
+                        <td class="font-14 textColor">+91 9876543210</td>
+                        <td class="font-14 textColor">Mumbai</td>
+                        <td class="font-14 textColor">India</td>
+                        <td>
+                            <div class="d-flex flex-column">
+                                <span class="font-14 regular textColor">Jan 31, 2020</span>
+                                <span class="font-14 regular textColor">14:23</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="d-flex flex-column">
+                                <span class="font-14 regular textColor">Jan 31, 2020</span>
+                                <span class="font-14 regular textColor">14:23</span>
+                            </div>
+                        </td>
+                        <td><span class="message-count">12</span></td>
+                        <td><span class="status-badge status-unverified">Unverified</span></td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="d-flex align-items-center gap-2">
+                                <img src="assets/images/png/user-img.png" alt="Amanda Taylor"
+                                    class="user-avatar rounded-circle" width="40" height="40">
+                                <span class="font-14 semibold textColor">Amanda Taylor</span>
+                            </div>
+                        </td>
+                        <td class="font-14 textColor">amanda.taylor@email.com</td>
+                        <td class="font-14 textColor">+91 9876543210</td>
+                        <td class="font-14 textColor">Mumbai</td>
+                        <td class="font-14 textColor">India</td>
+                        <td>
+                            <div class="d-flex flex-column">
+                                <span class="font-14 regular textColor">Jan 31, 2020</span>
+                                <span class="font-14 regular textColor">14:23</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="d-flex flex-column">
+                                <span class="font-14 regular textColor">Jan 31, 2020</span>
+                                <span class="font-14 regular textColor">14:23</span>
+                            </div>
+                        </td>
+                        <td><span class="message-count">18</span></td>
+                        <td><span class="status-badge status-resolve">Resolve</span></td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/2.3.5/js/dataTables.js"></script>
+    <script src="https://cdn.datatables.net/2.3.5/js/dataTables.bootstrap5.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#contactsTable').DataTable({
+                responsive: false,
+                scrollX: true,
+                autoWidth: false,
+                pageLength: 10,
+                paging: true,
+                info: true,
+                searching: true,
+                lengthChange: true,
+                ordering: true,
+                language: {
+                    search: "Search contacts:",
+                    lengthMenu: "Show _MENU_ entries",
+                    info: "Showing _START_ to _END_ of _TOTAL_ entries",
+                    paginate: {
+                        first: "First",
+                        last: "Last",
+                        next: "Next",
+                        previous: "Previous"
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

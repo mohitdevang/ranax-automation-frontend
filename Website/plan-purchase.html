@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plan Purchase - Ranax Social Media</title>
+  <!-- Custom Css -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- Plan Purchase Custom CSS -->
+  <link href="assets/css/plan-purchase.css" rel="stylesheet">
+  <!-- Bootstrap Css -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Css -->
+  <link href="assets/css/stylesheet.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="page-scroll-area">
+    <!-- Navbar -->
+    <header class="navbar-container py-3">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <a href="index.html" class="nav-logo">
+            <img src="assets/images/svg/logo.svg" alt="Ranax Social Logo" />
+          </a>
+          <!-- Navigation Links -->
+          <nav class="nav-menu" id="navMenu">
+            <a class="nav-link-item position-relative font-16 medium" href="pricing.html">Pricing</a>
+            <span class="nav-separator font-16 medium text-muted">></span>
+            <a href="plan-purchase.html" class="nav-link-item position-relative font-16 medium text-muted active">Confirm your plan</a>
+             <span class="nav-separator font-16 medium text-muted">></span>
+            <a href="payment-process.html" class="nav-link-item position-relative font-16 medium text-muted">Make Payment</a>
+          </nav>
+          <!-- Auth Buttons -->
+          <div class="d-flex gap-3 align-items-center">
+            <a href="#"
+              class="font-14 semibold step-number-yellow integration-card-yellow text-white px-3 py-1 rounded-3">Sign
+              Out</a>
+            <div class="user-avatar d-flex align-items-center justify-content-center">
+              <span class="font-14 medium primaryColor">SK</span>
+            </div>
+          </div>
+          <!-- Hamburger -->
+          <div class="nav-toggle flex-column justify-content-between cursor-pointer" id="navToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="main-content  p-sm-4 px-2 py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 m-auto">
+            <div class="d-flex flex-column gap-1 mb-4">
+              <h1 class="font-30 primaryColor medium mb-0">Confirm your subscription </h1>
+              <p class="font-20 regular lightGray mb-0">Review your subscription details and proceed to payment </p>
+            </div>
+
+            <div class="row g-5 gy-4">
+              <!-- Plan details  -->
+              <div class="col-md-6">
+                <div class="plan-details-card rounded-4 d-flex flex-column gap-3">
+                  <h3 class="primaryColor font-24 medium">Plan details</h3>
+                  <!-- Plan Badge -->
+                  <div class="plan-badge">
+                    <span class="font-20 regular text-white">Professional</span>
+                  </div>
+                  <!-- Price -->
+                  <div class="d-flex gap-1 align-items-baseline">
+                    <span class="font-36 medium textColor">$99</span>
+                    <span class="font-16 regular text-muted">/month</span>
+                  </div>
+                  <!-- Features List -->
+                  <ul class="plan-features list-unstyled">
+                    <li class="d-flex align-items-start gap-3 mb-2">
+                      <img src="assets/images/svg/tik-mark.svg" alt="Check" class="feature-check-icon green-filter">
+                      <span class="font-16 regular textColor">10 social accounts</span>
+                    </li>
+                    <li class="d-flex align-items-start gap-3 mb-2">
+                      <img src="assets/images/svg/tik-mark.svg" alt="Check" class="feature-check-icon green-filter">
+                      <span class="font-16 regular textColor">Advanced analytics</span>
+                    </li>
+                    <li class="d-flex align-items-start gap-3 mb-2">
+                      <img src="assets/images/svg/tik-mark.svg" alt="Check" class="feature-check-icon green-filter">
+                      <span class="font-16 regular textColor">Up to 10 team members</span>
+                    </li>
+                    <li class="d-flex align-items-start gap-3 mb-2">
+                      <img src="assets/images/svg/tik-mark.svg" alt="Check" class="feature-check-icon green-filter">
+                      <span class="font-16 regular textColor">Unlimited posts</span>
+                    </li>
+                    <li class="d-flex align-items-start gap-3">
+                      <img src="assets/images/svg/tik-mark.svg" alt="Check" class="feature-check-icon green-filter">
+                      <span class="font-16 regular textColor">Content calendar</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Building summary  -->
+              <div class="col-md-6">
+                <div class="plan-details-card rounded-4 d-flex flex-column gap-3">
+                  <h3 class="primaryColor font-24 medium">Billing summary</h3>
+
+                  <!-- Billing Details -->
+                  <div class="billing-details">
+                    <div class="billing-row d-flex justify-content-between align-items-center mb-3">
+                      <span class="font-18 regular textColor">Plan:</span>
+                      <span class="font-18 regular textColor">Professional</span>
+                    </div>
+                    <div class="billing-row d-flex justify-content-between align-items-center mb-3">
+                      <span class="font-18 regular textColor">Billing:</span>
+                      <span class="font-18 regular textColor">Monthly</span>
+                    </div>
+                    <div class="billing-row d-flex justify-content-between align-items-center mb-3">
+                      <span class="font-18 regular textColor">Price:</span>
+                      <span class="font-18 regular textColor">$99</span>
+                    </div>
+                    <div class="billing-row d-flex justify-content-between align-items-center mb-4">
+                      <span class="font-18 regular textColor">Tax:</span>
+                      <span class="font-18 regular textColor">$18</span>
+                    </div>
+
+                    <!-- Total -->
+                    <div class="billing-total d-flex justify-content-between align-items-center mb-3 px-sm-3 px-1">
+                      <span class="font-20  medium">Total:</span>
+                      <span class="font-20 medium">$117</span>
+                    </div>
+
+                    <!-- Free Trial Info -->
+                    <div class="free-trial-info d-flex align-items-center gap-3 px-sm-3 px-1">
+                     <img src="assets/images/svg/verify-icon.svg">
+                      <div class="d-flex flex-column gap-1">
+                        <p class="font-24 medium mb-0">Free 14 day trial</p>
+                        <p class="trial-subtitle font-14 regular mb-0">Cancel anytime</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-center mt-5">
+              <a href="payment-process.html" class="hero-btn-primary font-16 semibold line-height-26 py-2">Continue to
+                payment</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <!-- jQuery -->
+  <script src="assets/js/jquery.js"></script>
+  <!-- Custom JS -->
+  <script src="assets/js/custom.js"></script>
+
+  <script>
+    // Mobile Navigation Toggle
+    document.addEventListener('DOMContentLoaded', function () {
+      const navToggle = document.getElementById('navToggle');
+      const navMenu = document.getElementById('navMenu');
+
+      if (navToggle && navMenu) {
+        navToggle.addEventListener('click', function () {
+          navMenu.classList.toggle('show');
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ranax Social - What’s New</title>
+    <!-- Custom Css -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/team-flow.css" rel="stylesheet">
+    <link href="assets/css/whatsapp.css" rel="stylesheet">
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Css -->
+    <link href="assets/css/stylesheet.css" rel="stylesheet">
+    <!-- table css -->
+    <link href="assets/css/table.css" rel="stylesheet">
+    <!-- What's New CSS -->
+    <link href="assets/css/other.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Dashboard Container -->
+    <div class="dashboard-container">
+        <!-- Left Sidebar -->
+        <aside class="dashboard-sidebar" id="dashboardSidebar">
+            <div class="">
+                <!-- Logo -->
+                <div class="logo-card d-flex align-items-center justify-content-center">
+                    <div class="sidebar-logo">
+                        <img src="assets/images/svg/logo.svg" alt="Ranax Social Logo" />
+                    </div>
+                </div>
+                <div class="sidebar-content">
+                    <!-- Post buttons -->
+                    <div class="d-flex flex-column gap-3 post-button" id="postButtonDiv">
+                        <!-- Create Posts Button with Dropdown -->
+                        <div class="dropdown">
+                            <button id="createPostsBtn"
+                                class="sidebar-nav-item font-14 regular w-100 text-white border-0 d-flex align-items-center gap-3"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="assets/images/svg/plus.svg" alt="Plus" width="20" height="20">
+                                Create Posts
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-custom">
+                                <li><a href="create-instagram-post.html"
+                                        class="dropdown-item d-flex align-items-center gap-2 font-14 regular">
+                                        <img src="assets/images/png/instagram.png" alt="Instagram" width="16"
+                                            height="16">
+                                        <span>Instagram</span>
+                                    </a></li>
+                            </ul>
+                        </div>
+                        <!--  Calendar -->
+                        <a href="#" id="calendarBtn"
+                            class="sidebar-nav-item font-14 regular w-100 text-white border-0 d-flex align-items-center  gap-3">
+                            <img src="assets/images/svg/Calander.svg" alt="Calendar" width="16" height="16">
+                            Calendar
+                        </a>
+                        <!--   What's new -->
+                        <a href="whatsNew.html" id="whatsNewBtn"
+                            class="sidebar-nav-item active font-14 regular w-100 text-white border-0 d-flex align-items-center  gap-3">
+                            <img src="assets/images/svg/gift-fill.svg" alt="What's new" width="20" height="20">
+                            What's new
+                        </a>
+                    </div>
+                    <!-- Whatsaap connected buttons -->
+                    <div class="after-connected-whatsapp" id="afterConnectedDiv" style="display: none;">
+                        <div class="d-flex flex-column gap-3">
+                            <!-- Add WhatsApp Button (initially hidden) -->
+                            <div class="whatsapp-add-button whatsapp-add" id="whatsappAddButton">
+                                <button
+                                    class="sidebar-create-btn font-14 regular w-100 text-white border-0 d-flex align-items-center justify-content-center gap-2">
+                                    <img src="assets/images/svg/plus.svg" alt="Plus" width="16" height="16">
+                                    Add WhatsApp
+                                </button>
+                            </div>
+
+                            <!-- Connected User Profile (initially hidden) -->
+                            <div class="connected-user-profile whatsapp-profile" id="whatsappConnectedProfile">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="profile-image">
+                                        <img src="assets/images/png/user-img.png" alt="Profile"
+                                            class="rounded-circle user-img" height="30" width="30">
+                                    </div>
+                                    <div class="profile-info flex-grow-1">
+                                        <div class="font-14 medium black" id="connectedUserName">Rahul Kumar</div>
+                                        <div class="font-12 regular black" id="connectedUserPhone">+1 (951) 315-2454
+                                        </div>
+                                    </div>
+                                    <img src="assets/images/svg/arrow.svg" alt="Arrow" class="ms-auto" width="14"
+                                        height="14">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Social Channels Section -->
+                    <div class="sidebar-section">
+                        <h6 class="font-16 medium mb-2 p-2 black">Social Channels</h6>
+
+                        <div class="social-channels-list d-flex flex-column gap-3">
+                            <a href="#"
+                                class="social-channel-item font-14 medium d-flex align-items-center gap-3 textColor">
+                                <img src="assets/images/png/whatsApp.png" alt="WhatsApp" class="social-channel-icon">
+                                <span>WhatsApp</span>
+                                <img src="assets/images/svg/profile-arrow.svg" alt="Arrow" class="ms-auto" width="14"
+                                    height="14">
+                            </a>
+
+                            <a href="#"
+                                class="social-channel-item font-14 medium d-flex align-items-center gap-3 textColor">
+                                <img src="assets/images/png/instagram.png" alt="Instagram" class="social-channel-icon">
+                                <span>Instagram</span>
+                                <img src="assets/images/svg/profile-arrow.svg" alt="Arrow" class="ms-auto" width="14"
+                                    height="14">
+                            </a>
+
+                            <a href="#"
+                                class="social-channel-item font-14 medium d-flex align-items-center gap-3 textColor">
+                                <img src="assets/images/png/Facebook.png" alt="Facebook" class="social-channel-icon">
+                                <span>Facebook</span>
+                                <img src="assets/images/svg/profile-arrow.svg" alt="Arrow" class="ms-auto" width="14"
+                                    height="14">
+                            </a>
+
+                            <a href="#"
+                                class="social-channel-item font-14 medium d-flex align-items-center gap-3 textColor">
+                                <img src="assets/images/png/Linkedin.png" alt="LinkedIn" class="social-channel-icon">
+                                <span>LinkedIn</span>
+                                <img src="assets/images/svg/profile-arrow.svg" alt="Arrow" class="ms-auto" width="14"
+                                    height="14">
+                            </a>
+
+                            <a href="#"
+                                class="social-channel-item font-14 medium d-flex align-items-center gap-3 textColor">
+                                <img src="assets/images/png/Telegram.png" alt="YouTube" class="social-channel-icon">
+                                <span>Telegram</span>
+                                <img src="assets/images/svg/profile-arrow.svg" alt="Arrow" class="ms-auto" width="14"
+                                    height="14">
+                            </a>
+                            <button
+                                class="view-more-btn font-14 medium w-100 text-center mt-3 bg-transparent border-0">View
+                                More</button>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!-- Right Content Area -->
+        <div class="dashboard-content">
+            <!-- Navbar Section -->
+            <div class="position-relative">
+                <header class="navbar">
+                    <div class="container-fluid">
+                        <div class="nav-container">
+                            <!-- navbar list -->
+                            <nav class="nav-menu" id="navMenu">
+                                <div class="navbar-list">
+                                    <a class="nav-link-list font-14 regular" href="home.html">Home</a>
+                                    <a class="nav-link-list font-14 regular" href="junction.html">Junction</a>
+                                    <a class="nav-link-list font-14 regular" href="team.html">Team</a>
+                                    <a class="nav-link-list font-14 regular" href="ai-automation.html">Ai Automation</a>
+                                    <a class="nav-link-list font-14 regular" href="reports.html">Reports</a>
+                                </div>
+                            </nav>
+                            <div class="d-flex align-items-center justify-content-between gap-3 w-100">
+                                <!-- Dropdown -->
+                                <div class="d-flex align-items-center gap-3 position-relative">
+                                    <!-- Sidebar Toggle Button -->
+                                    <button class="sidebar-toggle-btn d-lg-none" type="button" id="sidebarToggle">
+                                        <div class="nav-toggle">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </button>
+                                </div>
+                                <div class="d-flex align-items-center gap-3">
+                                    <!-- Desktop Right Side Actions -->
+                                    <div class="d-flex align-items-center gap-4">
+                                        <!-- Social icon -->
+                                        <div class="social-icons-mobile">
+                                            <div class="d-flex align-items-center gap-3">
+                                                <!-- Notifications -->
+                                                <div class="dashboard-icon">
+                                                    <img src="assets/images/svg/notifications.svg" alt="Notifications"
+                                                        width="20" height="20">
+                                                </div>
+
+                                                <!-- Settings -->
+                                                <div class="dashboard-icon">
+                                                    <img src="assets/images/svg/setting.svg" alt="Settings" width="20"
+                                                        height="20">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Profile Dropdown -->
+                                        <div class="dropdown custom-profile">
+                                            <div class="dashboard-profile dropdown-toggle d-flex justify-content-center align-items-center"
+                                                data-bs-toggle="dropdown" aria-expanded="false" id="profileDropdown">
+                                                <span class="font-14 semibold">RS</span>
+                                            </div>
+                                            <ul class="dropdown-menu dropdown-menu-end profile-dropdown"
+                                                aria-labelledby="profileDropdown">
+                                                <li class="dropdown-header">
+                                                    <div class="d-flex align-items-center">
+                                                        <div
+                                                            class="profile-avatar me-3 semibold d-flex justify-content-center align-items-center text-white">
+                                                            <span class="font-12 semibold">RS</span>
+                                                        </div>
+                                                        <div>
+                                                            <div class="font-14 semibold text-dark">Ranax Social</div>
+                                                            <div class="font-12 text-muted">user@example.com</div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+
+                                                <li><a class="dropdown-item font-14 medium" href="#">
+                                                        <svg width="16" height="16" class="me-3" fill="currentColor"
+                                                            viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                                                        </svg>
+                                                        Profile
+                                                    </a></li>
+                                                <li><a class="dropdown-item font-14 medium" href="#">
+                                                        <svg width="16" height="16" class="me-3" fill="currentColor"
+                                                            viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
+                                                            <path
+                                                                d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z" />
+                                                        </svg>
+                                                        Settings
+                                                    </a></li>
+                                                <li>
+                                                    <hr class="dropdown-divider">
+                                                </li>
+                                                <li><a class="dropdown-item font-14 medium text-danger" href="#">
+                                                        <svg width="16" height="16" class="me-3" fill="currentColor"
+                                                            viewBox="0 0 16 16">
+                                                            <path fill-rule="evenodd"
+                                                                d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z" />
+                                                            <path fill-rule="evenodd"
+                                                                d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+                                                        </svg>
+                                                        Logout
+                                                    </a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- toggle button -->
+                                        <div class="d-flex align-items-center gap-4">
+                                            <div class="nav-toggle" id="navToggle">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </header>
+            </div>
+            <!-- Dashboard Main Content -->
+            <main class="dashboard-main">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <!-- Header Section -->
+                            <h2 class="font-30 medium textColor mb-sm-4 mb-3">What's New</h2>
+
+                            <!-- Tab Navigation -->
+                            <div class="d-flex gap-2 mb-4 py-2 news-tabs" id="tabsContainer">
+                                <button class="tab-btn font-16 medium active" data-filter="all">All</button>
+                                <button class="tab-btn font-16 medium" data-filter="new">New Features</button>
+                                <button class="tab-btn font-16 medium" data-filter="improvement">Improvements</button>
+                                <button class="tab-btn font-16 medium" data-filter="bug-fix">Bug Fixes</button>
+                                <button class="tab-btn font-16 medium" data-filter="announcement">Announcements</button>
+                            </div>
+
+                            <!-- News Grid -->
+                            <div id="newsGrid" class="d-flex flex-column gap-4">
+
+                                <!-- News Item 1 -->
+                                <div class="news-item" data-category="improvement">
+                                    <div class="news-card">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="flex-grow-1">
+                                                <div class="d-flex align-items-center gap-3 mb-3">
+                                                    <div
+                                                        class="news-icon d-flex align-items-center justify-content-center">
+                                                        <img src="assets/images/svg/Calendar-fill.svg" alt="Improvement"
+                                                            height="24" width="24">
+                                                    </div>
+                                                    <div class="d-flex flex-column gap-2 align-items-start">
+                                                        <span
+                                                            class="news-badge new font-12 text-uppercase text-nowrap">NEW</span>
+                                                        <h3 class="font-16 medium textColor mb-0">Bulk Scheduling
+                                                            Feature</h3>
+                                                    </div>
+
+                                                </div>
+                                                <p class="grayDark mb-3 line-height-22 font-16 regular">Schedule
+                                                    multiple posts across all social channels at once. Save time and
+                                                    maintain consistent posting schedules with our new bulk
+                                                    scheduling tool.
+                                                </p>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <span class="font-14 regular grayDark">Dec 10, 2025</span>
+                                                    <a href="#"
+                                                        class="news-link d-flex align-items-center gap-2 primaryColor font-16 semibold">
+                                                        Learn more
+                                                        <img src="assets/images/svg/arrow-right.svg" alt="Arrow"
+                                                            height="12" width="12" class="blue-filter">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- News Item 2 -->
+                                <div class="news-item" data-category="improvement">
+                                    <div class="news-card">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="flex-grow-1">
+                                                <div class="d-flex align-items-center gap-3 mb-3">
+                                                    <div
+                                                        class="news-icon d-flex align-items-center justify-content-center">
+                                                        <img src="assets/images/svg/Analytics-fill.svg"
+                                                            alt="Improvement" height="24" width="24">
+                                                    </div>
+                                                    <div class="d-flex flex-column gap-2 align-items-start">
+                                                        <span
+                                                            class="news-badge new font-12 text-uppercase text-nowrap">IMPROVED</span>
+                                                        <h3 class="font-16 medium textColor mb-0">Improved Analytics
+                                                            Dashboard</h3>
+                                                    </div>
+
+                                                </div>
+                                                <p class="grayDark mb-3 line-height-22 font-16 regular">Get deeper
+                                                    insights with our redesigned analytics dashboard. Track
+                                                    performance
+                                                    metrics in real-time and make data-driven decisions with
+                                                    enhanced
+                                                    visualizations.
+                                                </p>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <span class="font-14 regular grayDark">Dec 10, 2025</span>
+                                                    <a href="#"
+                                                        class="news-link d-flex align-items-center gap-2 primaryColor font-16 semibold">
+                                                        Learn more
+                                                        <img src="assets/images/svg/arrow-right.svg" alt="Arrow"
+                                                            height="12" width="12" class="blue-filter">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- News Item 3 -->
+                                <div class="news-item" data-category="bug-fix">
+                                    <div class="news-card">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="flex-grow-1">
+                                                <div class="d-flex align-items-center gap-3 mb-3">
+                                                    <div
+                                                        class="news-icon d-flex align-items-center justify-content-center">
+                                                        <img src="assets/images/svg/Sync.svg" alt="Bug Fix" height="24"
+                                                            width="24">
+                                                    </div>
+                                                    <div class="d-flex flex-column gap-2 align-items-start">
+                                                        <span
+                                                            class="news-badge new font-12 text-uppercase text-nowrap">FIXED</span>
+                                                        <h3 class="font-16 medium textColor mb-0">Fixed Instagram DM
+                                                            Sync Issue</h3>
+                                                    </div>
+
+                                                </div>
+                                                <p class="grayDark mb-3 line-height-22 font-16 regular">Resolved the
+                                                    synchronization issue with Instagram Direct Messages. All DMs
+                                                    will
+                                                    now sync properly across devices and updates will be reflected
+                                                    in
+                                                    real-time.
+                                                </p>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <span class="font-14 regular grayDark">Dec 8, 2024</span>
+                                                    <a href="#"
+                                                        class="news-link d-flex align-items-center gap-2 primaryColor font-16 semibold">
+                                                        Learn more
+                                                        <img src="assets/images/svg/arrow-right.svg" alt="Arrow"
+                                                            height="12" width="12" class="blue-filter">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- News Item 4 -->
+                                <div class="news-item" data-category="announcement">
+                                    <div class="news-card">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="flex-grow-1">
+                                                <div class="d-flex align-items-center gap-3 mb-3">
+                                                    <div
+                                                        class="news-icon d-flex align-items-center justify-content-center">
+                                                        <img src="assets/images/svg/announcement.svg" alt="Announcement"
+                                                            height="24" width="24">
+                                                    </div>
+                                                    <div class="d-flex flex-column gap-2 align-items-start">
+                                                        <span
+                                                            class="news-badge new font-12 text-uppercase text-nowrap">ANNOUNCEMENT</span>
+                                                        <h3 class="font-16 medium textColor mb-0">WhatsApp API
+                                                            Integration Released</h3>
+                                                    </div>
+
+                                                </div>
+                                                <p class="grayDark mb-3 line-height-22 font-16 regular">Officially
+                                                    launched full WhatsApp Business API integration. Connect your
+                                                    WhatsApp account to reach customers directly and manage
+                                                    conversations from a single dashboard.
+                                                </p>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <span class="font-14 regular grayDark">Dec 5, 2025</span>
+                                                    <a href="#"
+                                                        class="news-link d-flex align-items-center gap-2 primaryColor font-16 semibold">
+                                                        Learn more
+                                                        <img src="assets/images/svg/arrow-right.svg" alt="Arrow"
+                                                            height="12" width="12" class="blue-filter">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- News Item 5 -->
+                                <div class="news-item" data-category="improvement">
+                                    <div class="news-card">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="flex-grow-1">
+                                                <div class="d-flex align-items-center gap-3 mb-3 ">
+                                                    <div
+                                                        class="news-icon d-flex align-items-center justify-content-center">
+                                                        <img src="assets/images/svg/automation.svg" alt="Improvement"
+                                                            height="24" width="24" class="blue-filter">
+                                                    </div>
+                                                    <div class="d-flex flex-column gap-2 align-items-start">
+                                                        <span
+                                                            class="news-badge new font-12 text-uppercase text-nowrap">IMPROVED</span>
+                                                        <h3 class="font-16 medium textColor mb-0">Performance &
+                                                            Speed
+                                                            Enhancements</h3>
+                                                    </div>
+
+                                                </div>
+                                                <p class="grayDark mb-3 line-height-22 font-16 regular">Experience
+                                                    lightning-fast performance with our latest optimizations. Page
+                                                    load
+                                                    times reduced by 40% and improved responsiveness across the
+                                                    entire
+                                                    platform.
+                                                </p>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <span class="font-14 regular grayDark">Dec 2, 2025</span>
+                                                    <a href="#"
+                                                        class="news-link d-flex align-items-center gap-2 primaryColor font-16 semibold">
+                                                        Learn more
+                                                        <img src="assets/images/svg/arrow-right.svg" alt="Arrow"
+                                                            height="12" width="12" class="blue-filter">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- Empty State -->
+                                <div class="text-center py-5" id="emptyState" style="display: none;">
+                                    <div class="mb-3">
+                                        <img src="assets/images/svg/block.svg" alt="No items"
+                                            style="width: 60px; height: 60px; opacity: 0.5;">
+                                    </div>
+                                    <h5 class="font-16 medium textColor">No items found</h5>
+                                    <p class="font-14 textLightColor">There are no updates in this category at the
+                                        moment.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </main>
+
+        </div>
+    </div>
+
+    <!-- Sidebar Overlay for Mobile -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/sidebar.js"></script>
+
+
+
+</body>
+
+</html>
+
+<script>
+    // Tab filtering functionality
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.addEventListener('click', function () {
+            const filter = this.getAttribute('data-filter');
+
+            // Update active tab
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+
+            // Filter news cards
+            const cards = document.querySelectorAll('.news-item');
+            const emptyState = document.getElementById('emptyState');
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                    card.style.display = 'flex';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Show empty state if no items
+            emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
+        });
+    });
+</script>

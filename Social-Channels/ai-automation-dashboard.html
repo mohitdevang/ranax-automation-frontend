@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ranax Social - ChatFlow Dashboard</title>
+    <!-- Custom Css -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Css -->
+    <link href="assets/css/stylesheet.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Dashboard Container -->
+    <div class="dashboard-container">
+
+
+        <!-- Right Content Area -->
+        <div class="dashboard-content">
+            <!-- Navbar Section -->
+            <div class="position-relative">
+                <header class="navbar py-2">
+                    <div class="container-fluid">
+                        <div class="nav-container gap-5">
+                            <!-- Logo -->
+                            <div class="logo-card d-flex align-items-center justify-content-center p-0">
+                                <div class="sidebar-logo">
+                                    <img src="assets/images/svg/logo.svg" alt="Ranax Social Logo" />
+                                </div>
+                            </div>
+                            <!-- navbar list -->
+                            <nav class="nav-menu" id="navMenu">
+                                <div class="navbar-list">
+                                    <a class="nav-link-list font-14 regular" href="home.html">Home</a>
+                                    <a class="nav-link-list font-14 regular" href="junction.html">Junction</a>
+                                    <a class="nav-link-list font-14 regular" href="team.html">Team</a>
+                                    <a class="nav-link-list font-14 regular active" href="ai-automation.html">Ai Automation</a>
+                                    <a class="nav-link-list font-14 regular" href="reports.html">Reports</a>
+                                </div>
+                            </nav>
+                            <div class="d-flex align-items-center justify-content-between gap-3 w-100">
+                                <!-- Dropdown -->
+                                <div class="d-flex align-items-center gap-3 position-relative">
+                                </div>
+                                <div class="d-flex align-items-center gap-3">
+                                    <!-- Desktop Right Side Actions -->
+                                    <div class="d-flex align-items-center gap-4">
+                                        <!-- Create Posts Button -->
+                                     
+                                        <!-- Social icon -->
+                                        <div class="social-icons-mobile">
+                                            <div class="d-flex align-items-center gap-3">
+                                                <!-- Notifications -->
+                                                <div class="dashboard-icon">
+                                                    <img src="assets/images/svg/notifications.svg" alt="Notifications"
+                                                        width="20" height="20">
+                                                </div>
+
+                                                <!-- Settings -->
+                                                <div class="dashboard-icon">
+                                                    <img src="assets/images/svg/setting.svg" alt="Settings" width="20"
+                                                        height="20">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Profile Dropdown -->
+                                    <div class="dropdown custom-profile">
+                                        <div class="dashboard-profile dropdown-toggle d-flex justify-content-center align-items-center"
+                                            data-bs-toggle="dropdown" aria-expanded="false" id="profileDropdown">
+                                            <span class="font-14 semibold">RS</span>
+                                        </div>
+                                        <ul class="dropdown-menu dropdown-menu-end profile-dropdown"
+                                            aria-labelledby="profileDropdown">
+                                            <li class="dropdown-header">
+                                                <div class="d-flex align-items-center">
+                                                    <div
+                                                        class="profile-avatar me-3 semibold d-flex justify-content-center align-items-center text-white">
+                                                        <span class="font-12 semibold">RS</span>
+                                                    </div>
+                                                    <div>
+                                                        <div class="font-14 semibold text-dark">Ranax Social</div>
+                                                        <div class="font-12 text-muted">user@example.com</div>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                            <li><a class="dropdown-item font-14 medium" href="#">
+                                                    <svg width="16" height="16" class="me-3" fill="currentColor"
+                                                        viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                                                    </svg>
+                                                    Profile
+                                                </a></li>
+                                            <li><a class="dropdown-item font-14 medium" href="#">
+                                                    <svg width="16" height="16" class="me-3" fill="currentColor"
+                                                        viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
+                                                        <path
+                                                            d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z" />
+                                                    </svg>
+                                                    Settings
+                                                </a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li><a class="dropdown-item font-14 medium text-danger" href="#">
+                                                    <svg width="16" height="16" class="me-3" fill="currentColor"
+                                                        viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+                                                    </svg>
+                                                    Logout
+                                                </a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- toggle button -->
+                                    <div class="d-flex align-items-center gap-4">
+                                        <div class="nav-toggle" id="navToggle">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        <!-- Flow Right Sidebar Toggle (mobile only) -->
+                                        <div class="right-sidebar-toggle-btn d-flex d-md-none align-items-center justify-content-center cursor-pointer"
+                                            style="background: rgba(255,255,255,0.2); border-radius: 6px; padding: 5px; width: 30px; height: 30px;">
+                                            <img src="assets/images/svg/chat-flow.svg" height="12"
+                                                style="filter: brightness(0) invert(1);">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+            <div class="d-flex h-100">
+                <div class="mini-sidebar">
+                    <img src="assets/images/svg/Home.svg">
+                </div>
+                <!-- Left Sidebar -->
+                <aside class="chatflow-sidebar" id="dashboardSidebar">
+                    <h3 class="font-24 medium textDark mb-0 text-nowrap">Ai & Automation</h3>
+                    <ul class="chatflow-sidebar-list d-flex flex-column gap-3">
+                        <li class="font-20 regular d-flex align-items-center gap-3">
+                            <div class="sidebar-icon-bg d-flex justify-content-center align-items-center"><img
+                                    src="assets/images/svg/chat-flow.svg"></div>Chatflow
+                        </li>
+                        <li class="font-20 regular d-flex align-items-center gap-3">
+                            <div class="sidebar-icon-bg d-flex justify-content-center align-items-center">
+                                <img src="">
+                            </div>
+                            Ai Agent
+                        </li>
+                    </ul>
+                </aside>
+
+                <!-- Dashboard Main Content -->
+                <main class="dashboard-main p-0">
+                    <!-- Top Header -->
+                    <div class="d-flex align-items-center justify-content-between chat-topbar">
+                        <!-- left side -->
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="flow-toggle-btn toggle-bg d-flex justify-content-center align-items-center">
+                                <img src="assets/images/svg/toggle.svg" class="cursor-pointer" height="20">
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h4 class="font-16 medium textDark mb-0">Ranax Chatflow 1</h4>
+                                <h5 class="font-12 regular textLightColor mb-0">DRAFT</h5>
+                            </div>
+                        </div>
+                        <!-- right side -->
+                        <div class="d-flex align-items-center gap-sm-3 gap-1">
+                            <div class="filter-item">
+                                <div class="custom-select status-select">
+                                    <div class="select-trigger more-btn font-14 regular primaryColor">
+                                        More
+                                    </div>
+                                    <div class="select-options">
+                                        <div class="select-option" data-value="duplicate">Duplicate</div>
+                                        <div class="select-option" data-value="export">Export</div>
+                                        <div class="select-option text-danger" data-value="delete">Delete</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="save-btn font-14 regular border-0 text-white">Save</button>
+                            <button type="button" class="live-btn font-14 regular border-0 text-white">Set Live</button>
+                            <div class="toggle-bg d-flex align-items-center justify-content-center">
+                                <img src="assets/images/svg/close.svg" class="cursor-pointer" height="20">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Middle Content -->
+                    <div class="d-flex justify-content-between h-100">
+                        <!-- Main Content -->
+                        <div class="chatFlow-container-bg w-100">
+                            <div class="chatFlow-container position-relative">
+                                <div class="chatFlow-create-card d-flex flex-column gap-2 position-absolute cursor-pointer"
+                                    ondblclick="openToolSidebar('keyword')" style="left: 50px; top: 50px;">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <div
+                                            class="tool-icon  d-flex justify-content-center align-items-center bg-voilet-light">
+                                            <img src="assets/images/svg/ai.svg" class="voilet-filter">
+                                        </div>
+                                        <h4 class="font-14 medium textDark mb-0"> Keyword</h4>
+                                    </div>
+                                    <h5 class="font-12 regular textLightColor mb-0">Entry point for the chatflow.</h5>
+                                    <span class="dot cursor-pointer"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ChatFlow Right Sidebar -->
+                        <div class="flow-right-sidebar h-100 position-relative overflow-hidden d-none d-md-block"
+                            id="flowRightSidebar">
+                            <!-- Sidebar Content -->
+                            <div class="sidebar-content-wrapper" id="sidebarContentWrapper">
+                                <div class="sidebar-header pb-2 mb-2 p-0">
+                                    <h3 class="font-16 medium textDark mb-0">Chat Flow Tools</h3>
+                                </div>
+
+                                <!-- Accordion Container -->
+                                <div class="accordion" id="chatFlowAccordion">
+
+                                    <!-- Share Message Section -->
+                                    <div class="accordion-item sidebar-section" data-section="share-message">
+                                        <h2 class="accordion-header" id="shareMessageHeader">
+                                            <button
+                                                class="accordion-button collapsed section-header d-flex justify-content-between p-2 align-items-center"
+                                                type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#shareMessageContent" aria-expanded="false"
+                                                aria-controls="shareMessageContent">
+                                                <h4 class="section-title font-16 regular mb-0">Share Message</h4>
+                                                <img src="assets/images/svg/dropdown-arrow.svg" alt="Arrow"
+                                                    class="section-arrow">
+                                            </button>
+                                        </h2>
+                                        <div id="shareMessageContent" class="accordion-collapse collapse"
+                                            aria-labelledby="shareMessageHeader" data-bs-parent="#chatFlowAccordion">
+                                            <div class="accordion-body section-content">
+                                                <div class="tool-option" data-tool="text-message">
+                                                    <div
+                                                        class="tool-icon  d-flex justify-content-center align-items-center bg-voilet-light">
+                                                        <img src="assets/images/svg/chat.svg" alt="Text">
+                                                    </div>
+                                                    <span class="font-16 regular black">Text</span>
+                                                </div>
+                                                <div class="tool-option" data-tool="media-message">
+                                                    <div
+                                                        class="tool-icon  d-flex justify-content-center align-items-center bg-voilet-light">
+                                                        <img src="assets/images/svg/file.svg" alt="Media">
+                                                    </div>
+                                                    <span class="font-16 regular black">Media</span>
+                                                </div>
+                                                <div class="tool-option" data-tool="cta-message">
+                                                    <div
+                                                        class="tool-icon  d-flex justify-content-center align-items-center bg-voilet-light">
+                                                        <img src="assets/images/svg/action.svg" alt="CTA">
+                                                    </div>
+                                                    <span class="font-16 regular black">CTA</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Ask for Information Section -->
+                                    <div class="accordion-item sidebar-section" data-section="ask-information">
+                                        <h2 class="accordion-header" id="askInfoHeader">
+                                            <button
+                                                class="accordion-button collapsed section-header d-flex justify-content-between p-2 align-items-center"
+                                                type="button" data-bs-toggle="collapse" data-bs-target="#askInfoContent"
+                                                aria-expanded="false" aria-controls="askInfoContent">
+                                                <h4 class="section-title font-16 regular mb-0">Ask for information</h4>
+                                                <img src="assets/images/svg/dropdown-arrow.svg" alt="Arrow"
+                                                    class="section-arrow">
+                                            </button>
+                                        </h2>
+                                        <div id="askInfoContent" class="accordion-collapse collapse"
+                                            aria-labelledby="askInfoHeader" data-bs-parent="#chatFlowAccordion">
+                                            <div class="accordion-body section-content">
+                                                <div class="tool-option" data-tool="collect-name">
+                                                    <div
+                                                        class="tool-icon  d-flex justify-content-center align-items-center bg-yellow-light">
+                                                        <img src="assets/images/svg/yellow-album.svg"
+                                                            alt="Quick reply buttons">
+                                                    </div>
+                                                    <span class="font-16 regular black">Quick reply buttons</span>
+                                                </div>
+                                                <div class="tool-option" data-tool="collect-email">
+                                                    <div
+                                                        class="tool-icon  d-flex justify-content-center align-items-center bg-yellow-light">
+                                                        <img src="assets/images/svg/yellow-album.svg"
+                                                            alt="List options">
+                                                    </div>
+                                                    <span class="font-16 regular black"> List options </span>
+                                                </div>
+                                                <div class="tool-option" data-tool="collect-phone">
+                                                    <div
+                                                        class="tool-icon  d-flex justify-content-center align-items-center bg-yellow-light">
+                                                        <img src="assets/images/svg/yellow-album.svg"
+                                                            alt="Ask Anything">
+                                                    </div>
+                                                    <span class="font-16 regular black">Ask Anything </span>
+                                                </div>
+                                                <div class="tool-option" data-tool="collect-address">
+                                                    <div
+                                                        class="tool-icon  d-flex justify-content-center align-items-center bg-yellow-light">
+                                                        <img src="assets/images/svg/yellow-album.svg" alt="Address">
+                                                    </div>
+                                                    <span class="font-16 regular black">Address </span>
+                                                </div>
+                                                <div class="tool-option" data-tool="collect-forms">
+                                                    <div
+                                                        class="tool-icon  d-flex justify-content-center align-items-center bg-yellow-light">
+                                                        <img src="assets/images/svg/yellow-album.svg" alt="Forms">
+                                                    </div>
+                                                    <span class="font-16 regular black">Forms </span>
+                                                </div>
+                                                <div class="tool-option" data-tool="collect-location">
+                                                    <div
+                                                        class="tool-icon  d-flex justify-content-center align-items-center bg-yellow-light">
+                                                        <img src="assets/images/svg/yellow-album.svg" alt="Location">
+                                                    </div>
+                                                    <span class="font-16 regular black">Location </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Actions Section -->
+                                    <div class="accordion-item sidebar-section" data-section="actions">
+                                        <h2 class="accordion-header" id="actionsHeader">
+                                            <button
+                                                class="accordion-button collapsed section-header d-flex justify-content-between p-2 align-items-center"
+                                                type="button" data-bs-toggle="collapse" data-bs-target="#actionsContent"
+                                                aria-expanded="false" aria-controls="actionsContent">
+                                                <h4 class="section-title font-16 regular mb-0">Actions</h4>
+                                                <img src="assets/images/svg/dropdown-arrow.svg" alt="Arrow"
+                                                    class="section-arrow">
+                                            </button>
+                                        </h2>
+                                        <div id="actionsContent" class="accordion-collapse collapse"
+                                            aria-labelledby="actionsHeader" data-bs-parent="#chatFlowAccordion">
+                                            <div class="accordion-body section-content">
+                                                <div class="tool-option" data-tool="set-condition">
+                                                    <div
+                                                        class="tool-icon  d-flex justify-content-center align-items-center bg-blue-light">
+                                                        <img src="assets/images/svg/blue-album.svg"
+                                                            alt="Cheque condition">
+                                                    </div>
+                                                    <span class="font-16 regular black">Cheque condition </span>
+                                                </div>
+                                                <div class="tool-option" data-tool="write-attribute">
+                                                    <div
+                                                        class="tool-icon  d-flex justify-content-center align-items-center bg-blue-light">
+                                                        <img src="assets/images/svg/blue-album.svg"
+                                                            alt="Write attribute">
+                                                    </div>
+                                                    <span class="font-16 regular black">Write attribute</span>
+                                                </div>
+                                                <div class="tool-option" data-tool="assign">
+                                                    <div
+                                                        class="tool-icon  d-flex justify-content-center align-items-center bg-blue-light">
+                                                        <img src="assets/images/svg/blue-album.svg" alt="Assign">
+                                                    </div>
+                                                    <span class="font-16 regular black">Assign</span>
+                                                </div>
+                                                <div class="tool-option" data-tool="alert">
+                                                    <div
+                                                        class="tool-icon  d-flex justify-content-center align-items-center bg-blue-light">
+                                                        <img src="assets/images/svg/blue-album.svg" alt="Alert">
+                                                    </div>
+                                                    <span class="font-16 regular black">Alert </span>
+                                                </div>
+                                                <div class="tool-option" data-tool="custom-api">
+                                                    <div
+                                                        class="tool-icon  d-flex justify-content-center align-items-center bg-blue-light">
+                                                        <img src="assets/images/svg/blue-album.svg" alt="Custom API">
+                                                    </div>
+                                                    <span class="font-16 regular black">Custom API </span>
+                                                </div>
+                                                <div class="tool-option" data-tool="open-conversation">
+                                                    <div
+                                                        class="tool-icon  d-flex justify-content-center align-items-center bg-blue-light">
+                                                        <img src="assets/images/svg/blue-album.svg"
+                                                            alt="Open conversation">
+                                                    </div>
+                                                    <span class="font-16 regular black">Open conversation </span>
+                                                </div>
+                                                <div class="tool-option" data-tool="flow-completed">
+                                                    <div
+                                                        class="tool-icon  d-flex justify-content-center align-items-center bg-blue-light">
+                                                        <img src="assets/images/svg/blue-album.svg"
+                                                            alt="Flow completed">
+                                                    </div>
+                                                    <span class="font-16 regular black">Flow completed </span>
+                                                </div>
+                                                <div class="tool-option" data-tool="connect-other-flow">
+                                                    <div
+                                                        class="tool-icon  d-flex justify-content-center align-items-center bg-blue-light">
+                                                        <img src="assets/images/svg/blue-album.svg"
+                                                            alt="Connect other flow">
+                                                    </div>
+                                                    <span class="font-16 regular black">Connect other flow</span>
+                                                </div>
+                                                <div class="tool-option" data-tool="wait">
+                                                    <div
+                                                        class="tool-icon  d-flex justify-content-center align-items-center bg-blue-light">
+                                                        <img src="assets/images/svg/blue-album.svg" alt="Wait">
+                                                    </div>
+                                                    <span class="font-16 regular black">Wait </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Apps Section -->
+                                    <div class="accordion-item sidebar-section" data-section="apps">
+                                        <h2 class="accordion-header" id="appsHeader">
+                                            <button
+                                                class="accordion-button collapsed section-header d-flex justify-content-between p-2 align-items-center"
+                                                type="button" data-bs-toggle="collapse" data-bs-target="#appsContent"
+                                                aria-expanded="false" aria-controls="appsContent">
+                                                <h4 class="section-title font-16 regular mb-0">Apps</h4>
+                                                <img src="assets/images/svg/dropdown-arrow.svg" alt="Arrow"
+                                                    class="section-arrow">
+                                            </button>
+                                        </h2>
+                                        <div id="appsContent" class="accordion-collapse collapse"
+                                            aria-labelledby="appsHeader" data-bs-parent="#chatFlowAccordion">
+
+                                            <div class="section-content collapse" id="appsContent">
+                                                <div class="tool-option" data-tool="google-sheets">
+                                                    <div
+                                                        class="tool-icon  d-flex justify-content-center align-items-center bg-green-light">
+                                                        <img src="assets/images/svg/green-album.svg"
+                                                            alt="Google Sheets">
+                                                    </div>
+                                                    <span class="font-16 regular black">Google Sheets</span>
+                                                </div>
+                                                <div class="tool-option" data-tool="shopify">
+                                                    <div
+                                                        class="tool-icon  d-flex justify-content-center align-items-center bg-green-light">
+                                                        <img src="assets/images/svg/green-album.svg" alt="Shopify">
+                                                    </div>
+                                                    <span class="font-16 regular black">Shopify </span>
+                                                </div>
+                                                <div class="tool-option" data-tool="zoho">
+                                                    <div
+                                                        class="tool-icon  d-flex justify-content-center align-items-center bg-green-light">
+                                                        <img src="assets/images/svg/green-album.svg" alt="Zoho">
+                                                    </div>
+                                                    <span class="font-16 regular black">Zoho </span>
+                                                </div>
+                                                <div class="tool-option" data-tool="woo-commerce">
+                                                    <div
+                                                        class="tool-icon  d-flex justify-content-center align-items-center bg-green-light">
+                                                        <img src="assets/images/svg/green-album.svg" alt="Woo Commerce">
+                                                    </div>
+                                                    <span class="font-16 regular black">Woo Commerce </span>
+                                                </div>
+                                                <div class="tool-option" data-tool="appointment">
+                                                    <div
+                                                        class="tool-icon  d-flex justify-content-center align-items-center bg-green-light">
+                                                        <img src="assets/images/svg/green-album.svg" alt="Appointment">
+                                                    </div>
+                                                    <span class="font-16 regular black">Appointment </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Commerce Related Section -->
+                                    <div class="accordion-item sidebar-section" data-section="commerce">
+                                        <h2 class="accordion-header" id="commerceHeader">
+                                            <button
+                                                class="accordion-button collapsed section-header d-flex justify-content-between p-2 align-items-center"
+                                                type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#commerceContent" aria-expanded="false"
+                                                aria-controls="commerceContent">
+                                                <h4 class="section-title font-16 regular mb-0">Commerce Related</h4>
+                                                <img src="assets/images/svg/dropdown-arrow.svg" alt="Arrow"
+                                                    class="section-arrow">
+                                            </button>
+                                        </h2>
+                                        <div id="commerceContent" class="accordion-collapse collapse"
+                                            aria-labelledby="commerceHeader" data-bs-parent="#chatFlowAccordion">
+                                            <div class="accordion-body section-content">
+                                                <div class="tool-option" data-tool="share-product">
+                                                    <div
+                                                        class="tool-icon  d-flex justify-content-center align-items-center bg-pink-light">
+                                                        <img src="assets/images/svg/red-album.svg" alt="Share product">
+                                                    </div>
+                                                    <span class="font-16 regular black">Share product </span>
+                                                </div>
+                                                <div class="tool-option" data-tool="manage-cart">
+                                                    <div
+                                                        class="tool-icon  d-flex justify-content-center align-items-center bg-pink-light">
+                                                        <img src="assets/images/svg/red-album.svg" alt="Manage cart">
+                                                    </div>
+                                                    <span class="font-16 regular black">Manage cart</span>
+                                                </div>
+                                                <div class="tool-option" data-tool="collect-payment">
+                                                    <div
+                                                        class="tool-icon  d-flex justify-content-center align-items-center bg-pink-light">
+                                                        <img src="assets/images/svg/red-album.svg"
+                                                            alt="Collect payment">
+                                                    </div>
+                                                    <span class="font-16 regular black">Collect payment </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- AI Section -->
+                                    <div class="accordion-item sidebar-section" data-section="ai">
+                                        <h2 class="accordion-header" id="aiHeader">
+                                            <button
+                                                class="accordion-button collapsed section-header d-flex justify-content-between p-2 align-items-center"
+                                                type="button" data-bs-toggle="collapse" data-bs-target="#aiContent"
+                                                aria-expanded="false" aria-controls="aiContent">
+                                                <h4 class="section-title font-16 regular mb-0">AI</h4>
+                                                <img src="assets/images/svg/dropdown-arrow.svg" alt="Arrow"
+                                                    class="section-arrow">
+                                            </button>
+                                        </h2>
+                                        <div id="aiContent" class="accordion-collapse collapse"
+                                            aria-labelledby="aiHeader" data-bs-parent="#chatFlowAccordion">
+                                            <div class="accordion-body section-content">
+                                                <div class="tool-option" data-tool="ai-response">
+                                                    <div
+                                                        class="tool-icon bg-black-light d-flex justify-content-center align-items-center ">
+                                                        <img src="assets/images/svg/black-album.svg" alt="Let AI reply">
+                                                    </div>
+                                                    <span class="font-16 regular black">Let AI reply </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> <!-- End Accordion Container -->
+                                <!-- How To Use -->
+                                <div class="create-box d-flex flex-column gap-1">
+                                    <h2 class="font-14 medium textDark mb-0">How To Use</h2>
+                                    <h5 class="font-10 regular textLightColor mb-0">Drag and drop nodes from the sidebar
+                                        onto the canvas to build your chatflow.
+                                        Connect nodes by dragging from one node's output to another node's input.</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Sidebar Overlay for Mobile -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Chat Flow Details Sidebar -->
+    <div class="customer-details-sidebar" id="chatFlowDetailsSidebar">
+        <div class="sidebar-header d-flex justify-content-between align-items-center p-3">
+            <h3 class="font-16 medium mb-0 textDark d-flex align-items-center gap-3">
+                <div class="chat-icon-bg">
+                    <img src="assets/images/svg/add-keyword.svg" id="sidebarIcon">
+                </div>
+                <span id="sidebarTitleText">Add keyword</span>
+            </h3>
+            <button class="close-sidebar-btn" id="closeChatFlowSidebarBtn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <div class="sidebar-header p-2">
+            <h3 class="section-title font-12 medium mb-0 px-3" id="sidebarDescription">Add up to 10 keywords to trigger
+                this
+                chatflow.</h3>
+        </div>
+
+        <!-- Keyword Content (Default) -->
+        <div class="sidebar-content p-3" id="keywordContent">
+            <!-- Matching Behavior Section -->
+            <div class="matching-behavior-section mb-3">
+                <h4 class="font-16 medium textDark mb-2">Matching Behavior</h4>
+
+                <div class="d-flex flex-column">
+                    <!-- Exact Match Option -->
+                    <div class="behavior-option">
+                        <label class="behavior-label d-flex align-items-center gap-3">
+                            <input type="radio" name="matchingBehavior" value="exact" class="behavior-radio" checked>
+                            <span class="custom-radio"></span>
+                            <span class="option-text font-16 regular textDark">Exact Match</span>
+                        </label>
+                    </div>
+
+                    <!-- Contains Option -->
+                    <div class="behavior-option">
+                        <label class="behavior-label d-flex align-items-center gap-3">
+                            <input type="radio" name="matchingBehavior" value="contains" class="behavior-radio">
+                            <span class="custom-radio"></span>
+                            <span class="option-text font-16 regular textDark">Contains</span>
+                        </label>
+                    </div>
+
+                    <!-- Intent Option -->
+                    <div class="behavior-option">
+                        <label class="behavior-label d-flex align-items-center gap-3">
+                            <input type="radio" name="matchingBehavior" value="intent" class="behavior-radio">
+                            <span class="custom-radio"></span>
+                            <span class="option-text font-16 regular textDark">Intent</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <!-- Keywords  -->
+            <div class="d-flex flex-column gap-2 mb-2">
+                <h4 class="font-16 medium textDark mb-0">Keywords</h4>
+                <div class="d-flex gap-2">
+                    <input type="text" class="input-field font-16 regular font-14 w-100 bg-white py-2"
+                        placeholder="Enter keywords.." name="keyword">
+                    <button type="button" class="save-btn font-14 regular border-0 text-white">Save</button>
+                </div>
+                <p class="font-10 regular mb-0 textLightColor">0/72 characters • 1/10 keywords</p>
+            </div>
+            <!-- Keywords  -->
+            <div class="d-flex flex-column gap-2">
+                <h4 class="font-16 medium textDark mb-0">Keywords</h4>
+                <div class="d-flex">
+                    <div class="add-kayword d-flex align-items-center gap-1 cursor-pointer">
+                        <h4 class="font-10 medium mb-0 primaryColor">Hello user</h4>
+                        <img src="assets/images/svg/close.svg" class="voilet-filter" height="12">
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom Buttons -->
+            <div class="sidebar-bottom-buttons">
+                <div class="d-flex justify-content-end gap-3">
+                    <button type="button" class="close-btn font-14 regular border-0 text-white">Cancel</button>
+                    <button type="button" class="save-btn font-14 regular border-0 text-white">Save</button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Text Message Content -->
+        <div class="sidebar-content p-3" id="textMessageContent" style="display: none;">
+            <!-- Text Message Section -->
+            <div class="d-flex flex-column gap-2 mb-3">
+                <h4 class="font-16 medium textDark mb-0">Text Message</h4>
+                <textarea class="input-field font-14 regular w-100 bg-white p-3" placeholder="Type your message here..."
+                    rows="6" name="textMessage"></textarea>
+            </div>
+
+            <!-- Bottom Buttons -->
+            <div class="sidebar-bottom-buttons">
+                <div class="d-flex justify-content-end gap-3">
+                    <button type="button" class="close-btn font-14 regular border-0 text-white">Cancel</button>
+                    <button type="button" class="save-btn font-14 regular border-0 text-white">Save</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Media Message Content -->
+        <div class="sidebar-content p-3" id="mediaMessageContent" style="display: none;">
+            <!-- Image Upload Section -->
+            <div class="d-flex flex-column gap-2 mb-3">
+                <div class="d-flex align-items-center justify-content-between">
+                    <h4 class="font-16 medium textDark mb-0">Image</h4>
+                    <img src="assets/images/svg/delete.svg" alt="Delete" class="cursor-pointer" width="16">
+                </div>
+                <div class="upload-area d-flex flex-column align-items-center justify-content-center p-4">
+                    <img src="assets/images/svg/file.svg" alt="Upload" width="30" class="mb-3">
+                    <p class="font-14 regular textLightColor mb-1">Upload JPEG/PNG up to 5 MB</p>
+                    <p class="font-12 regular textLightColor mb-0">Click to start</p>
+                    <input type="file" name="mediaImage" accept="image/jpeg,image/png" style="display: none;">
+                </div>
+            </div>
+
+            <!-- Bottom Buttons -->
+            <div class="sidebar-bottom-buttons">
+                <div class="d-flex justify-content-end gap-3">
+                    <button type="button" class="close-btn font-14 regular border-0 text-white">Cancel</button>
+                    <button type="button" class="save-btn font-14 regular border-0 text-white">Save</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Message Content -->
+        <div class="sidebar-content p-3" id="ctaMessageContent" style="display: none;">
+            <!-- Header Type Section -->
+            <div class="d-flex flex-column gap-2 mb-3">
+                <h4 class="font-16 medium textDark mb-0">Header Type</h4>
+                <select class="input-field font-14 regular w-100 bg-white py-2" name="ctaHeaderType">
+                    <option value="none">None</option>
+                    <option value="text">Text</option>
+                    <option value="image">Image</option>
+                    <option value="video">Video</option>
+                    <option value="document">Document</option>
+                </select>
+            </div>
+
+            <!-- Body Section -->
+            <div class="d-flex flex-column gap-2 mb-3">
+                <h4 class="font-16 medium textDark mb-0">Body<span class="text-danger">*</span></h4>
+                <textarea class="input-field font-14 regular w-100 bg-white p-3" placeholder="Click to open" rows="4"
+                    name="ctaBody" required></textarea>
+            </div>
+
+            <!-- Footer Section -->
+            <div class="d-flex flex-column gap-2 mb-3">
+                <h4 class="font-16 medium textDark mb-0">Footer</h4>
+                <input type="text" class="input-field font-14 regular w-100 bg-white py-2"
+                    placeholder="Enter footer text" name="ctaFooter">
+            </div>
+
+            <!-- Button Title Section -->
+            <div class="d-flex flex-column gap-2 mb-3">
+                <h4 class="font-16 medium textDark mb-0">Button Title <span class="text-danger">*</span></h4>
+                <input type="text" class="input-field font-14 regular w-100 bg-white py-2"
+                    placeholder="Enter Button text" name="ctaButtonTitle" required>
+            </div>
+
+            <!-- Button URL Section -->
+            <div class="d-flex flex-column gap-2 mb-3">
+                <h4 class="font-16 medium textDark mb-0">Button URL<span class="text-danger">*</span></h4>
+                <input type="url" class="input-field font-14 regular w-100 bg-white py-2" placeholder="Enter URL"
+                    name="ctaButtonUrl" required>
+            </div>
+
+            <!-- Bottom Buttons -->
+            <div class="sidebar-bottom-buttons">
+                <div class="d-flex justify-content-end gap-3">
+                    <button type="button" class="close-btn font-14 regular border-0 text-white">Cancel</button>
+                    <button type="button" class="save-btn font-14 regular border-0 text-white">Save</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Reply Buttons Content -->
+        <div class="sidebar-content p-3" id="quickReplyContent" style="display: none;">
+            <!-- Header Section -->
+            <div class="d-flex flex-column gap-2 mb-3">
+                <h4 class="font-16 medium textDark mb-0">Header</h4>
+                <select class="input-field font-14 regular w-100 bg-white py-2" name="quickReplyHeader">
+                    <option value="none">None</option>
+                    <option value="text">Text</option>
+                    <option value="image">Image</option>
+                    <option value="video">Video</option>
+                    <option value="document">Document</option>
+                </select>
+            </div>
+
+            <!-- Body Section -->
+            <div class="d-flex flex-column gap-2 mb-3">
+                <h4 class="font-16 medium textDark mb-0">Body<span class="text-danger">*</span></h4>
+                <textarea class="input-field font-14 regular w-100 bg-white p-3" placeholder="Click to open" rows="4"
+                    name="quickReplyBody" required></textarea>
+            </div>
+
+            <!-- Buttons Section -->
+            <div class="d-flex flex-column gap-2 mb-3">
+                <div class="d-flex align-items-center justify-content-between">
+                    <h4 class="font-16 medium textDark mb-0">Buttons (1-3)</h4>
+                    <button type="button"
+                        class="d-flex align-items-center gap-2 border-0 bg-transparent primaryColor font-14 regular">
+                        <img src="assets/images/svg/add.svg" alt="Add" width="16">
+                        Add Button
+                    </button>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <input type="text" class="input-field font-14 regular w-100 bg-white py-2"
+                        placeholder="Button 1 Title" name="quickReplyButton1">
+                    <img src="assets/images/svg/delete.svg" alt="Delete" class="cursor-pointer" width="16">
+                </div>
+            </div>
+
+            <!-- Advanced Options Section -->
+            <div class="d-flex flex-column gap-2 mb-3">
+                <h4 class="font-16 medium textDark mb-0">Advanced Options</h4>
+
+                <div class="d-flex flex-column">
+                    <!-- Validate User Response -->
+                    <div class="behavior-option">
+                        <label class="behavior-label d-flex align-items-center gap-3">
+                            <input type="radio" name="quickReplyAdvanced" value="validate" class="behavior-radio"
+                                checked>
+                            <span class="custom-radio"></span>
+                            <span class="option-text font-14 regular textDark">Validate User Response</span>
+                        </label>
+                    </div>
+
+                    <!-- Save User Response -->
+                    <div class="behavior-option">
+                        <label class="behavior-label d-flex align-items-center gap-3">
+                            <input type="radio" name="quickReplyAdvanced" value="save" class="behavior-radio">
+                            <span class="custom-radio"></span>
+                            <span class="option-text font-14 regular textDark">Save User Response</span>
+                        </label>
+                    </div>
+
+                    <!-- If User Unresponsive -->
+                    <div class="behavior-option">
+                        <label class="behavior-label d-flex align-items-center gap-3">
+                            <input type="radio" name="quickReplyAdvanced" value="unresponsive" class="behavior-radio">
+                            <span class="custom-radio"></span>
+                            <span class="option-text font-14 regular textDark">If User Unresponsive</span>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Buttons -->
+            <div class="sidebar-bottom-buttons">
+                <div class="d-flex justify-content-end gap-3">
+                    <button type="button" class="close-btn font-14 regular border-0 text-white">Cancel</button>
+                    <button type="button" class="save-btn font-14 regular border-0 text-white">Save</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- List Options Content -->
+        <div class="sidebar-content p-3" id="listOptionsContent" style="display: none;">
+            <!-- Header Section -->
+            <div class="d-flex flex-column gap-2 mb-3">
+                <h4 class="font-16 medium textDark mb-0">Header</h4>
+                <select class="input-field font-14 regular w-100 bg-white py-2" name="listHeader">
+                    <option value="none">None</option>
+                    <option value="text">Text</option>
+                    <option value="image">Image</option>
+                    <option value="video">Video</option>
+                    <option value="document">Document</option>
+                </select>
+            </div>
+
+            <!-- Body Section -->
+            <div class="d-flex flex-column gap-2 mb-3">
+                <h4 class="font-16 medium textDark mb-0">Body<span class="text-danger">*</span></h4>
+                <textarea class="input-field font-14 regular w-100 bg-white p-3" placeholder="Click to open" rows="4"
+                    name="listBody" required></textarea>
+            </div>
+
+            <!-- Menu Button Section -->
+            <div class="d-flex flex-column gap-2 mb-3">
+                <div class="d-flex align-items-center justify-content-between">
+                    <h4 class="font-16 medium textDark mb-0">Menu button<span class="text-danger">*</span></h4>
+                    <button type="button"
+                        class="d-flex align-items-center gap-2 border-0 bg-transparent primaryColor font-14 regular">
+                        <img src="assets/images/svg/add.svg" alt="Add" width="16">
+                        Add Button
+                    </button>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <input type="text" class="input-field font-14 regular w-100 bg-white py-2" placeholder="Menu"
+                        name="listMenuButton" required>
+                    <img src="assets/images/svg/delete.svg" alt="Delete" class="cursor-pointer" width="16">
+                </div>
+            </div>
+
+            <!-- Options Section -->
+            <div class="d-flex flex-column gap-1 mb-3">
+                <h4 class="font-16 medium textDark mb-0">Options (1-10) <span class="text-danger">*</span></h4>
+                <p class="font-12 regular textLightColor mb-0">Add list options for users to choose from</p>
+            </div>
+
+            <!-- Advanced Options Section -->
+            <div class="d-flex flex-column gap-2 mb-3">
+                <h4 class="font-16 medium textDark mb-0">Advanced Options</h4>
+
+                <div>
+                    <!-- Validate User Response -->
+                    <div class="behavior-option">
+                        <label class="behavior-label d-flex align-items-center gap-3">
+                            <input type="radio" name="listAdvanced" value="validate" class="behavior-radio" checked>
+                            <span class="custom-radio"></span>
+                            <span class="option-text font-14 regular textDark">Validate User Response</span>
+                        </label>
+                    </div>
+
+                    <!-- Save User Response -->
+                    <div class="behavior-option">
+                        <label class="behavior-label d-flex align-items-center gap-3">
+                            <input type="radio" name="listAdvanced" value="save" class="behavior-radio">
+                            <span class="custom-radio"></span>
+                            <span class="option-text font-14 regular textDark">Save User Response</span>
+                        </label>
+                    </div>
+
+                    <!-- If User Unresponsive -->
+                    <div class="behavior-option">
+                        <label class="behavior-label d-flex align-items-center gap-3">
+                            <input type="radio" name="listAdvanced" value="unresponsive" class="behavior-radio">
+                            <span class="custom-radio"></span>
+                            <span class="option-text font-14 regular textDark">If User Unresponsive</span>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Buttons -->
+            <div class="sidebar-bottom-buttons">
+                <div class="d-flex justify-content-end gap-3">
+                    <button type="button" class="close-btn font-14 regular border-0 text-white">Cancel</button>
+                    <button type="button" class="save-btn font-14 regular border-0 text-white">Save</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Address Content -->
+        <div class="sidebar-content p-3" id="addressContent" style="display: none;">
+            <!-- Question Text Section -->
+            <div class="d-flex flex-column gap-2 mb-3">
+                <h4 class="font-16 medium textDark mb-0">Question Text</h4>
+                <textarea class="input-field font-14 regular w-100 bg-white p-3" placeholder="What's your address?"
+                    rows="4" name="addressQuestion"></textarea>
+            </div>
+
+            <!-- Auto-fill Checkbox -->
+            <div class="d-flex align-items-center gap-2 mb-3">
+                <input type="checkbox" id="autoFillAddress" name="autoFillAddress" class="cursor-pointer">
+                <label for="autoFillAddress" class="font-14 regular textDark mb-0 cursor-pointer">Auto-fill previously
+                    saved address</label>
+            </div>
+
+            <!-- Advanced Options Section -->
+            <div class="d-flex flex-column gap-2 mb-3">
+                <h4 class="font-16 medium textDark mb-0">Advanced Options</h4>
+
+                <div>
+                    <!-- Validate User Response -->
+                    <div class="behavior-option">
+                        <label class="behavior-label d-flex align-items-center gap-3">
+                            <input type="radio" name="addressAdvanced" value="validate" class="behavior-radio" checked>
+                            <span class="custom-radio"></span>
+                            <span class="option-text font-14 regular textDark">Validate User Response</span>
+                        </label>
+                    </div>
+
+                    <!-- Save User Response -->
+                    <div class="behavior-option">
+                        <label class="behavior-label d-flex align-items-center gap-3">
+                            <input type="radio" name="addressAdvanced" value="save" class="behavior-radio">
+                            <span class="custom-radio"></span>
+                            <span class="option-text font-14 regular textDark">Save User Response</span>
+                        </label>
+                    </div>
+
+                    <!-- If User Unresponsive -->
+                    <div class="behavior-option">
+                        <label class="behavior-label d-flex align-items-center gap-3">
+                            <input type="radio" name="addressAdvanced" value="unresponsive" class="behavior-radio">
+                            <span class="custom-radio"></span>
+                            <span class="option-text font-14 regular textDark">If User Unresponsive</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Buttons -->
+            <div class="sidebar-bottom-buttons">
+                <div class="d-flex justify-content-end gap-3">
+                    <button type="button" class="close-btn font-14 regular border-0 text-white">Cancel</button>
+                    <button type="button" class="save-btn font-14 regular border-0 text-white">Save</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Forms Content -->
+        <div class="sidebar-content p-3" id="formsContent" style="display: none;">
+            <!-- Choose Form Section -->
+            <div class="d-flex flex-column gap-2 mb-3">
+                <h4 class="font-16 medium textDark mb-0">Choose Form <span class="text-danger">*</span></h4>
+                <select class="input-field font-14 regular w-100 bg-white py-2" name="formSelect" required>
+                    <option value="">Select a form</option>
+                    <option value="form1">Form 1</option>
+                    <option value="form2">Form 2</option>
+                </select>
+            </div>
+
+            <!-- Header Section -->
+            <div class="d-flex flex-column gap-2 mb-3">
+                <h4 class="font-16 medium textDark mb-0">Header</h4>
+                <input type="text" class="input-field font-14 regular w-100 bg-white py-2"
+                    placeholder="Enter header text" name="formHeader">
+            </div>
+
+            <!-- Body Section -->
+            <div class="d-flex flex-column gap-2 mb-3">
+                <h4 class="font-16 medium textDark mb-0">Body <span class="text-danger">*</span></h4>
+                <textarea class="input-field font-14 regular w-100 bg-white p-3"
+                    placeholder="Please fill the below form" rows="4" name="formBody" required></textarea>
+            </div>
+
+            <!-- Footer Section -->
+            <div class="d-flex flex-column gap-2 mb-3">
+                <h4 class="font-16 medium textDark mb-0">Footer</h4>
+                <input type="text" class="input-field font-14 regular w-100 bg-white py-2"
+                    placeholder="Enter footer text" name="formFooter">
+            </div>
+
+            <!-- Button Section -->
+            <div class="d-flex flex-column gap-2 mb-3">
+                <h4 class="font-16 medium textDark mb-0">Button</h4>
+                <input type="text" class="input-field font-14 regular w-100 bg-white py-2" placeholder="Fill Form"
+                    name="formButton">
+            </div>
+
+            <!-- Advanced Options Section -->
+            <div class="d-flex flex-column gap-2 mb-3">
+                <h4 class="font-16 medium textDark mb-0">Advanced Options</h4>
+
+                <div>
+                    <!-- Validate User Response -->
+                    <div class="behavior-option">
+                        <label class="behavior-label d-flex align-items-center gap-3">
+                            <input type="radio" name="formAdvanced" value="validate" class="behavior-radio" checked>
+                            <span class="custom-radio"></span>
+                            <span class="option-text font-14 regular textDark">Validate User Response</span>
+                        </label>
+                    </div>
+
+                    <!-- Save User Response -->
+                    <div class="behavior-option">
+                        <label class="behavior-label d-flex align-items-center gap-3">
+                            <input type="radio" name="formAdvanced" value="save" class="behavior-radio">
+                            <span class="custom-radio"></span>
+                            <span class="option-text font-14 regular textDark">Save User Response</span>
+                        </label>
+                    </div>
+
+                    <!-- If User Unresponsive -->
+                    <div class="behavior-option">
+                        <label class="behavior-label d-flex align-items-center gap-3">
+                            <input type="radio" name="formAdvanced" value="unresponsive" class="behavior-radio">
+                            <span class="custom-radio"></span>
+                            <span class="option-text font-14 regular textDark">If User Unresponsive</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Buttons -->
+            <div class="sidebar-bottom-buttons">
+                <div class="d-flex justify-content-end gap-3">
+                    <button type="button" class="close-btn font-14 regular border-0 text-white">Cancel</button>
+                    <button type="button" class="save-btn font-14 regular border-0 text-white">Save</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Location Content -->
+        <div class="sidebar-content p-3" id="locationContent" style="display: none;">
+            <!-- Message Section -->
+            <div class="d-flex flex-column gap-2 mb-3">
+                <h4 class="font-16 medium textDark mb-0">Message</h4>
+                <textarea class="input-field font-14 regular w-100 bg-white p-3"
+                    placeholder="Please share your location" rows="4" name="locationMessage"></textarea>
+            </div>
+
+            <!-- Advanced Options Section -->
+            <div class="d-flex flex-column gap-2 mb-3">
+                <h4 class="font-16 medium textDark mb-0">Advanced Options</h4>
+
+                <div>
+                    <!-- Validate User Response -->
+                    <div class="behavior-option">
+                        <label class="behavior-label d-flex align-items-center gap-3">
+                            <input type="radio" name="locationAdvanced" value="validate" class="behavior-radio" checked>
+                            <span class="custom-radio"></span>
+                            <span class="option-text font-14 regular textDark">Validate User Response</span>
+                        </label>
+                    </div>
+
+                    <!-- Save User Response -->
+                    <div class="behavior-option">
+                        <label class="behavior-label d-flex align-items-center gap-3">
+                            <input type="radio" name="locationAdvanced" value="save" class="behavior-radio">
+                            <span class="custom-radio"></span>
+                            <span class="option-text font-14 regular textDark">Save User Response</span>
+                        </label>
+                    </div>
+
+                    <!-- If User Unresponsive -->
+                    <div class="behavior-option">
+                        <label class="behavior-label d-flex align-items-center gap-3">
+                            <input type="radio" name="locationAdvanced" value="unresponsive" class="behavior-radio">
+                            <span class="custom-radio"></span>
+                            <span class="option-text font-14 regular textDark">If User Unresponsive</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Buttons -->
+            <div class="sidebar-bottom-buttons">
+                <div class="d-flex justify-content-end gap-3">
+                    <button type="button" class="close-btn font-14 regular border-0 text-white">Cancel</button>
+                    <button type="button" class="save-btn font-14 regular border-0 text-white">Save</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Check Condition Content -->
+        <div class="sidebar-content p-3" id="checkConditionContent" style="display: none;">
+            <!-- Condition 1 Section -->
+            <div class="d-flex flex-column gap-2 mb-3">
+                <h4 class="font-16 medium textDark mb-0">Condition 1</h4>
+                <div class="upload-area p-4 d-flex flex-column align-items-center justify-content-center gap-2">
+                    <p class="font-14 regular textLightColor mb-0">+ Add rule</p>
+                    <button type="button" class="filter-btn font-12 regular d-flex align-items-center gap-2">
+                        <img src="assets/images/svg/filter.svg" alt="Filter" width="14">
+                        Add Filter
+                    </button>
+                </div>
+            </div>
+
+            <!-- Add Condition Box Button -->
+            <div class="d-flex justify-content-center mb-3">
+                <button type="button"
+                    class="d-flex align-items-center gap-2 border-0 bg-transparent primaryColor font-14 regular">
+                    <img src="assets/images/svg/add.svg" alt="Add" width="16">
+                    Add Condition Box
+                </button>
+            </div>
+
+            <!-- Bottom Buttons -->
+            <div class="sidebar-bottom-buttons">
+                <div class="d-flex justify-content-end gap-3">
+                    <button type="button" class="close-btn font-14 regular border-0 text-white">Cancel</button>
+                    <button type="button" class="save-btn font-14 regular border-0 text-white">Save</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Write Attribute Content -->
+        <div class="sidebar-content p-3" id="writeAttributeContent" style="display: none;">
+            <!-- Attribute 1 Section -->
+            <div class="attribute-box p-3 mb-3">
+                <h4 class="font-14 medium textDark mb-3">Attribute 1</h4>
+
+                <!-- Select Attribute -->
+                <div class="d-flex flex-column gap-2 mb-3">
+                    <h5 class="font-14 medium textDark mb-0">Select Attribute</h5>
+                    <select class="input-field font-14 regular w-100 bg-white py-2" name="attribute1Select">
+                        <option value="">Select Attribute</option>
+                        <option value="attr1">Attribute 1</option>
+                        <option value="attr2">Attribute 2</option>
+                    </select>
+                </div>
+
+                <!-- Value -->
+                <div class="d-flex flex-column gap-2">
+                    <h5 class="font-14 medium textDark mb-0">Value</h5>
+                    <input type="text" class="input-field font-14 regular w-100 bg-white py-2"
+                        placeholder="Select an attribute first" name="attribute1Value" disabled>
+                </div>
+            </div>
+
+            <!-- Add More Button -->
+            <div class="d-flex justify-content-center mb-3">
+                <button type="button"
+                    class="d-flex align-items-center gap-2 border-0 bg-transparent primaryColor font-14 regular">
+                    <img src="assets/images/svg/add.svg" alt="Add" width="16">
+                    Add More
+                </button>
+            </div>
+
+            <!-- Bottom Buttons -->
+            <div class="sidebar-bottom-buttons">
+                <div class="d-flex justify-content-end gap-3">
+                    <button type="button" class="close-btn font-14 regular border-0 text-white">Cancel</button>
+                    <button type="button" class="save-btn font-14 regular border-0 text-white">Save</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Assign Content -->
+        <div class="sidebar-content p-3" id="assignContent" style="display: none;">
+            <!-- Assignment Target Section -->
+            <div class="d-flex flex-column gap-2 mb-3">
+                <h4 class="font-16 medium textDark mb-0">Assignment Target</h4>
+                <select class="input-field font-14 regular w-100 bg-white py-2" name="assignmentTarget">
+                    <option value="">Select team member or team</option>
+                    <option value="team-member">Team member</option>
+                    <option value="teams">Teams</option>
+                </select>
+            </div>
+
+            <!-- Bottom Buttons -->
+            <div class="sidebar-bottom-buttons">
+                <div class="d-flex justify-content-end gap-3">
+                    <button type="button" class="close-btn font-14 regular border-0 text-white">Cancel</button>
+                    <button type="button" class="save-btn font-14 regular border-0 text-white">Save</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Alert Content -->
+        <div class="sidebar-content p-3" id="alertContent" style="display: none;">
+            <!-- Team Member Section -->
+            <div class="d-flex flex-column gap-2 mb-3">
+                <h4 class="font-16 medium textDark mb-0">Team Member</h4>
+                <select class="input-field font-14 regular w-100 bg-white py-2" name="alertTeamMember">
+                    <option value="">Select team member or team</option>
+                    <option value="team-member">Team member</option>
+                    <option value="teams">Teams</option>
+                </select>
+            </div>
+
+            <!-- Template Section -->
+            <div class="d-flex flex-column gap-2 mb-3">
+                <h4 class="font-16 medium textDark mb-0">Template</h4>
+                <select class="input-field font-14 regular w-100 bg-white py-2" name="alertTemplate">
+                    <option value="">Select template</option>
+                    <option value="ranax-temp1">Ranax temp1</option>
+                    <option value="template2">Template 2</option>
+                </select>
+            </div>
+
+            <!-- Bottom Buttons -->
+            <div class="sidebar-bottom-buttons">
+                <div class="d-flex justify-content-end gap-3">
+                    <button type="button" class="close-btn font-14 regular border-0 text-white">Cancel</button>
+                    <button type="button" class="save-btn font-14 regular border-0 text-white">Save</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Custom API Content -->
+        <div class="sidebar-content p-3" id="customApiContent" style="display: none;">
+            <!-- Method & URI Section -->
+            <div class="d-flex flex-column gap-2 mb-3">
+                <h4 class="font-16 medium textDark mb-0">Method & URI</h4>
+                <div class="d-flex gap-2">
+                    <select class="input-field font-14 regular bg-white py-2" name="apiMethod" style="width: 100px;">
+                        <option value="POST">POST</option>
+                        <option value="GET">GET</option>
+                        <option value="PUT">PUT</option>
+                        <option value="DELETE">DELETE</option>
+                    </select>
+                    <input type="url" class="input-field font-14 regular w-100 bg-white py-2" placeholder="Enter URI"
+                        name="apiUri">
+                </div>
+            </div>
+
+            <!-- Headers Section -->
+            <div class="d-flex flex-column gap-2 mb-3">
+                <div class="d-flex align-items-center justify-content-between">
+                    <h4 class="font-16 medium textDark mb-0">Headers</h4>
+                    <h5 class="font-14 regular primaryColor mb-0">Customize headers</h5>
+                </div>
+                <button type="button"
+                    class="d-flex align-items-center gap-2 border-0 bg-transparent textDark font-14 regular">
+                    <img src="assets/images/svg/add.svg" alt="Add" width="16">
+                    Add More
+                </button>
+            </div>
+
+            <!-- Body Section -->
+            <div class="d-flex flex-column gap-2 mb-3">
+                <h4 class="font-16 medium textDark mb-0">Body</h4>
+                <p class="font-12 regular textLightColor mb-2">Define a custom request body in JSON format to send
+                    specific data to your API, enabling flexible and dynamic integrations.</p>
+                <select class="input-field font-14 regular w-100 bg-white py-2" name="apiBodyKey">
+                    <option value="">JSON Key</option>
+                    <option value="key1">Key 1</option>
+                    <option value="key2">Key 2</option>
+                </select>
+                <button type="button"
+                    class="d-flex align-items-center gap-2 border-0 bg-transparent textDark font-14 regular">
+                    <img src="assets/images/svg/add.svg" alt="Add" width="16">
+                    Add More
+                </button>
+            </div>
+
+            <!-- Share Conversation Section -->
+            <div class="d-flex flex-column gap-2 mb-3">
+                <h4 class="font-16 medium textDark mb-0">Share conversation</h4>
+                <p class="font-12 regular textLightColor mb-2">Share last few conversation messages in the request. The
+                    messages will be included under the Conversation key.</p>
+                <select class="input-field font-14 regular w-100 bg-white py-2" name="apiConversation">
+                    <option value="no">No conversations</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+
+            <!-- Bottom Buttons -->
+            <div class="sidebar-bottom-buttons">
+                <div class="d-flex justify-content-end gap-3">
+                    <button type="button" class="close-btn font-14 regular border-0 text-white">Cancel</button>
+                    <button type="button" class="save-btn font-14 regular border-0 text-white">Save</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Connect Flow Content -->
+        <div class="sidebar-content p-3" id="connectFlowContent" style="display: none;">
+            <!-- Select Chatflow Section -->
+            <div class="d-flex flex-column gap-2 mb-3">
+                <h4 class="font-16 medium textDark mb-0">Select Chatflow <span class="text-danger">*</span></h4>
+                <select class="input-field font-14 regular w-100 bg-white py-2" name="connectChatflow" required>
+                    <option value="">Choose a chatflow</option>
+                    <option value="inside-testing">Inside testing</option>
+                    <option value="flow2">Flow 2</option>
+                    <option value="flow3">Flow 3</option>
+                </select>
+            </div>
+
+            <!-- Bottom Buttons -->
+            <div class="sidebar-bottom-buttons">
+                <div class="d-flex justify-content-end gap-3">
+                    <button type="button" class="close-btn font-14 regular border-0 text-white">Cancel</button>
+                    <button type="button" class="save-btn font-14 regular border-0 text-white">Save</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wait Content -->
+        <div class="sidebar-content p-3" id="waitContent" style="display: none;">
+            <!-- Days Section -->
+            <div class="d-flex flex-column gap-2 mb-3">
+                <h4 class="font-16 medium textDark mb-0">Days (max 10)</h4>
+                <input type="number" class="input-field font-14 regular w-100 bg-white py-2" placeholder="0"
+                    name="waitDays" min="0" max="10">
+            </div>
+
+            <!-- Hours Section -->
+            <div class="d-flex flex-column gap-2 mb-3">
+                <h4 class="font-16 medium textDark mb-0">Hours (0-23)</h4>
+                <input type="number" class="input-field font-14 regular w-100 bg-white py-2" placeholder="0"
+                    name="waitHours" min="0" max="23">
+            </div>
+
+            <!-- Minutes Section -->
+            <div class="d-flex flex-column gap-2 mb-3">
+                <h4 class="font-16 medium textDark mb-0">Minutes (0-59)</h4>
+                <input type="number" class="input-field font-14 regular w-100 bg-white py-2" placeholder="0"
+                    name="waitMinutes" min="0" max="59">
+            </div>
+
+            <!-- Bottom Buttons -->
+            <div class="sidebar-bottom-buttons">
+                <div class="d-flex justify-content-end gap-3">
+                    <button type="button" class="close-btn font-14 regular border-0 text-white">Cancel</button>
+                    <button type="button" class="save-btn font-14 regular border-0 text-white">Save</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Share Products Content -->
+        <div class="sidebar-content p-3" id="shareProductsContent" style="display: none;">
+            <!-- Facebook Catalog Section -->
+            <div class="d-flex flex-column gap-2 mb-3">
+                <h4 class="font-16 medium textDark mb-0">Facebook Catalog</h4>
+                <div class="catalog-info p-3 d-flex flex-column gap-2">
+                    <p class="font-12 regular textLightColor mb-0">No Facebook Catalog connected. Connect your catalog
+                        to start sharing products.</p>
+                    <button type="button"
+                        class="catalog-btn font-14 regular border-0 text-white w-100 d-flex align-items-center justify-content-center gap-2">
+                        <img src="assets/images/svg/add.svg" alt="Add" width="16"
+                            style="filter: brightness(0) invert(1);">
+                        Add More
+                    </button>
+                </div>
+            </div>
+
+            <!-- Bottom Buttons -->
+            <div class="sidebar-bottom-buttons">
+                <div class="d-flex justify-content-end gap-3">
+                    <button type="button" class="close-btn font-14 regular border-0 text-white">Cancel</button>
+                    <button type="button" class="save-btn font-14 regular border-0 text-white">Save</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Manage Cart Content -->
+        <div class="sidebar-content p-3" id="manageCartContent" style="display: none;">
+            <!-- Cart Action Section -->
+            <div class="d-flex flex-column gap-2 mb-3">
+                <h4 class="font-16 medium textDark mb-0">Cart Action</h4>
+                <select class="input-field font-14 regular w-100 bg-white py-2" name="cartAction">
+                    <option value="confirm">Confirm cart</option>
+                    <option value="clear">Clear cart</option>
+                </select>
+            </div>
+
+            <!-- Message Text Section -->
+            <div class="d-flex flex-column gap-2 mb-3">
+                <h4 class="font-16 medium textDark mb-0">Message Text</h4>
+                <textarea class="input-field font-14 regular w-100 bg-white p-3" placeholder="Enter message" rows="4"
+                    name="cartMessage"></textarea>
+            </div>
+
+            <!-- Bottom Buttons -->
+            <div class="sidebar-bottom-buttons">
+                <div class="d-flex justify-content-end gap-3">
+                    <button type="button" class="close-btn font-14 regular border-0 text-white">Cancel</button>
+                    <button type="button" class="save-btn font-14 regular border-0 text-white">Save</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/sidebar.js"></script>
+    <script src="assets/js/chatflow-drag-drop.js"></script>
+
+    <script>
+        // Function to open Customer Details Sidebar
+        function openCustomerDetails() {
+            const customerSidebar = document.getElementById('chatFlowDetailsSidebar');
+            const sidebarOverlay = document.getElementById('sidebarOverlay');
+
+            if (customerSidebar) {
+                customerSidebar.classList.add('active');
+                if (sidebarOverlay) {
+                    sidebarOverlay.classList.add('active');
+                }
+                document.body.style.overflow = 'hidden';
+                console.log('ChatFlow Details Sidebar opened');
+            }
+        }
+
+        // Function to close Customer Details Sidebar
+        function closeCustomerDetails() {
+            const customerSidebar = document.getElementById('chatFlowDetailsSidebar');
+            const sidebarOverlay = document.getElementById('sidebarOverlay');
+
+            if (customerSidebar) {
+                customerSidebar.classList.remove('active');
+                if (sidebarOverlay) {
+                    sidebarOverlay.classList.remove('active');
+                }
+                document.body.style.overflow = '';
+                console.log('ChatFlow Details Sidebar closed');
+            }
+        }
+
+        // Event listeners for closing sidebar
+        document.addEventListener('DOMContentLoaded', function () {
+            const closeSidebarBtn = document.getElementById('closeChatFlowSidebarBtn');
+            const sidebarOverlay = document.getElementById('sidebarOverlay');
+
+            if (closeSidebarBtn) {
+                closeSidebarBtn.addEventListener('click', closeCustomerDetails);
+            }
+
+            if (sidebarOverlay) {
+                sidebarOverlay.addEventListener('click', closeCustomerDetails);
+            }
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connect Instagram - Ranax Social</title>
+    <!-- Custom Css -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Css -->
+    <link href="assets/css/stylesheet.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Dashboard Container -->
+    <div class="dashboard-container">
+         <!-- Left Sidebar -->
+    <aside class="dashboard-sidebar" id="dashboardSidebar">
+      <div class="">
+        <!-- Logo -->
+        <div class="logo-card d-flex align-items-center justify-content-center">
+          <div class="sidebar-logo">
+            <img src="assets/images/svg/logo.svg" alt="Ranax Social Logo" />
+          </div>
+        </div>
+        <div class="sidebar-content">
+          <!-- Post buttons -->
+          <div class="d-flex flex-column gap-3 post-button" id="postButtonDiv">
+            <!-- Create Posts Button with Dropdown -->
+            <div class="dropdown">
+              <button id="createPostsBtn"
+                class="sidebar-nav-item font-14 regular w-100 text-white border-0 d-flex align-items-center gap-3"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="assets/images/svg/plus.svg" alt="Plus" width="20" height="20">
+                Create Posts
+              </button>
+              <ul class="dropdown-menu dropdown-menu-custom">
+                <li><a href="create-instagram-post.html" class="dropdown-item d-flex align-items-center gap-2 font-14 regular" >
+                    <img src="assets/images/png/instagram.png" alt="Instagram" width="16" height="16">
+                    <span>Instagram</span>
+                  </a></li>
+              </ul>
+            </div>
+            <!--  Calendar -->
+            <a href="#" id="calendarBtn"
+              class="sidebar-nav-item font-14 regular w-100 text-white border-0 d-flex align-items-center  gap-3">
+              <img src="assets/images/svg/Calander.svg" alt="Calendar" width="16" height="16">
+              Calendar
+            </a>
+            <!--   What's new -->
+            <a href="whatsNew.html" id="whatsNewBtn"
+              class="sidebar-nav-item font-14 regular w-100 text-white border-0 d-flex align-items-center  gap-3">
+              <img src="assets/images/svg/gift-fill.svg" alt="What's new" width="20" height="20">
+              What's new
+            </a>
+          </div>
+          <!-- Whatsaap connected buttons -->
+          <div class="after-connected-whatsapp" id="afterConnectedDiv" style="display: none;">
+            <div class="d-flex flex-column gap-3">
+              <!-- Add WhatsApp Button (initially hidden) -->
+              <div class="whatsapp-add-button whatsapp-add" id="whatsappAddButton">
+                <button
+                  class="sidebar-create-btn font-14 regular w-100 text-white border-0 d-flex align-items-center justify-content-center gap-2">
+                  <img src="assets/images/svg/plus.svg" alt="Plus" width="16" height="16">
+                  Add WhatsApp
+                </button>
+              </div>
+
+              <!-- Connected User Profile (initially hidden) -->
+              <div class="connected-user-profile whatsapp-profile" id="whatsappConnectedProfile">
+                <div class="d-flex align-items-center gap-2">
+                  <div class="profile-image">
+                    <img src="assets/images/png/user-img.png" alt="Profile" class="rounded-circle user-img" height="30"
+                      width="30">
+                  </div>
+                  <div class="profile-info flex-grow-1">
+                    <div class="font-14 medium black" id="connectedUserName">Rahul Kumar</div>
+                    <div class="font-12 regular black" id="connectedUserPhone">+1 (951) 315-2454</div>
+                  </div>
+                  <img src="assets/images/svg/arrow.svg" alt="Arrow" class="ms-auto" width="14" height="14">
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Social Channels Section -->
+          <div class="sidebar-section">
+            <h6 class="font-16 medium mb-2 p-2 black">Social Channels</h6>
+
+            <div class="social-channels-list d-flex flex-column gap-3">
+              <a href="#" class="social-channel-item font-14 medium d-flex align-items-center gap-3 textColor">
+                <img src="assets/images/png/whatsApp.png" alt="WhatsApp" class="social-channel-icon">
+                <span>WhatsApp</span>
+                <img src="assets/images/svg/profile-arrow.svg" alt="Arrow" class="ms-auto" width="14" height="14">
+              </a>
+
+              <a href="#" class="social-channel-item font-14 medium d-flex align-items-center gap-3 textColor">
+                <img src="assets/images/png/instagram.png" alt="Instagram" class="social-channel-icon">
+                <span>Instagram</span>
+                <img src="assets/images/svg/profile-arrow.svg" alt="Arrow" class="ms-auto" width="14" height="14">
+              </a>
+
+              <a href="#" class="social-channel-item font-14 medium d-flex align-items-center gap-3 textColor">
+                <img src="assets/images/png/Facebook.png" alt="Facebook" class="social-channel-icon">
+                <span>Facebook</span>
+                <img src="assets/images/svg/profile-arrow.svg" alt="Arrow" class="ms-auto" width="14" height="14">
+              </a>
+
+              <a href="#" class="social-channel-item font-14 medium d-flex align-items-center gap-3 textColor">
+                <img src="assets/images/png/Linkedin.png" alt="LinkedIn" class="social-channel-icon">
+                <span>LinkedIn</span>
+                <img src="assets/images/svg/profile-arrow.svg" alt="Arrow" class="ms-auto" width="14" height="14">
+              </a>
+
+              <a href="#" class="social-channel-item font-14 medium d-flex align-items-center gap-3 textColor">
+                <img src="assets/images/png/Telegram.png" alt="YouTube" class="social-channel-icon">
+                <span>Telegram</span>
+                <img src="assets/images/svg/profile-arrow.svg" alt="Arrow" class="ms-auto" width="14" height="14">
+              </a>
+              <button class="view-more-btn font-14 medium w-100 text-center mt-3 bg-transparent border-0">View
+                More</button>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </aside>
+
+        <!-- Right Content Area -->
+        <div class="dashboard-content">
+            <!-- Navbar Section -->
+            <div class="position-relative">
+                <header class="navbar">
+                    <div class="container-fluid">
+                        <div class="nav-container">
+                            <!-- navbar list -->
+                            <nav class="nav-menu" id="navMenu">
+                                <div class="navbar-list">
+                                    <a class="nav-link-list font-14 regular" href="home.html">Home</a>
+                                    <a class="nav-link-list font-14 regular" href="junction.html">Junction</a>
+                                    <a class="nav-link-list font-14 regular" href="team.html">Team</a>
+                                    <a class="nav-link-list font-14 regular" href="ai-automation.html">Ai Automation</a>
+                                    <a class="nav-link-list font-14 regular" href="reports.html">Reports</a>
+                                </div>
+                            </nav>
+                            <div class="d-flex align-items-center justify-content-between gap-3 w-100">
+                                <!-- Dropdown -->
+                                <div class="d-flex align-items-center gap-3 position-relative">
+                                    <!-- Sidebar Toggle Button -->
+                                    <button class="sidebar-toggle-btn d-lg-none" type="button" id="sidebarToggle">
+                                        <div class="nav-toggle">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </button>
+                                </div>
+                                <div class="d-flex align-items-center gap-3">
+                                    <!-- Desktop Right Side Actions -->
+                                    <div class="d-flex align-items-center gap-4">
+                                        <!-- Social icon -->
+                                        <div class="social-icons-mobile">
+                                            <div class="d-flex align-items-center gap-3">
+                                                <!-- Notifications -->
+                                                <div class="dashboard-icon">
+                                                    <img src="assets/images/svg/notifications.svg" alt="Notifications"
+                                                        width="20" height="20">
+                                                </div>
+
+                                                <!-- Settings -->
+                                                <div class="dashboard-icon">
+                                                    <img src="assets/images/svg/setting.svg" alt="Settings" width="20"
+                                                        height="20">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Profile Dropdown -->
+                                        <div class="dropdown custom-profile">
+                                            <div class="dashboard-profile dropdown-toggle d-flex justify-content-center align-items-center"
+                                                data-bs-toggle="dropdown" aria-expanded="false" id="profileDropdown">
+                                                <span class="font-14 semibold">RS</span>
+                                            </div>
+                                            <ul class="dropdown-menu dropdown-menu-end profile-dropdown"
+                                                aria-labelledby="profileDropdown">
+                                                <li class="dropdown-header">
+                                                    <div class="d-flex align-items-center">
+                                                        <div
+                                                            class="profile-avatar me-3 semibold d-flex justify-content-center align-items-center text-white">
+                                                            <span class="font-12 semibold">RS</span>
+                                                        </div>
+                                                        <div>
+                                                            <div class="font-14 semibold text-dark">Ranax Social</div>
+                                                            <div class="font-12 text-muted">user@example.com</div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+
+                                                <li><a class="dropdown-item font-14 medium" href="#">
+                                                        <svg width="16" height="16" class="me-3" fill="currentColor"
+                                                            viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                                                        </svg>
+                                                        Profile
+                                                    </a></li>
+                                                <li><a class="dropdown-item font-14 medium" href="#">
+                                                        <svg width="16" height="16" class="me-3" fill="currentColor"
+                                                            viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
+                                                            <path
+                                                                d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z" />
+                                                        </svg>
+                                                        Settings
+                                                    </a></li>
+                                                <li>
+                                                    <hr class="dropdown-divider">
+                                                </li>
+                                                <li><a class="dropdown-item font-14 medium text-danger" href="#">
+                                                        <svg width="16" height="16" class="me-3" fill="currentColor"
+                                                            viewBox="0 0 16 16">
+                                                            <path fill-rule="evenodd"
+                                                                d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z" />
+                                                            <path fill-rule="evenodd"
+                                                                d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+                                                        </svg>
+                                                        Logout
+                                                    </a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- toggle button -->
+                                        <div class="d-flex align-items-center gap-4">
+                                            <div class="nav-toggle" id="navToggle">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </header>
+            </div>
+            <!-- WhatsApp Connection Main Content -->
+            <main class="dashboard-main">
+                <!-- Header with Back Button -->
+                <div class="connection-header d-flex flex-column gap-2 mb-4">
+                    <div class="d-flex  align-items-center gap-2">
+                        <button class="back-btn border-0 bg-transparent" onclick="history.back()">
+                            <img src="assets/images/svg/back-arrow.svg" alt="Back" width="20" height="20">
+                        </button>
+                        <h6 class="font-30 medium textColor mb-0">Connect Instagram</h6>
+                    </div>
+                    <p class="grayColor font-16 regular mb-0">Manage your Instagram account and engage with your
+                        audience From powerful platform </p>
+                </div>
+
+                <!-- Main Content Area -->
+                <div class="col-md-10">
+                    <div class="social-channels-section">
+
+                        <!-- Step 1 -->
+                        <div id="step1Content">
+                            <div class="row gy-4">
+                                <div class="col-md-7">
+                                    <div class="connection-form d-flex flex-column gap-4">
+                                        <div class="d-flex flex-column gap-1">
+                                            <h2 class="font-20 regular black mb-0">Connect Your Instagram Account</h2>
+                                            <p class="font-16 regular grayColor mb-0 line-height-22">To get started
+                                                please login and connect your Instagram account.</p>
+                                        </div>
+                                        <form class="whatsapp-form d-flex flex-column gap-4">
+                                            <div class="form-group d-flex flex-column gap-1">
+                                                <label class="font-16 medium black">Email Address</label>
+                                                <input type="email" class="input-field font-16 regular"
+                                                    placeholder="you@example.com">
+                                            </div>
+                                            <div class="form-group d-flex flex-column gap-1">
+                                                <label class="font-16 medium black">Password</label>
+                                                <div class="password-input-wrapper">
+                                                    <input type="password" class="input-field font-16 regular"
+                                                        id="instagramPassword" placeholder="••••••••">
+                                                    <button type="button"
+                                                        class="password-toggle-btn border-0 bg-transparent"
+                                                        onclick="togglePasswordVisibility('instagramPassword', this)">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                            fill="none" viewBox="0 0 24 24" stroke="#6c757d"
+                                                            stroke-width="1.5">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="">
+                                                <button type="button" onclick="handleFormSubmit()"
+                                                    class="next-btn instagram-next font-16 regular d-flex align-items-center gap-2">
+                                                    Next
+                                                    <img src="assets/images/svg/arrow-left.svg" alt="Next" width="12"
+                                                        height="12" class="">
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="connection-illustration text-center">
+                                        <img src="assets/images/png/instagram-connect-img.png"
+                                            alt="Instagram Connection" class="illustration-img">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Success -->
+                        <div id="step2Content" style="display:none;">
+                            <div class="row gy-4">
+                                <div class="col-12">
+                                    <div class="complete-content d-flex flex-column gap-4 text-center">
+                                        <div class="d-flex flex-column">
+                                            <h2 class="font-20 regular black mb-0">Congratulation you connected your
+                                            </h2>
+                                            <h2 class="font-20 regular black mb-0">Instagram successfully</h2>
+                                        </div>
+                                        <div class="user-profile-card mx-auto">
+                                            <div class="d-flex align-items-center gap-3">
+                                                <div class="profile-image">
+                                                    <img src="assets/images/png/user-img.png" alt="Profile"
+                                                        class="rounded-circle user-img">
+                                                </div>
+                                                <div class="profile-info text-start">
+                                                    <div class="font-14 medium black">Rahul Kumar</div>
+                                                    <div class="font-10 regular grayColor">+1 (951) 315-2454</div>
+                                                </div>
+                                                <div class="active-status">
+                                                    <span class="font-12 medium status-active">Active</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <p class="font-16 regular grayColor mb-0 line-height-22">Please follow those
+                                                steps to verify this number to connect </p>
+                                            <p class="font-16 regular grayColor mb-0 line-height-22">Whatsapp to Ranax
+                                                Social </p>
+                                        </div>
+                                        <div class="complete-buttons d-flex justify-content-center">
+                                            <button
+                                                class="next-btn instagram-next font-16 regular d-flex align-items-center gap-2"
+                                                onclick="window.location.href='dashboard-instagram.html'">
+                                                Next
+                                                <img src="assets/images/svg/arrow-left.svg" alt="Next" width="12"
+                                                    height="12" class="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Sidebar Overlay for Mobile -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-circle"></div>
+        <div class="loading-text">Processing your request...</div>
+    </div>
+
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/sidebar.js"></script>
+    <script>
+        function togglePasswordVisibility(inputId, btn) {
+            const input = document.getElementById(inputId);
+            const isPassword = input.type === 'password';
+            input.type = isPassword ? 'text' : 'password';
+            btn.querySelector('svg').style.opacity = isPassword ? '1' : '0.5';
+        }
+
+        function handleFormSubmit() {
+            document.getElementById('step1Content').style.display = 'none';
+            document.getElementById('step2Content').style.display = 'block';
+        }
+
+        function goToStep(step) {
+            document.getElementById('step1Content').style.display = step === 1 ? 'block' : 'none';
+            document.getElementById('step2Content').style.display = step === 2 ? 'block' : 'none';
+        }
+    </script>
+
+</body>
+
+</html>

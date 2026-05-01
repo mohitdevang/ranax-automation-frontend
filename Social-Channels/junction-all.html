@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ranax Social - All Junctions</title>
+    <!-- Custom Css -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/team-flow.css" rel="stylesheet">
+    <link href="assets/css/whatsapp.css" rel="stylesheet">
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Css -->
+    <link href="assets/css/stylesheet.css" rel="stylesheet">
+    <!-- table css -->
+    <link href="assets/css/table.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Dashboard Container -->
+    <div class="dashboard-container">
+        <!-- Left Sidebar -->
+        <aside class="dashboard-sidebar" id="dashboardSidebar">
+            <div class="">
+                <!-- Logo -->
+                <div class="logo-card d-flex align-items-center justify-content-center">
+                    <div class="sidebar-logo">
+                        <img src="assets/images/svg/logo.svg" alt="Ranax Social Logo" />
+                    </div>
+                </div>
+                <div class="sidebar-content">
+                    <!-- Post buttons -->
+                    <div class="d-flex flex-column gap-3 post-button" id="postButtonDiv">
+                        <!-- Create Posts Button with Dropdown -->
+                        <div class="dropdown">
+                            <button id="createPostsBtn"
+                                class="sidebar-nav-item font-14 regular w-100 text-white border-0 d-flex align-items-center gap-3"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="assets/images/svg/plus.svg" alt="Plus" width="20" height="20">
+                                Create Posts
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-custom">
+                                <li><a href="create-instagram-post.html"
+                                        class="dropdown-item d-flex align-items-center gap-2 font-14 regular">
+                                        <img src="assets/images/png/instagram.png" alt="Instagram" width="16"
+                                            height="16">
+                                        <span>Instagram</span>
+                                    </a></li>
+                            </ul>
+                        </div>
+                        <!--  Calendar -->
+                        <a href="#" id="calendarBtn"
+                            class="sidebar-nav-item font-14 regular w-100 text-white border-0 d-flex align-items-center  gap-3">
+                            <img src="assets/images/svg/Calander.svg" alt="Calendar" width="16" height="16">
+                            Calendar
+                        </a>
+                        <!--   What's new -->
+                        <a href="whatsNew.html" id="whatsNewBtn"
+                            class="sidebar-nav-item font-14 regular w-100 text-white border-0 d-flex align-items-center  gap-3">
+                            <img src="assets/images/svg/gift-fill.svg" alt="What's new" width="20" height="20">
+                            What's new
+                        </a>
+                    </div>
+                    <!-- Whatsaap connected buttons -->
+                    <div class="after-connected-whatsapp" id="afterConnectedDiv" style="display: none;">
+                        <div class="d-flex flex-column gap-3">
+                            <!-- Add WhatsApp Button (initially hidden) -->
+                            <div class="whatsapp-add-button whatsapp-add" id="whatsappAddButton">
+                                <button
+                                    class="sidebar-create-btn font-14 regular w-100 text-white border-0 d-flex align-items-center justify-content-center gap-2">
+                                    <img src="assets/images/svg/plus.svg" alt="Plus" width="16" height="16">
+                                    Add WhatsApp
+                                </button>
+                            </div>
+
+                            <!-- Connected User Profile (initially hidden) -->
+                            <div class="connected-user-profile whatsapp-profile" id="whatsappConnectedProfile">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="profile-image">
+                                        <img src="assets/images/png/user-img.png" alt="Profile"
+                                            class="rounded-circle user-img" height="30" width="30">
+                                    </div>
+                                    <div class="profile-info flex-grow-1">
+                                        <div class="font-14 medium black" id="connectedUserName">Rahul Kumar</div>
+                                        <div class="font-12 regular black" id="connectedUserPhone">+1 (951) 315-2454
+                                        </div>
+                                    </div>
+                                    <img src="assets/images/svg/arrow.svg" alt="Arrow" class="ms-auto" width="14"
+                                        height="14">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Social Channels Section -->
+                    <div class="sidebar-section">
+                        <h6 class="font-16 medium mb-2 p-2 black">Social Channels</h6>
+
+                        <div class="social-channels-list d-flex flex-column gap-3">
+                            <a href="#"
+                                class="social-channel-item font-14 medium d-flex align-items-center gap-3 textColor">
+                                <img src="assets/images/png/whatsApp.png" alt="WhatsApp" class="social-channel-icon">
+                                <span>WhatsApp</span>
+                                <img src="assets/images/svg/profile-arrow.svg" alt="Arrow" class="ms-auto" width="14"
+                                    height="14">
+                            </a>
+
+                            <a href="#"
+                                class="social-channel-item font-14 medium d-flex align-items-center gap-3 textColor">
+                                <img src="assets/images/png/instagram.png" alt="Instagram" class="social-channel-icon">
+                                <span>Instagram</span>
+                                <img src="assets/images/svg/profile-arrow.svg" alt="Arrow" class="ms-auto" width="14"
+                                    height="14">
+                            </a>
+
+                            <a href="#"
+                                class="social-channel-item font-14 medium d-flex align-items-center gap-3 textColor">
+                                <img src="assets/images/png/Facebook.png" alt="Facebook" class="social-channel-icon">
+                                <span>Facebook</span>
+                                <img src="assets/images/svg/profile-arrow.svg" alt="Arrow" class="ms-auto" width="14"
+                                    height="14">
+                            </a>
+
+                            <a href="#"
+                                class="social-channel-item font-14 medium d-flex align-items-center gap-3 textColor">
+                                <img src="assets/images/png/Linkedin.png" alt="LinkedIn" class="social-channel-icon">
+                                <span>LinkedIn</span>
+                                <img src="assets/images/svg/profile-arrow.svg" alt="Arrow" class="ms-auto" width="14"
+                                    height="14">
+                            </a>
+
+                            <a href="#"
+                                class="social-channel-item font-14 medium d-flex align-items-center gap-3 textColor">
+                                <img src="assets/images/png/Telegram.png" alt="YouTube" class="social-channel-icon">
+                                <span>Telegram</span>
+                                <img src="assets/images/svg/profile-arrow.svg" alt="Arrow" class="ms-auto" width="14"
+                                    height="14">
+                            </a>
+                            <button
+                                class="view-more-btn font-14 medium w-100 text-center mt-3 bg-transparent border-0">View
+                                More</button>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Right Content Area -->
+        <div class="dashboard-content">
+            <!-- Navbar Section -->
+            <div class="position-relative">
+                <header class="navbar">
+                    <div class="container-fluid">
+                        <div class="nav-container">
+                            <!-- navbar list -->
+                            <nav class="nav-menu" id="navMenu">
+                                <div class="navbar-list">
+                                      <a class="nav-link-list font-14 regular" href="home.html">Home</a>
+                                    <a class="nav-link-list font-14 regular active" href="junction.html">Junction</a>
+                                    <a class="nav-link-list font-14 regular" href="team.html">Team</a>
+                                    <a class="nav-link-list font-14 regular" href="ai-automation.html">Ai Automation</a>
+                                    <a class="nav-link-list font-14 regular" href="reports.html">Reports</a>
+                                </div>
+                            </nav>
+                            <div class="d-flex align-items-center justify-content-between gap-3 w-100">
+                                <!-- Dropdown -->
+                                <div class="d-flex align-items-center gap-3 position-relative">
+                                    <!-- Sidebar Toggle Button -->
+                                    <button class="sidebar-toggle-btn d-lg-none" type="button" id="sidebarToggle">
+                                        <div class="nav-toggle">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </button>
+                                </div>
+                                <div class="d-flex align-items-center gap-3">
+                                    <!-- Desktop Right Side Actions -->
+                                    <div class="d-flex align-items-center gap-4">
+                                        <!-- Social icon -->
+                                        <div class="social-icons-mobile">
+                                            <div class="d-flex align-items-center gap-3">
+                                                <!-- Notifications -->
+                                                <div class="dashboard-icon">
+                                                    <img src="assets/images/svg/notifications.svg" alt="Notifications"
+                                                        width="20" height="20">
+                                                </div>
+
+                                                <!-- Settings -->
+                                                <div class="dashboard-icon">
+                                                    <img src="assets/images/svg/setting.svg" alt="Settings" width="20"
+                                                        height="20">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Profile Dropdown -->
+                                        <div class="dropdown custom-profile">
+                                            <div class="dashboard-profile dropdown-toggle d-flex justify-content-center align-items-center"
+                                                data-bs-toggle="dropdown" aria-expanded="false" id="profileDropdown">
+                                                <span class="font-14 semibold">RS</span>
+                                            </div>
+                                            <ul class="dropdown-menu dropdown-menu-end profile-dropdown"
+                                                aria-labelledby="profileDropdown">
+                                                <li class="dropdown-header">
+                                                    <div class="d-flex align-items-center">
+                                                        <div
+                                                            class="profile-avatar me-3 semibold d-flex justify-content-center align-items-center text-white">
+                                                            <span class="font-12 semibold">RS</span>
+                                                        </div>
+                                                        <div>
+                                                            <div class="font-14 semibold text-dark">Ranax Social</div>
+                                                            <div class="font-12 text-muted">user@example.com</div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+
+                                                <li><a class="dropdown-item font-14 medium" href="#">
+                                                        <svg width="16" height="16" class="me-3" fill="currentColor"
+                                                            viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                                                        </svg>
+                                                        Profile
+                                                    </a></li>
+                                                <li><a class="dropdown-item font-14 medium" href="#">
+                                                        <svg width="16" height="16" class="me-3" fill="currentColor"
+                                                            viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
+                                                            <path
+                                                                d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z" />
+                                                        </svg>
+                                                        Settings
+                                                    </a></li>
+                                                <li>
+                                                    <hr class="dropdown-divider">
+                                                </li>
+                                                <li><a class="dropdown-item font-14 medium text-danger" href="#">
+                                                        <svg width="16" height="16" class="me-3" fill="currentColor"
+                                                            viewBox="0 0 16 16">
+                                                            <path fill-rule="evenodd"
+                                                                d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z" />
+                                                            <path fill-rule="evenodd"
+                                                                d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+                                                        </svg>
+                                                        Logout
+                                                    </a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- toggle button -->
+                                        <div class="d-flex align-items-center gap-4">
+                                            <div class="nav-toggle" id="navToggle">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </header>
+            </div>
+
+            <!-- Dashboard Main Content -->
+            <main class="dashboard-main">
+                <!-- Make a Junction -->
+                <div class="d-flex flex-column gap-3 mb-4">
+                    <!-- Team Management -->
+                    <h1 class="font-30 medium textColor mb-0">Junction</h1>
+                    <!-- Assign to a member Section -->
+                    <div class="card-bg rounded-4 d-flex align-items-start gap-4">
+                        <img src="assets/images/png/junction-icon.png">
+                        <div class="d-flex flex-column align-items-start gap-3 ps-2">
+                            <div class="d-flex flex-column gap-1">
+                                <h3 class="font-30 medium text-dark mb-0">Make a Junction</h3>
+                                <h4 class="font-18 grayDark regular mb-0">centralised space to merge all parts of your
+                                    organisation Social media presence </h4>
+                            </div>
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#createjunctionModal"
+                                class="cta-small-button font-16 regular d-flex align-items-center gap-2"><img
+                                    src="assets/images/svg/plus.svg" height="16">Create a junction</button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- All Junctions -->
+                <div class="d-flex flex-column gap-3">
+                    <!-- Team Management -->
+                    <h1 class="font-30 medium textColor mb-0">All Junctions</h1>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <!-- Assign to a member Section -->
+                            <div class="card-bg rounded-4 d-flex align-items-start gap-4">
+                                <img src="assets/images/png/junction-icon.png">
+                                <div class="d-flex flex-column align-items-start gap-3 ps-2 w-100">
+                                    <div class="d-flex flex-column gap-1 w-100">
+                                        <div class="d-flex justify-content-between">
+                                            <h3 class="font-24 medium text-dark mb-0">Ranax Automation</h3>
+                                            <img src="assets/images/svg/dropdown-icon-dot.svg">
+                                        </div>
+                                        <h4 class="font-18 grayDark regular mb-0">5 Accounts </h4>
+                                    </div>
+                                    <div class="d-flex justify-content-end gap-3 w-100">
+                                        <a href="junction-chatBox.html" type="button"
+                                            class="cta-small-button font-16 regular d-flex align-items-center gap-2"><img
+                                                src="assets/images/svg/plus.svg" height="16">Inbox</a>
+                                        <a href="junction-create-post.html" type="button"
+                                            class="cta-small-button font-16 regular d-flex align-items-center gap-2"><img
+                                                src="assets/images/svg/plus.svg" height="16">Create Post</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <!-- Assign to a member Section -->
+                            <div class="card-bg rounded-4 d-flex align-items-start gap-4">
+                                <img src="assets/images/png/junction-icon.png">
+                                <div class="d-flex flex-column align-items-start gap-3 ps-2 w-100">
+
+                                    <div class="d-flex flex-column gap-1 w-100">
+                                        <div class="d-flex justify-content-between">
+                                            <h3 class="font-24 medium text-dark mb-0">Ranax Automation</h3>
+                                            <img src="assets/images/svg/dropdown-icon-dot.svg">
+                                        </div>
+                                        <h4 class="font-18 grayDark regular mb-0">5 Accounts </h4>
+                                    </div>
+                                    <div class="d-flex justify-content-end gap-3 w-100">
+                                        <a href="junction-chatBox.html" type="button"
+                                            class="cta-small-button font-16 regular d-flex align-items-center gap-2"><img
+                                                src="assets/images/svg/plus.svg" height="16">Inbox</a>
+                                        <a href="junction-create-post.html" type="button"
+                                            class="cta-small-button font-16 regular d-flex align-items-center gap-2"><img
+                                                src="assets/images/svg/plus.svg" height="16">Create Post</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </main>
+
+        </div>
+    </div>
+
+    <!-- Sidebar Overlay for Mobile -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+    <!-- Create New Junction Modal -->
+    <div class="modal fade" id="createjunctionModal" tabindex="-1" aria-labelledby="scheduleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered schedule-modal-dialog">
+            <div class="modal-content border-0 rounded-4">
+                <!-- Header -->
+                <div class="modal-header border-0 p-3">
+                    <h5 class="font-24 semibold textColor mb-0" id="scheduleModalLabel">Create New Junction</h5>
+                    <button type="button" class="btn-close font-14" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <!-- Body -->
+                <div class="modal-body pt-3 pb-2  d-flex flex-column justify-content-between">
+                    <div class="d-flex flex-column gap-3">
+                        <!-- search bar -->
+                        <div class="d-flex gap-3">
+                            <!-- Edit profile -->
+                            <div class="d-flex flex-column align-items-center gap-2">
+                                <div class="profile-image-container position-relative">
+                                    <img src="assets/images/png/user-avtar.png" alt="Profile"
+                                        class="rounded-3 profile-edit-img" id="profileImage" width="80" height="80">
+                                    <button type="button"
+                                        class="edit-profile-btn position-absolute d-flex justify-content-center align-items-center"
+                                        onclick="document.getElementById('profileImageInput').click()">
+                                        <img src="assets/images/svg/edit.svg" alt="Edit" width="16" height="16">
+                                    </button>
+                                </div>
+                                <input type="file" id="profileImageInput" accept="image/*" style="display: none;"
+                                    onchange="previewProfileImage(event)">
+                                <span class="font-11 medium text-muted">Edit Photo</span>
+                            </div>
+                            <div class="d-flex flex-column gap-1 w-100">
+                                <h3 class="font-16 text-dark semibold mb-0">Junction Name</h3>
+                                <input type="text" placeholder="Enter Junction Name"
+                                    class="input-field font-14 regular w-100 px-3">
+                            </div>
+                        </div>
+                        <h2 class="font-16 semibold text-dark mb-0">Select Social Accounts</h2>
+                        <!-- search bar -->
+                        <div class="d-flex gap-3">
+                            <div class="d-flex">
+                                <div class="custom-select status-select h-100">
+                                    <div class="select-trigger bg-white justify-content-between h-100">
+                                        <span class="filter-label">All</span>
+                                        <img src="assets/images/svg/arrow.svg" alt="arrow" class="dropdown-arrow">
+                                    </div>
+                                    <div class="select-options">
+                                        <div class="select-option" data-value="all"><img
+                                                src="assets/images/svg/fill-whatsapp.svg">WhatsApp</div>
+                                        <div class="select-option" data-value="unread"><img
+                                                src="assets/images/svg/facebook-fill.svg">Facebook</div>
+                                        <div class="select-option" data-value="read"><img
+                                                src="assets/images/svg/Instagram-fill.svg">Instagram</div>
+                                        <div class="select-option" data-value="archived"><img
+                                                src="assets/images/svg/LinkedIn-fill.svg">LinkedIn</div>
+                                        <div class="select-option" data-value="archived"><img
+                                                src="assets/images/svg/YouTube-fill.svg">YouTube</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat-search w-100">
+                                <img src="assets/images/svg/search.svg" alt="Search" class="search-icon">
+                                <input type="text" placeholder="Search..." class="search-input w-100">
+                            </div>
+                        </div>
+
+                        <!-- Facebook Account -->
+                        <div class="mt-2 d-flex flex-column gap-2">
+                            <!-- Facebook Section -->
+                            <div class="accounts-header">
+                                <h5 class="font-14 medium textLightColor mb-0">FACEBOOK</h5>
+                            </div>
+                            <!-- Facebook Account Items -->
+                            <div class="accounts-list d-flex flex-column">
+                                <!-- Facebook Business1 -->
+                                <div class="account-item d-flex align-items-center justify-content-between p-3">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="whatsapp-icon">
+                                            <img src="assets/images/png/Facebook.png" alt="Facebook" width="48"
+                                                height="48">
+                                        </div>
+                                        <div class="account-info">
+                                            <h6 class="font-16 semibold textColor mb-1">@company.profile
+                                            </h6>
+
+                                        </div>
+                                    </div>
+                                    <div class="account-status">
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accounts-list d-flex flex-column">
+                                <!-- Facebook Business1 -->
+                                <div class="account-item d-flex align-items-center justify-content-between p-3">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="whatsapp-icon">
+                                            <img src="assets/images/png/Facebook.png" alt="Facebook" width="48"
+                                                height="48">
+                                        </div>
+                                        <div class="account-info">
+                                            <h6 class="font-16 semibold textColor mb-1">@company.profile
+                                            </h6>
+
+                                        </div>
+                                    </div>
+                                    <div class="account-status">
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accounts-list d-flex flex-column">
+                                <!-- Facebook Business1 -->
+                                <div class="account-item d-flex align-items-center justify-content-between p-3">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="whatsapp-icon">
+                                            <img src="assets/images/png/Facebook.png" alt="Facebook" width="48"
+                                                height="48">
+                                        </div>
+                                        <div class="account-info">
+                                            <h6 class="font-16 semibold textColor mb-1">@company.profile
+                                            </h6>
+
+                                        </div>
+                                    </div>
+                                    <div class="account-status">
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Instagram Account -->
+                        <div class="mt-2 d-flex flex-column gap-2">
+                            <!-- Instagram Section -->
+                            <div class="accounts-header">
+                                <h5 class="font-14 medium textLightColor mb-0">Instagram</h5>
+                            </div>
+                            <!-- Instagram Account Items -->
+                            <div class="accounts-list d-flex flex-column">
+                                <!-- Instagram Business1 -->
+                                <div class="account-item d-flex align-items-center justify-content-between p-3">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="whatsapp-icon">
+                                            <img src="assets/images/png/instagram.png" alt="Facebook" width="48"
+                                                height="48">
+                                        </div>
+                                        <div class="account-info">
+                                            <h6 class="font-16 semibold textColor mb-1">@company.profile
+                                            </h6>
+
+                                        </div>
+                                    </div>
+                                    <div class="account-status">
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Buttons -->
+                <div class="d-flex justify-content-end p-3">
+                    <div class="d-flex gap-2">
+                        <button type="button" class="cta-outline-button font-16 medium">Cancel</button>
+                        <a href="all-Junction.html" type="button" class="cta-small-button font-16 medium">Create
+                            Junction</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/sidebar.js"></script>
+
+    <script>
+        // Profile image preview functionality for junction creation
+        function previewProfileImage(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    document.getElementById('profileImage').src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

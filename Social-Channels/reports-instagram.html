@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ranax Social - Reports Instagram</title>
+    <!-- Custom Css -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/team-flow.css" rel="stylesheet">
+    <link href="assets/css/whatsapp.css" rel="stylesheet">
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Css -->
+    <link href="assets/css/stylesheet.css" rel="stylesheet">
+    <!-- table css -->
+    <link href="assets/css/table.css" rel="stylesheet">
+    <!-- What's New CSS -->
+    <link href="assets/css/other.css" rel="stylesheet">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+    <!-- Dashboard Container -->
+    <div class="dashboard-container">
+        <!-- Left Sidebar -->
+        <aside class="dashboard-sidebar" id="dashboardSidebar">
+            <div class="">
+                <!-- Logo -->
+                <div class="logo-card d-flex align-items-center justify-content-center">
+                    <div class="sidebar-logo">
+                        <img src="assets/images/svg/logo.svg" alt="Ranax Social Logo" />
+                    </div>
+                </div>
+                <div class="sidebar-content">
+                    <!-- Post buttons -->
+                    <div class="d-flex flex-column gap-3 post-button" id="postButtonDiv">
+                        <!-- Create Posts Button with Dropdown -->
+                        <div class="dropdown">
+                            <button id="createPostsBtn"
+                                class="sidebar-nav-item font-14 regular w-100 text-white border-0 d-flex align-items-center gap-3"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="assets/images/svg/plus.svg" alt="Plus" width="20" height="20">
+                                Create Posts
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-custom">
+                                <li><a href="create-instagram-post.html"
+                                        class="dropdown-item d-flex align-items-center gap-2 font-14 regular">
+                                        <img src="assets/images/png/instagram.png" alt="Instagram" width="16"
+                                            height="16">
+                                        <span>Instagram</span>
+                                    </a></li>
+                            </ul>
+                        </div>
+                        <!--  Calendar -->
+                        <a href="#" id="calendarBtn"
+                            class="sidebar-nav-item font-14 regular w-100 text-white border-0 d-flex align-items-center  gap-3">
+                            <img src="assets/images/svg/Calander.svg" alt="Calendar" width="16" height="16">
+                            Calendar
+                        </a>
+                        <!--   What's new -->
+                        <a href="whatsNew.html" id="whatsNewBtn"
+                            class="sidebar-nav-item font-14 regular w-100 text-white border-0 d-flex align-items-center  gap-3">
+                            <img src="assets/images/svg/gift-fill.svg" alt="What's new" width="20" height="20">
+                            What's new
+                        </a>
+                    </div>
+                    <!-- Whatsaap connected buttons -->
+                    <div class="after-connected-whatsapp" id="afterConnectedDiv" style="display: none;">
+                        <div class="d-flex flex-column gap-3">
+                            <!-- Add WhatsApp Button (initially hidden) -->
+                            <div class="whatsapp-add-button whatsapp-add" id="whatsappAddButton">
+                                <button
+                                    class="sidebar-create-btn font-14 regular w-100 text-white border-0 d-flex align-items-center justify-content-center gap-2">
+                                    <img src="assets/images/svg/plus.svg" alt="Plus" width="16" height="16">
+                                    Add WhatsApp
+                                </button>
+                            </div>
+
+                            <!-- Connected User Profile (initially hidden) -->
+                            <div class="connected-user-profile whatsapp-profile" id="whatsappConnectedProfile">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="profile-image">
+                                        <img src="assets/images/png/user-img.png" alt="Profile"
+                                            class="rounded-circle user-img" height="30" width="30">
+                                    </div>
+                                    <div class="profile-info flex-grow-1">
+                                        <div class="font-14 medium black" id="connectedUserName">Rahul Kumar</div>
+                                        <div class="font-12 regular black" id="connectedUserPhone">+1 (951) 315-2454
+                                        </div>
+                                    </div>
+                                    <img src="assets/images/svg/arrow.svg" alt="Arrow" class="ms-auto" width="14"
+                                        height="14">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Social Channels Section -->
+                    <div class="sidebar-section">
+                        <h6 class="font-16 medium mb-2 p-2 black">Social Channels</h6>
+
+                        <div class="social-channels-list d-flex flex-column gap-3">
+                            <a href="#"
+                                class="social-channel-item font-14 medium d-flex align-items-center gap-3 textColor">
+                                <img src="assets/images/png/whatsApp.png" alt="WhatsApp" class="social-channel-icon">
+                                <span>WhatsApp</span>
+                                <img src="assets/images/svg/profile-arrow.svg" alt="Arrow" class="ms-auto" width="14"
+                                    height="14">
+                            </a>
+
+                            <a href="#"
+                                class="social-channel-item font-14 medium d-flex align-items-center gap-3 textColor">
+                                <img src="assets/images/png/instagram.png" alt="Instagram" class="social-channel-icon">
+                                <span>Instagram</span>
+                                <img src="assets/images/svg/profile-arrow.svg" alt="Arrow" class="ms-auto" width="14"
+                                    height="14">
+                            </a>
+
+                            <a href="#"
+                                class="social-channel-item font-14 medium d-flex align-items-center gap-3 textColor">
+                                <img src="assets/images/png/Facebook.png" alt="Facebook" class="social-channel-icon">
+                                <span>Facebook</span>
+                                <img src="assets/images/svg/profile-arrow.svg" alt="Arrow" class="ms-auto" width="14"
+                                    height="14">
+                            </a>
+
+                            <a href="#"
+                                class="social-channel-item font-14 medium d-flex align-items-center gap-3 textColor">
+                                <img src="assets/images/png/Linkedin.png" alt="LinkedIn" class="social-channel-icon">
+                                <span>LinkedIn</span>
+                                <img src="assets/images/svg/profile-arrow.svg" alt="Arrow" class="ms-auto" width="14"
+                                    height="14">
+                            </a>
+
+                            <a href="#"
+                                class="social-channel-item font-14 medium d-flex align-items-center gap-3 textColor">
+                                <img src="assets/images/png/Telegram.png" alt="YouTube" class="social-channel-icon">
+                                <span>Telegram</span>
+                                <img src="assets/images/svg/profile-arrow.svg" alt="Arrow" class="ms-auto" width="14"
+                                    height="14">
+                            </a>
+                            <button
+                                class="view-more-btn font-14 medium w-100 text-center mt-3 bg-transparent border-0">View
+                                More</button>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Right Content Area -->
+        <div class="dashboard-content">
+            <!-- Navbar Section -->
+            <div class="position-relative">
+                <header class="navbar">
+                    <div class="container-fluid">
+                        <div class="nav-container">
+                            <!-- navbar list -->
+                            <nav class="nav-menu" id="navMenu">
+                                <div class="navbar-list">
+                                    <a class="nav-link-list font-14 regular" href="home.html">Home</a>
+                                    <a class="nav-link-list font-14 regular" href="junction.html">Junction</a>
+                                    <a class="nav-link-list font-14 regular" href="team.html">Team</a>
+                                    <a class="nav-link-list font-14 regular" href="ai-automation.html">Ai Automation</a>
+                                    <a class="nav-link-list font-14 regular active" href="reports.html">Reports</a>
+                                </div>
+                            </nav>
+                            <div class="d-flex align-items-center justify-content-between gap-3 w-100">
+                                <!-- Dropdown -->
+                                <div class="d-flex align-items-center gap-3 position-relative">
+                                    <!-- Sidebar Toggle Button -->
+                                    <button class="sidebar-toggle-btn d-lg-none" type="button" id="sidebarToggle">
+                                        <div class="nav-toggle">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </button>
+                                </div>
+                                <div class="d-flex align-items-center gap-3">
+                                    <!-- Desktop Right Side Actions -->
+                                    <div class="d-flex align-items-center gap-4">
+                                        <!-- Social icon -->
+                                        <div class="social-icons-mobile">
+                                            <div class="d-flex align-items-center gap-3">
+                                                <!-- Notifications -->
+                                                <div class="dashboard-icon">
+                                                    <img src="assets/images/svg/notifications.svg" alt="Notifications"
+                                                        width="20" height="20">
+                                                </div>
+
+                                                <!-- Settings -->
+                                                <div class="dashboard-icon">
+                                                    <img src="assets/images/svg/setting.svg" alt="Settings" width="20"
+                                                        height="20">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Profile Dropdown -->
+                                        <div class="dropdown custom-profile">
+                                            <div class="dashboard-profile dropdown-toggle d-flex justify-content-center align-items-center"
+                                                data-bs-toggle="dropdown" aria-expanded="false" id="profileDropdown">
+                                                <span class="font-14 semibold">RS</span>
+                                            </div>
+                                            <ul class="dropdown-menu dropdown-menu-end profile-dropdown"
+                                                aria-labelledby="profileDropdown">
+                                                <li class="dropdown-header">
+                                                    <div class="d-flex align-items-center">
+                                                        <div
+                                                            class="profile-avatar me-3 semibold d-flex justify-content-center align-items-center text-white">
+                                                            <span class="font-12 semibold">RS</span>
+                                                        </div>
+                                                        <div>
+                                                            <div class="font-14 semibold text-dark">Ranax Social</div>
+                                                            <div class="font-12 text-muted">user@example.com</div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+
+                                                <li><a class="dropdown-item font-14 medium" href="#">
+                                                        <svg width="16" height="16" class="me-3" fill="currentColor"
+                                                            viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                                                        </svg>
+                                                        Profile
+                                                    </a></li>
+                                                <li><a class="dropdown-item font-14 medium" href="#">
+                                                        <svg width="16" height="16" class="me-3" fill="currentColor"
+                                                            viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
+                                                            <path
+                                                                d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z" />
+                                                        </svg>
+                                                        Settings
+                                                    </a></li>
+                                                <li>
+                                                    <hr class="dropdown-divider">
+                                                </li>
+                                                <li><a class="dropdown-item font-14 medium text-danger" href="#">
+                                                        <svg width="16" height="16" class="me-3" fill="currentColor"
+                                                            viewBox="0 0 16 16">
+                                                            <path fill-rule="evenodd"
+                                                                d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z" />
+                                                            <path fill-rule="evenodd"
+                                                                d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+                                                        </svg>
+                                                        Logout
+                                                    </a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- toggle button -->
+                                        <div class="d-flex align-items-center gap-4">
+                                            <div class="nav-toggle" id="navToggle">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </header>
+            </div>
+            <!-- Dashboard Main Content -->
+            <main class="dashboard-main">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12 p-0">
+                            <div class="d-flex justify-content-between mb-5 flex-wrap gap-3">
+                                <!-- Header Section -->
+                                <h2 class="font-30 medium textColor mb-0">Reports</h2>
+                                <!-- buttons -->
+                                <div class="d-flex gap-sm-3 gap-2 align-items-center flex-wrap">
+                                    <!-- WhatsApp Dropdown -->
+                                    <div class="dropdown">
+                                        <button
+                                            class="more-btn primaryColor font-14 medium d-flex align-items-center gap-4 px-3 py-2"
+                                            type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <img src="assets/images/png/instagram.png" alt="Instagram" width="18"
+                                                    height="18">
+                                                Instagram
+                                            </div>
+                                            <img src="assets/images/svg/arrow-down.svg" alt="Dropdown" width="12"
+                                                height="12">
+                                        </button>
+                                        <ul class="dropdown-menu dropdown-menu-custom">
+                                            <li><a class="dropdown-item d-flex align-items-center gap-2 font-14 regular"
+                                                    href="reports.html">
+                                                    <img src="assets/images/png/whatsApp.png" alt="WhatsApp" width="16"
+                                                        height="16">
+                                                    <span>WhatsApp</span>
+                                                </a></li>
+                                            <li><a class="dropdown-item d-flex align-items-center gap-2 font-14 regular"
+                                                    href="reports-instagram.html">
+                                                    <img src="assets/images/png/instagram.png" alt="Instagram"
+                                                        width="16" height="16">
+                                                    <span>Instagram</span>
+                                                </a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="d-flex gap-sm-3 gap-2">
+                                        <div
+                                            class="more-btn primaryColor font-14 medium d-flex align-items-center gap-2 px-sm-3 px-2 py-2">
+                                            <img src="assets/images/svg/date.svg" alt="Calendar" width="16" height="16"
+                                                class="blue-filter">
+                                            Apr 14, 2026 - May 14, 2026
+                                        </div>
+                                        <button class="cta-small-button font-16 regular rounded-3">
+                                            <img src="assets/images/svg/download.svg" alt="Export" width="16"
+                                                height="16" class="white-filter">
+                                            Export Report
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Cards -->
+                            <div class="mb-4">
+
+                                <div class="row g-3">
+                                    <!-- Total Messages Sent  -->
+                                    <a href="#" class="col-xl-3 col-md-6 col-sm-6">
+                                        <div class="dashboard-card d-flex flex-column gap-2">
+                                            <span class="corner-decor"></span>
+                                            <div class="d-flex align-items-center gap-3">
+                                                <div class="icon-bg d-flex justify-content-center align-items-center"
+                                                    style="background-color: #BA427D1A;">
+                                                    <img src="assets/images/svg/massage-sent.svg">
+                                                </div>
+                                                <div class="d-flex flex-column gap-1">
+                                                    <h3 class="font-14 medium textColor mb-0">Total Messages Sent</h3>
+                                                    <h3 class="font-24 semibold mb-0 textColor">12,483</h3>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="d-flex align-items-center justify-content-end justify-content-md-center gap-2">
+                                                <span class="font-12 medium" style="color: #05CD99;">+5%</span>
+                                                <span class="font-12 regular textColor">Last 7 days</span>
+                                                <img src="assets/images/svg/card-arrow.svg" width="6">
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                    <!-- Automation Triggered -->
+                                    <a href="#" class="col-xl-3 col-md-6 col-sm-6">
+                                        <div class="dashboard-card d-flex flex-column gap-2">
+                                            <span class="corner-decor"></span>
+                                            <div class="d-flex align-items-center gap-3">
+                                                <div class="icon-bg d-flex justify-content-center align-items-center"
+                                                    style="background-color: #F974151A;">
+                                                    <img src="assets/images/svg/automation-triggered.svg">
+                                                </div>
+                                                <div class="d-flex flex-column gap-1">
+                                                    <h3 class="font-14 medium textColor mb-0">Automation Triggered</h3>
+                                                    <h3 class="font-24 semibold mb-0 textColor">14.5k</h3>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="d-flex align-items-center gap-2 justify-content-end justify-content-md-center">
+                                                <span class="font-12 medium" style="color: #05CD99;">+5%</span>
+                                                <span class="font-12 regular textColor">Last 7 days</span>
+                                                <img src="assets/images/svg/card-arrow.svg" width="6">
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                    <!-- New Leads -->
+                                    <a href="#" class="col-xl-3 col-md-6 col-sm-6">
+                                        <div class="dashboard-card d-flex flex-column gap-2">
+                                            <span class="corner-decor"></span>
+                                            <div class="d-flex align-items-center gap-3">
+                                                <div class="icon-bg d-flex justify-content-center align-items-center"
+                                                    style="background-color: #05B7231A;">
+                                                    <img src="assets/images/svg/new-leads.svg">
+                                                </div>
+                                                <div class="d-flex flex-column gap-1">
+                                                    <h3 class="font-14 medium textColor mb-0">New Leads</h3>
+                                                    <h3 class="font-24 semibold mb-0 textColor">284</h3>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="d-flex align-items-center gap-2 justify-content-end justify-content-md-center">
+                                                <span class="font-12 medium" style="color: #05CD99;">+5%</span>
+                                                <span class="font-12 regular textColor">Last 7 days</span>
+                                                <img src="assets/images/svg/card-arrow.svg" width="6">
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                    <!-- Conversion Rate -->
+                                    <a href="#" class="col-xl-3 col-md-6 col-sm-6">
+                                        <div class="dashboard-card d-flex flex-column gap-2">
+                                            <span class="corner-decor"></span>
+                                            <div class="d-flex align-items-center gap-3">
+                                                <div class="icon-bg d-flex justify-content-center align-items-center"
+                                                    style="background-color: #718EBF1A;">
+                                                    <img src="assets/images/svg/conversion-rate.svg">
+                                                </div>
+                                                <div class="d-flex flex-column gap-1">
+                                                    <h3 class="font-14 medium grayColor mb-0">Conversion Rate</h3>
+                                                    <h3 class="font-24 semibold mb-0 textColor">3,452</h3>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="d-flex align-items-center gap-2 justify-content-end justify-content-md-center">
+                                                <span class="font-12 medium" style="color: #05CD99;">+5%</span>
+                                                <span class="font-12 regular grayColor">Last 7 days</span>
+                                                <img src="assets/images/svg/card-arrow.svg" width="6">
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row g-4">
+                                <!-- Messages Overview -->
+                                <div class="col-md-7">
+                                    <div class="card-bg p-3 shadow-none rounded-4 h-100">
+                                        <h5 class="font-18 medium textColor mb-4">Messages Overview</h5>
+                                        <canvas id="messagesChart" height="150"></canvas>
+                                        <div class="d-flex justify-content-center gap-4 mt-4">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <span class="dot-chart" style="background-color: #E91E63;"></span>
+                                                <h4 class="font-14 regular mb-0" style="color: #E91E63;">Likes</h4>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <span class="dot-chart" style="background-color: #059669;"></span>
+                                                <h4 class="font-14 regular mb-0" style="color: #059669;">Total
+                                                    Engagement</h4>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <span class="dot-chart" style="background-color: #F5BB5C;"></span>
+                                                <h4 class="font-14 regular mb-0" style="color: #F5BB5C;">Comments</h4>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- Message Type Distribution -->
+                                <div class="col-md-5">
+                                    <div class="card-bg p-3 shadow-none rounded-4 h-100">
+                                        <h5 class="font-18 medium textColor mb-4">Message Type Distribution</h5>
+                                        <div
+                                            class="message-distribution d-flex flex-column align-items-center justify-content-between">
+                                            <svg viewBox="0 0 200 200" class="distribution-chart"
+                                                style="transform: scaleX(-1);">
+                                                <circle cx="100" cy="100" r="80" fill="none" stroke="#D82D7E"
+                                                    stroke-width="30" stroke-dasharray="251.3 502.6"
+                                                    transform="rotate(-90 100 100)" />
+                                                <circle cx="100" cy="100" r="80" fill="none" stroke="#F5BB5C"
+                                                    stroke-width="30" stroke-dasharray="176.9 502.6"
+                                                    stroke-dashoffset="-251.3" transform="rotate(-90 100 100)" />
+                                                <circle cx="100" cy="100" r="80" fill="none" stroke="#6E508E"
+                                                    stroke-width="30" stroke-dasharray="75.4 502.6"
+                                                    stroke-dashoffset="-428.2" transform="rotate(-90 100 100)" />
+                                            </svg>
+                                            <div class="d-flex flex-column gap-3 mt-4 w-100 px-5">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <span class="dot-chart"
+                                                            style="background-color: #D82D7E;"></span>
+                                                        <span class="font-14 medium textColor">Text Messages</span>
+                                                    </div>
+                                                    <span class="font-14 medium grayColor">50%</span>
+                                                </div>
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <span class="dot-chart"
+                                                            style="background-color: #6E508E;"></span>
+                                                        <span class="font-14 regular textColor">Media Messages</span>
+                                                    </div>
+                                                    <span class="font-14 medium grayColor">35%</span>
+                                                </div>
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <span class="dot-chart"
+                                                            style="background-color: #F5BB5C;"></span>
+                                                        <span class="font-14 regular textColor">Interactive
+                                                            Messages</span>
+                                                    </div>
+                                                    <span class="font-14 medium grayColor">15%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Top Performing Posts -->
+                                <div class="col-md-12">
+                                    <div class="card-bg p-4 shadow-none rounded-4">
+                                        <h5 class="font-18 medium textColor mb-4">Top Performing Posts</h5>
+                                        <div class="table-responsive">
+                                            <table class="table table-borderless automations-table">
+                                                <thead>
+                                                    <tr class="table-header-row">
+                                                        <th class="font-12 medium textColor">CONTENT</th>
+                                                        <th class="font-12 medium textColor">TYPE</th>
+                                                        <th class="font-12 medium textColor">LIKES</th>
+                                                        <th class="font-12 medium textColor">COMMENTS</th>
+                                                        <th class="font-12 medium textColor">SAVES</th>
+                                                        <th class="font-12 medium textColor">ENGAGEMENT RATE</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="font-14 medium textColor">
+                                                            <div class="d-flex align-items-center gap-3">
+                                                                <img src="assets/images/png/recent-post1.png" alt="Post"
+                                                                    class="post-thumbnail" width="40" height="40"
+                                                                    style="border-radius: 10px;">
+                                                                <span>Summer vibes collection 2024</span>
+                                                            </div>
+                                                        </td>
+                                                        <td><span class="badge-trigger">Reel</span></td>
+                                                        <td class="font-14 medium textColor">12,400</td>
+                                                        <td class="font-14 medium textColor">845</td>
+                                                        <td class="font-14 medium textColor">2,120</td>
+                                                        <td>
+                                                            <div class="d-flex align-items-center gap-3">
+                                                                <div class="progress-bar-container">
+                                                                    <div class="progress-bar-fill"
+                                                                        style="width: 84%; background: linear-gradient(90deg, #E91E63 0%, #F97316 100%);">
+                                                                    </div>
+                                                                </div>
+                                                                <span class="font-14 medium textColor">8.4%</span>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="font-14 medium textColor">
+                                                            <div class="d-flex align-items-center gap-3">
+                                                                <img src="assets/images/png/recent-post2.png" alt="Post"
+                                                                    class="post-thumbnail" width="40" height="40"
+                                                                    style="border-radius: 10px;">
+                                                                <span>Behind the scenes with our team</span>
+                                                            </div>
+                                                        </td>
+                                                        <td><span class="badge-trigger">Carousel</span></td>
+                                                        <td class="font-14 medium textColor">9,240</td>
+                                                        <td class="font-14 medium textColor">562</td>
+                                                        <td class="font-14 medium textColor">1,804</td>
+                                                        <td>
+                                                            <div class="d-flex align-items-center gap-3">
+                                                                <div class="progress-bar-container">
+                                                                    <div class="progress-bar-fill"
+                                                                        style="width: 68%; background: linear-gradient(90deg, #E91E63 0%, #F97316 100%);">
+                                                                    </div>
+                                                                </div>
+                                                                <span class="font-14 medium textColor">6.8%</span>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="font-14 medium textColor">
+                                                            <div class="d-flex align-items-center gap-3">
+                                                                <img src="assets/images/png/recent-post3.png" alt="Post"
+                                                                    class="post-thumbnail" width="40" height="40"
+                                                                    style="border-radius: 10px;">
+                                                                <span>New product launch announcement</span>
+                                                            </div>
+                                                        </td>
+                                                        <td><span class="badge-trigger">Image</span></td>
+                                                        <td class="font-14 medium textColor">7,120</td>
+                                                        <td class="font-14 medium textColor">425</td>
+                                                        <td class="font-14 medium textColor">1,205</td>
+                                                        <td>
+                                                            <div class="d-flex align-items-center gap-3">
+                                                                <div class="progress-bar-container">
+                                                                    <div class="progress-bar-fill"
+                                                                        style="width: 52%; background: linear-gradient(90deg, #E91E63 0%, #F97316 100%);">
+                                                                    </div>
+                                                                </div>
+                                                                <span class="font-14 medium textColor">5.2%</span>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="font-14 medium textColor">
+                                                            <div class="d-flex align-items-center gap-3">
+                                                                <img src="assets/images/png/recent-post1.png" alt="Post"
+                                                                    class="post-thumbnail" width="40" height="40"
+                                                                    style="border-radius: 10px;">
+                                                                <span>Daily motivation Monday</span>
+                                                            </div>
+                                                        </td>
+                                                        <td><span class="badge-trigger">Story</span></td>
+                                                        <td class="font-14 medium textColor">5,890</td>
+                                                        <td class="font-14 medium textColor">298</td>
+                                                        <td class="font-14 medium textColor">890</td>
+                                                        <td>
+                                                            <div class="d-flex align-items-center gap-3">
+                                                                <div class="progress-bar-container">
+                                                                    <div class="progress-bar-fill"
+                                                                        style="width: 41%; background: linear-gradient(90deg, #E91E63 0%, #F97316 100%);">
+                                                                    </div>
+                                                                </div>
+                                                                <span class="font-14 medium textColor">4.1%</span>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="font-14 medium textColor">
+                                                            <div class="d-flex align-items-center gap-3">
+                                                                <img src="assets/images/png/recent-post2.png" alt="Post"
+                                                                    class="post-thumbnail" width="40" height="40"
+                                                                    style="border-radius: 10px;">
+                                                                <span>Quick tips for productivity</span>
+                                                            </div>
+                                                        </td>
+                                                        <td><span class="badge-trigger">Reel</span></td>
+                                                        <td class="font-14 medium textColor">8,450</td>
+                                                        <td class="font-14 medium textColor">512</td>
+                                                        <td class="font-14 medium textColor">1,680</td>
+                                                        <td>
+                                                            <div class="d-flex align-items-center gap-3">
+                                                                <div class="progress-bar-container">
+                                                                    <div class="progress-bar-fill"
+                                                                        style="width: 62%; background: linear-gradient(90deg, #E91E63 0%, #F97316 100%);">
+                                                                    </div>
+                                                                </div>
+                                                                <span class="font-14 medium textColor">6.2%</span>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Audience Insights -->
+                                <div class="col-md-6">
+                                    <div class="card-bg p-4 shadow-none rounded-4 h-100">
+                                        <h5 class="font-18 medium textColor mb-4">Audience Insights</h5>
+                                        <div class="audience-insights-list">
+                                            <div class="audience-item">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <span class="font-14 regular grayDark">Total Followers</span>
+                                                    <span class="font-20 bold textColor">54,320</span>
+                                                </div>
+                                            </div>
+                                            <div class="audience-item">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <span class="font-14 regular grayDark">Followers Gained</span>
+                                                    <span class="font-16 semibold" style="color: #05CD99;">+342</span>
+                                                </div>
+                                            </div>
+                                            <div class="audience-item">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <span class="font-14 regular grayDark">Followers Lost</span>
+                                                    <span class="font-16 semibold" style="color: #EF4444;">-18</span>
+                                                </div>
+                                            </div>
+                                            <div class="mt-4">
+                                                <h6 class="font-12 semibold grayDark mb-3 text-uppercase">Gender
+                                                    Distribution</h6>
+                                                <div class="gender-item mb-3">
+                                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                                        <span class="font-14 regular grayDark">Female</span>
+                                                        <span class="font-14 medium textColor">62%</span>
+                                                    </div>
+                                                    <div class="gender-bar">
+                                                        <div class="gender-fill"
+                                                            style="width: 62%; background: #E91E63;"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="gender-item">
+                                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                                        <span class="font-14 regular grayDark">Male</span>
+                                                        <span class="font-14 medium textColor">38%</span>
+                                                    </div>
+                                                    <div class="gender-bar">
+                                                        <div class="gender-fill"
+                                                            style="width: 38%; background: #6E508E;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mt-4">
+                                                <h6 class="font-12 semibold grayDark mb-2 text-uppercase">Top Age
+                                                    Group</h6>
+                                                <h5 class="font-20 bold textColor mb-1">25-34 years</h5>
+                                                <p class="font-12 regular grayDark mb-0">45% of your audience</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Best Time to Post -->
+                                <div class="col-md-6">
+                                    <div class="card-bg p-4 shadow-none rounded-4 h-100">
+                                        <h5 class="font-18 medium textColor mb-3">Best Time to Post</h5>
+                                        <div class="best-time-list">
+                                            <div
+                                                class="best-time-item d-flex align-items-center justify-content-between gap-3">
+                                                <div class="best-time-label" style="min-width: 120px;">
+                                                    <h6 class="font-14 medium textColor mb-0">Monday</h6>
+                                                    <p class="font-12 regular grayDark mb-0">7:00 PM - 9:00 PM</p>
+                                                </div>
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <div class="best-time-bar">
+                                                        <div class="best-time-fill"
+                                                            style="width: 92%; background: linear-gradient(90deg, #F97316 0%, #E91E63 100%);">
+                                                        </div>
+                                                    </div>
+                                                    <span class="font-14 medium textColor"
+                                                        style="min-width: 40px; text-align: right;">92%</span>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="best-time-item d-flex align-items-center justify-content-between   gap-3">
+                                                <div class="best-time-label" style="min-width: 120px;">
+                                                    <h6 class="font-14 medium textColor mb-0">Tuesday</h6>
+                                                    <p class="font-12 regular grayDark mb-0">6:00 PM - 8:00 PM</p>
+                                                </div>
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <div class="best-time-bar">
+                                                        <div class="best-time-fill"
+                                                            style="width: 88%; background: linear-gradient(90deg, #F97316 0%, #E91E63 100%);">
+                                                        </div>
+                                                    </div>
+                                                    <span class="font-14 medium textColor"
+                                                        style="min-width: 40px; text-align: right;">88%</span>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="best-time-item d-flex align-items-center justify-content-between   gap-3">
+                                                <div class="best-time-label" style="min-width: 120px;">
+                                                    <h6 class="font-14 medium textColor mb-0">Wednesday</h6>
+                                                    <p class="font-12 regular grayDark mb-0">7:30 PM - 9:30 PM</p>
+                                                </div>
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <div class="best-time-bar">
+                                                        <div class="best-time-fill"
+                                                            style="width: 85%; background: linear-gradient(90deg, #F97316 0%, #E91E63 100%);">
+                                                        </div>
+                                                    </div>
+                                                    <span class="font-14 medium textColor"
+                                                        style="min-width: 40px; text-align: right;">85%</span>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="best-time-item d-flex align-items-center justify-content-between   gap-3">
+                                                <div class="best-time-label" style="min-width: 120px;">
+                                                    <h6 class="font-14 medium textColor mb-0">Thursday</h6>
+                                                    <p class="font-12 regular grayDark mb-0">8:00 PM - 10:00 PM</p>
+                                                </div>
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <div class="best-time-bar">
+                                                        <div class="best-time-fill"
+                                                            style="width: 91%; background: linear-gradient(90deg, #F97316 0%, #E91E63 100%);">
+                                                        </div>
+                                                    </div>
+                                                    <span class="font-14 medium textColor"
+                                                        style="min-width: 40px; text-align: right;">91%</span>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="best-time-item d-flex align-items-center justify-content-between   gap-3">
+                                                <div class="best-time-label" style="min-width: 120px;">
+                                                    <h6 class="font-14 medium textColor mb-0">Friday</h6>
+                                                    <p class="font-12 regular grayDark mb-0">6:30 PM - 8:30 PM</p>
+                                                </div>
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <div class="best-time-bar">
+                                                        <div class="best-time-fill"
+                                                            style="width: 87%; background: linear-gradient(90deg, #F97316 0%, #E91E63 100%);">
+                                                        </div>
+                                                    </div>
+                                                    <span class="font-14 medium textColor"
+                                                        style="min-width: 40px; text-align: right;">87%</span>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="best-time-item d-flex align-items-center justify-content-between   gap-3">
+                                                <div class="best-time-label" style="min-width: 120px;">
+                                                    <h6 class="font-14 medium textColor mb-0">Saturday</h6>
+                                                    <p class="font-12 regular grayDark mb-0">2:00 PM - 4:00 PM</p>
+                                                </div>
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <div class="best-time-bar">
+                                                        <div class="best-time-fill"
+                                                            style="width: 84%; background: linear-gradient(90deg, #F97316 0%, #E91E63 100%);">
+                                                        </div>
+                                                    </div>
+                                                    <span class="font-14 medium textColor"
+                                                        style="min-width: 40px; text-align: right;">84%</span>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="best-time-item d-flex align-items-center justify-content-between   gap-3">
+                                                <div class="best-time-label" style="min-width: 120px;">
+                                                    <h6 class="font-14 medium textColor mb-0">Sunday</h6>
+                                                    <p class="font-12 regular grayDark mb-0">3:00 PM - 5:00 PM</p>
+                                                </div>
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <div class="best-time-bar">
+                                                        <div class="best-time-fill"
+                                                            style="width: 79%; background: linear-gradient(90deg, #F97316 0%, #E91E63 100%);">
+                                                        </div>
+                                                    </div>
+                                                    <span class="font-14 medium textColor"
+                                                        style="min-width: 40px; text-align: right;">79%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </main>
+
+        </div>
+    </div>
+
+    <!-- Sidebar Overlay for Mobile -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/sidebar.js"></script>
+
+
+
+</body>
+
+</html>
+
+
+<script>
+    // Messages Overview Chart
+    const ctx = document.getElementById('messagesChart').getContext('2d');
+    const messagesChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['Apr 14', 'Apr 21', 'Apr 28', 'May 5', 'May 12'],
+            datasets: [
+                {
+                    label: 'Likes',
+                    data: [750, 820, 950, 880, 1150],
+                    borderColor: '#E91E63',
+                    backgroundColor: 'transparent',
+                    borderWidth: 2,
+                    fill: false,
+                    tension: 0.4,
+                    pointRadius: 5,
+                    pointBackgroundColor: '#E91E63',
+                    pointBorderColor: '#E91E63',
+                    pointBorderWidth: 0
+                },
+                {
+                    label: 'Total Engagement',
+                    data: [320, 380, 420, 380, 520],
+                    borderColor: '#059669',
+                    backgroundColor: 'transparent',
+                    borderWidth: 2,
+                    fill: false,
+                    tension: 0.4,
+                    pointRadius: 5,
+                    pointBackgroundColor: '#059669',
+                    pointBorderColor: '#059669',
+                    pointBorderWidth: 0
+                },
+                {
+                    label: 'Comments',
+                    data: [180, 240, 320, 280, 420],
+                    borderColor: '#F5BB5C',
+                    backgroundColor: 'transparent',
+                    borderWidth: 2,
+                    fill: false,
+                    tension: 0.4,
+                    pointRadius: 5,
+                    pointBackgroundColor: '#F5BB5C',
+                    pointBorderColor: '#F5BB5C',
+                    pointBorderWidth: 0
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            plugins: {
+                legend: {
+                    display: false
+                },
+                filler: {
+                    propagate: true
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 1200,
+                    ticks: {
+                        stepSize: 300,
+                        color: '#999999',
+                        font: {
+                            size: 12
+                        }
+                    },
+                    grid: {
+                        color: '#E5E7EB',
+                        drawBorder: false,
+                        borderDash: [5, 5]
+                    }
+                },
+                x: {
+                    ticks: {
+                        color: '#999999',
+                        font: {
+                            size: 12
+                        }
+                    },
+                    grid: {
+                        display: false,
+                        drawBorder: true,
+                        borderColor: '#E5E7EB',
+                        borderDash: [5, 5]
+                    }
+                }
+            }
+        }
+    });
+
+    // Message Type Distribution Chart
+    const ctxMessageType = document.getElementById('messageTypeChart');
+    if (ctxMessageType) {
+        const messageTypeChart = new Chart(ctxMessageType.getContext('2d'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Text Messages', 'Media Messages', 'Interactive Messages'],
+                datasets: [{
+                    data: [80, 50, 15],
+                    backgroundColor: ['#059669', '#F5BB5C', '#05966980'],
+                    borderColor: 'transparent',
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+    }
+</script>
+
+// Platform Dropdown Change
+document.querySelectorAll('.dropdown-menu-custom .dropdown-item').forEach(item => {
+item.addEventListener('click', function(e) {
+e.preventDefault();
+const icon = this.querySelector('img').src;
+const text = this.querySelector('span').textContent;
+const button = this.closest('.dropdown').querySelector('button');
+
+// Update button content
+button.innerHTML = `
+<img src="${icon}" alt="${text}" width="18" height="18">
+${text}
+<img src="assets/images/svg/arrow-down.svg" alt="Dropdown" width="14" height="14">
+`;
+});
+});
