@@ -1,0 +1,15 @@
+RewriteEngine On
+
+# If file or directory exists, serve it directly
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Redirect *.html to extensionless (works even if .html file is removed)
+RewriteCond %{REQUEST_URI} \.html$ [NC]
+RewriteRule ^(.+)\.html$ $1 [R=301,L]
+
+# Extensionless -> .php
+RewriteRule ^$ index.php [L]
+RewriteRule ^([A-Za-z0-9\-]+)$ $1.php [L]
+

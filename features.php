@@ -1,0 +1,584 @@
+﻿<?php
+$pageTitle = 'Features - Ranax Social';
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <?php include __DIR__ . "/partials/head.php"; ?>
+</head>
+<body>
+  <?php include __DIR__ . "/partials/header-public.php"; ?>
+
+<!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="row align-items-center g-4 scroll-animate">
+                    <!-- Left Content -->
+                    <div class="col-12 col-lg-6 scroll-animate-left">
+                        <h1 class="hero-title medium textColor mb-3">
+                            All Features, One <br> <span class="hero-highlight themeColor"> Powerful</span>
+                            Platform
+                        </h1>
+                        <p class="hero-desc font-18 regular textLightColor mb-4 line-height-26">
+                            Explore powerful tools to manage, schedule, analyze, and automate your social media — all
+                            from a single dashboard.
+                        </p>
+                        <div class="d-flex gap-3 mb-4">
+                            <a href="/signup" class="hero-btn-primary font-16 semibold line-height-26">Start Free
+                                Trial</a>
+                            <a href="#demo"
+                                class="hero-btn-secondary d-flex justify-content-center align-items-center font-16 semibold">Watch
+                                Demo</a>
+                        </div>
+                        <p class="hero-trust font-14 regular textLightColor mb-0">
+                            Trusted by marketers, creators, and growing businesses.
+                        </p>
+                    </div>
+
+                    <!-- Right Card -->
+                    <div class="col-12 col-lg-6 scroll-animate-right">
+                        <!-- <div class="hero-card">
+              <div class="row g-3 mb-3">
+                <div class="col-6">
+                  <div class="hero-stat-card">
+                    <p class="hero-stat-label font-14 regular mb-1">Engagement</p>
+                    <h3 class="hero-stat-value font-24 bold mb-0">2,847</h3>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="hero-stat-card hero-stat-card-purple">
+                    <p class="hero-stat-label font-14 regular mb-1">Reach</p>
+                    <h3 class="hero-stat-value font-24 bold mb-0">45.2K</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="row g-3">
+                <div class="col-3">
+                  <div class="hero-placeholder-card"></div>
+                </div>
+                <div class="col-3">
+                  <div class="hero-placeholder-card"></div>
+                </div>
+                <div class="col-3">
+                  <div class="hero-placeholder-card"></div>
+                </div>
+                <div class="col-3">
+                  <div class="hero-placeholder-card"></div>
+                </div>
+              </div>
+            </div> -->
+                        <img src="assets/images/png/hero-img.png" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Tabs Section -->
+        <section class="features-tabs-section py-sm-5 py-3">
+            <div class="container scroll-animate">
+                <div class="row justify-content-center">
+                    <div class="features-tabs">
+                        <!-- Tab Navigation -->
+                        <ul class="nav nav-pills features-tabs-nav d-flex justify-content-center flex-wrap gap-4 mb-5"
+                            id="featuresTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button
+                                    class="nav-link active features-tab-btn d-flex align-items-center gap-2 font-16 medium"
+                                    id="publishing-tab" data-bs-toggle="pill" data-bs-target="#publishing" type="button"
+                                    role="tab" aria-controls="publishing" aria-selected="true">
+                                    <img src="assets/images/svg/date.svg" class="tab-icon" alt="Publishing">
+                                    Publishing
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link features-tab-btn d-flex align-items-center gap-2 font-16 medium"
+                                    id="analytics-tab" data-bs-toggle="pill" data-bs-target="#analytics" type="button"
+                                    role="tab" aria-controls="analytics" aria-selected="false">
+                                    <img src="assets/images/svg/analytics.svg" class="tab-icon" alt="Analytics">
+                                    Analytics
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link features-tab-btn d-flex align-items-center gap-2 font-16 medium"
+                                    id="automation-tab" data-bs-toggle="pill" data-bs-target="#automation" type="button"
+                                    role="tab" aria-controls="automation" aria-selected="false">
+                                    <img src="assets/images/svg/automation.svg" class="tab-icon" alt="Automation">
+                                    Automation
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link features-tab-btn d-flex align-items-center gap-2 font-16 medium"
+                                    id="team-tab" data-bs-toggle="pill" data-bs-target="#team" type="button" role="tab"
+                                    aria-controls="team" aria-selected="false">
+                                    <img src="assets/images/svg/team-management.svg" class="tab-icon"
+                                        alt="Team Management">
+                                    Team Management
+                                </button>
+                            </li>
+                        </ul>
+
+                        <!-- Tab Content -->
+                        <div class="tab-content features-tab-content mt-5" id="featuresTabsContent">
+                            <!-- Publishing Tab -->
+                            <div class="tab-pane fade show active" id="publishing" role="tabpanel"
+                                aria-labelledby="publishing-tab">
+                                <section class="analytics-section">
+                                    <div class="container">
+                                        <div class="row g-5 gy-4">
+                                            <!-- Left Content -->
+                                            <div class="col-12 col-lg-6 scroll-animate-left animate-in">
+                                                <h2 class="analytics-title font-36 medium mb-3 textColor">
+                                                    Collaborate with Your <span
+                                                        class="section-title-highlight">Team</span>
+                                                </h2>
+                                                <p
+                                                    class="analytics-desc font-18 regular textLightColor mb-3 line-height-26">
+                                                    Get detailed insights into your social media performance with
+                                                    comprehensive analytics and reporting.
+                                                </p>
+
+                                                <ul class="list-unstyled mb-4">
+                                                    <li class="d-flex align-items-center mb-3">
+                                                        <img src="assets/images/svg/right-tik.svg" class="me-3"
+                                                            width="20" height="20" alt="Check">
+                                                        <span class="font-16 regular text-dark">Assign roles and
+                                                            permissions</span>
+                                                    </li>
+                                                    <li class="d-flex align-items-center mb-3">
+                                                        <img src="assets/images/svg/right-tik.svg" class="me-3"
+                                                            width="20" height="20" alt="Check">
+                                                        <span class="font-16 regular text-dark">Collaborate on posts and
+                                                            campaigns</span>
+                                                    </li>
+                                                    <li class="d-flex align-items-center mb-3">
+                                                        <img src="assets/images/svg/right-tik.svg" class="me-3"
+                                                            width="20" height="20" alt="Check">
+                                                        <span class="font-16 regular text-dark">Approval workflows for
+                                                            content publishing</span>
+                                                    </li>
+                                                    <li class="d-flex align-items-center mb-3">
+                                                        <img src="assets/images/svg/right-tik.svg" class="me-3"
+                                                            width="20" height="20" alt="Check">
+                                                        <span class="font-16 regular text-dark">Manage multiple clients
+                                                            or brands easily</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <!-- Right Card -->
+                                            <div class="col-12 col-lg-6 scroll-animate-right animate-in">
+                                                <div class="">
+                                                    <img src="assets/images/png/features-Publishing.png"
+                                                        class="img-fluid">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+
+                            <!-- Analytics Tab -->
+                            <div class="tab-pane fade" id="analytics" role="tabpanel" aria-labelledby="analytics-tab">
+                                <div class="row  g-4">
+                                    <div class="col-12 col-lg-6">
+                                        <div class="pe-lg-4">
+                                            <h3 class="font-30 medium text-dark mb-3">Track Reach with <span
+                                                    class="section-title-highlight">Analytics</span></h3>
+                                            <p class="font-18 regular text-muted mb-4 lh-base">
+                                                Get actionable insights to understand what works and improve your social
+                                                media strategy.
+                                            </p>
+                                            <ul class="list-unstyled mb-4">
+                                                <li class="d-flex align-items-center mb-3">
+                                                    <img src="assets/images/svg/right-tik.svg" class="me-3" width="20"
+                                                        height="20" alt="Check">
+                                                    <span class="font-16 regular text-dark">Monitor engagement, reach,
+                                                        and growth</span>
+                                                </li>
+                                                <li class="d-flex align-items-center mb-3">
+                                                    <img src="assets/images/svg/right-tik.svg" class="me-3" width="20"
+                                                        height="20" alt="Check">
+                                                    <span class="font-16 regular text-dark">Visual dashboards with
+                                                        easy-to-read charts</span>
+                                                </li>
+                                                <li class="d-flex align-items-center mb-3">
+                                                    <img src="assets/images/svg/right-tik.svg" class="me-3" width="20"
+                                                        height="20" alt="Check">
+                                                    <span class="font-16 regular text-dark">Track performance across
+                                                        multiple platforms</span>
+                                                </li>
+                                                <li class="d-flex align-items-center mb-3">
+                                                    <img src="assets/images/svg/right-tik.svg" class="me-3" width="20"
+                                                        height="20" alt="Check">
+                                                    <span class="font-16 regular text-dark">Export reports for clients
+                                                        and teams</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+                                        <div class="">
+                                            <img src="assets/images/png/features-Analytics.png" class="img-fluid"
+                                                alt="Analytics Dashboard">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Automation Tab -->
+                            <div class="tab-pane fade" id="automation" role="tabpanel" aria-labelledby="automation-tab">
+                                <div class="row align-items-center g-4">
+                                    <div class="col-12 col-lg-6">
+                                        <div class="pe-lg-4">
+                                            <h3 class="font-30 medium text-dark mb-3">Automate Your <span
+                                                    class="section-title-highlight">Workflow</span></h3>
+                                            <p class="font-18 regular text-muted mb-4 lh-base">
+                                                Save time by automating repetitive tasks and managing workflows
+                                                effortlessly.
+                                            </p>
+                                            <ul class="list-unstyled mb-4">
+                                                <li class="d-flex align-items-center mb-3">
+                                                    <img src="assets/images/svg/right-tik.svg" class="me-3" width="20"
+                                                        height="20" alt="Check">
+                                                    <span class="font-16 regular text-dark">Create automated replies and
+                                                        workflows</span>
+                                                </li>
+                                                <li class="d-flex align-items-center mb-3">
+                                                    <img src="assets/images/svg/right-tik.svg" class="me-3" width="20"
+                                                        height="20" alt="Check">
+                                                    <span class="font-16 regular text-dark">Set triggers for messages
+                                                        and actions</span>
+                                                </li>
+                                                <li class="d-flex align-items-center mb-3">
+                                                    <img src="assets/images/svg/right-tik.svg" class="me-3" width="20"
+                                                        height="20" alt="Check">
+                                                    <span class="font-16 regular text-dark">Build custom automation
+                                                        flows (Junction 🔥)</span>
+                                                </li>
+                                                <li class="d-flex align-items-center mb-3">
+                                                    <img src="assets/images/svg/right-tik.svg" class="me-3" width="20"
+                                                        height="20" alt="Check">
+                                                    <span class="font-16 regular text-dark">Reduce manual work and
+                                                        increase efficiency</span>
+                                                    responses</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+                                        <div class="">
+                                            <img src="assets/images/png/features-Automation.png" class="img-fluid"
+                                                alt="Automation Dashboard">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Team Management Tab -->
+                            <div class="tab-pane fade" id="team" role="tabpanel" aria-labelledby="team-tab">
+                                <div class="row align-items-center g-4">
+                                    <div class="col-12 col-lg-6">
+                                        <div class="pe-lg-4">
+                                            <h3 class="font-30 medium text-dark mb-3">Collaborate with Your <span
+                                                    class="section-title-highlight">Team</span></h3>
+                                            <p class="font-18 regular text-muted mb-4 lh-base">
+                                                Get detailed insights into your social media performance with
+                                                comprehensive analytics and reporting.
+                                            </p>
+                                            <ul class="list-unstyled mb-4">
+                                                <li class="d-flex align-items-center mb-3">
+                                                    <img src="assets/images/svg/right-tik.svg" class="me-3" width="20"
+                                                        height="20" alt="Check">
+                                                    <span class="font-16 regular text-dark">Assign roles and
+                                                        permissions</span>
+                                                </li>
+                                                <li class="d-flex align-items-center mb-3">
+                                                    <img src="assets/images/svg/right-tik.svg" class="me-3" width="20"
+                                                        height="20" alt="Check">
+                                                    <span class="font-16 regular text-dark">Collaborate on posts and
+                                                        campaigns</span>
+                                                </li>
+                                                <li class="d-flex align-items-center mb-3">
+                                                    <img src="assets/images/svg/right-tik.svg" class="me-3" width="20"
+                                                        height="20" alt="Check">
+                                                    <span class="font-16 regular text-dark">Approval workflows for
+                                                        content publishing</span>
+                                                </li>
+                                                <li class="d-flex align-items-center mb-3">
+                                                    <img src="assets/images/svg/right-tik.svg" class="me-3" width="20"
+                                                        height="20" alt="Check">
+                                                    <span class="font-16 regular text-dark">Manage multiple clients or
+                                                        brands easily</span>
+                                                    tools</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+                                        <div class="">
+                                            <img src="assets/images/png/features-team.png" class="img-fluid"
+                                                alt="Automation Dashboard">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Grid Section -->
+        <section class="features-grid-section py-4">
+            <div class="container scroll-animate">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-10 text-center">
+                        <h2 class="font-36 medium text-dark mb-3">
+                            Powerful Features To Boost Your <span
+                                class="section-title-highlight greenColor">Workflow</span>
+                        </h2>
+                        <p class="font-18 regular text-muted mb-5 lh-base">
+                            Everything you need to manage your social media presence efficiently
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row g-4 gy-4">
+                    <!-- Bulk Scheduling -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="features-item h-100">
+                            <div class="features-item-body p-4 text-start">
+                                <div
+                                    class="features-icon-bg features-icon-green  d-inline-flex align-items-center justify-content-center mb-3">
+                                    <img src="assets/images/svg/Bulk-Scheduling.svg" width="24" height="24"
+                                        alt="Bulk Scheduling">
+                                </div>
+                                <h5 class="font-20 medium text-dark mb-2">Bulk Scheduling</h5>
+                                <p class="font-14 regular text-muted mb-0 lh-base">
+                                    Schedule hundreds of posts in minutes
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hashtag Suggestions -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="features-item h-100">
+                            <div class="features-item-body p-4 text-start">
+                                <div
+                                    class="features-icon-bg features-icon-yellow  d-inline-flex align-items-center justify-content-center mb-3">
+                                    <img src="assets/images/svg/Hashtag.svg" width="24" height="24" alt="Hashtag">
+                                </div>
+                                <h5 class="font-20 medium text-dark mb-2">Hashtag Suggestions</h5>
+                                <p class="font-14 regular text-muted mb-0 lh-base">
+                                    Get trending and relevant hashtags
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Smart Analytics -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="features-item h-100">
+                            <div class="features-item-body p-4 text-start">
+                                <div
+                                    class="features-icon-bg features-icon-sky  d-inline-flex align-items-center justify-content-center mb-3">
+                                    <img src="assets/images/svg/Smart Analytics.svg" width="24" height="24"
+                                        alt="Smart Analytics">
+                                </div>
+                                <h5 class="font-20 medium text-dark mb-2">Smart Analytics</h5>
+                                <p class="font-14 regular text-muted mb-0 lh-base">
+                                    Data-driven insights for better decisions
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Auto Replies -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="features-item h-100">
+                            <div class="features-item-body p-4 text-start">
+                                <div
+                                    class="features-icon-bg features-icon-purple  d-inline-flex align-items-center justify-content-center mb-3">
+                                    <img src="assets/images/svg/Auto-Replies.svg" width="24" height="24"
+                                        alt="Auto Replies">
+                                </div>
+                                <h5 class="font-20 medium text-dark mb-2">Auto Replies</h5>
+                                <p class="font-14 regular text-muted mb-0 lh-base">
+                                    Automatically respond to common queries
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Calendar -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="features-item h-100">
+                            <div class="features-item-body p-4 text-start">
+                                <div
+                                    class="features-icon-bg features-icon-gray  d-inline-flex align-items-center justify-content-center mb-3">
+                                    <img src="assets/images/svg/Content-Calendar.svg" width="24" height="24"
+                                        alt="Content Calendar">
+                                </div>
+                                <h5 class="font-20 medium text-dark mb-2">Content Calendar</h5>
+                                <p class="font-14 regular text-muted mb-0 lh-base">
+                                    Visualize and organize your posting plan
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Multi-Platform Posting -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="features-item h-100">
+                            <div class="features-item-body p-4 text-start">
+                                <div
+                                    class="features-icon-bg features-icon-blue  d-inline-flex align-items-center justify-content-center mb-3">
+                                    <img src="assets/images/svg/Multi-Platform.svg" width="24" height="24"
+                                        alt="Multi-Platform">
+                                </div>
+                                <h5 class="font-20 medium text-dark mb-2">Multi-Platform Posting</h5>
+                                <p class="font-14 regular text-muted mb-0 lh-base">
+                                    Publish across all channels in one click
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison Section -->
+        <section class="comparison-section py-sm-5 py-3">
+            <div class="container scroll-animate">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-10 text-center">
+                        <h2 class="font-36 medium text-dark mb-3">
+                            Why Choose <span class="section-title-highlight yellowColor">Ranax</span> Automation?
+                        </h2>
+                        <p class="font-18 regular text-muted mb-5 lh-base">
+                            See how Ranax Automation stacks up against the competition
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-10">
+                        <div class="feature-comparison-wrapper">
+                            <!-- Table Header -->
+                            <div class="feature-comparison-grid feature-comparison-header">
+                                <div class="feature-comparison-item font-18 medium text-dark">Features</div>
+                                <div class="feature-comparison-item font-18 medium text-dark text-center">Ranax
+                                    Automation</div>
+                                <div class="feature-comparison-item font-18 medium text-muted text-center">Other Tools
+                                </div>
+                            </div>
+
+                            <!-- Comparison Rows -->
+                            <div class="feature-comparison-grid feature-comparison-row">
+                                <div class="feature-comparison-item font-16 regular text-dark">Unified Inbox</div>
+                                <div class="feature-comparison-item text-center">
+                                    <div
+                                        class="feature-check-green d-inline-flex align-items-center justify-content-center">
+                                        <img src="assets/images/svg/right-tik.svg" width="16" height="16" alt="Yes"
+                                            class="green-filter">
+                                    </div>
+                                </div>
+                                <div class="feature-comparison-item text-center">
+                                    <span class="feature-cross-text font-22 text-muted">×</span>
+                                </div>
+                            </div>
+
+                            <div class="feature-comparison-grid feature-comparison-row">
+                                <div class="feature-comparison-item font-16 regular text-dark">Automation</div>
+                                <div class="feature-comparison-item text-center">
+                                    <div
+                                        class="feature-check-green d-inline-flex align-items-center justify-content-center">
+                                        <img src="assets/images/svg/right-tik.svg" width="16" height="16" alt="Yes"
+                                            class="green-filter">
+                                    </div>
+                                </div>
+                                <div class="feature-comparison-item text-center">
+                                    <span class="font-14 regular text-muted">Limited</span>
+                                </div>
+                            </div>
+
+                            <div class="feature-comparison-grid feature-comparison-row">
+                                <div class="feature-comparison-item font-16 regular text-dark">Multi-Platform Posting
+                                </div>
+                                <div class="feature-comparison-item text-center">
+                                    <div
+                                        class="feature-check-green d-inline-flex align-items-center justify-content-center">
+                                        <img src="assets/images/svg/right-tik.svg" width="16" height="16" alt="Yes"
+                                            class="green-filter">
+                                    </div>
+                                </div>
+                                <div class="feature-comparison-item text-center">
+                                    <div
+                                        class="feature-check-gray d-inline-flex align-items-center justify-content-center">
+                                        <img src="assets/images/svg/right-tik.svg" width="16" height="16" alt="Partial"
+                                            class="gray-filter">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="feature-comparison-grid feature-comparison-row">
+                                <div class="feature-comparison-item font-16 regular text-dark">Real-Time Analytics</div>
+                                <div class="feature-comparison-item text-center">
+                                    <div
+                                        class="feature-check-green d-inline-flex align-items-center justify-content-center">
+                                        <img src="assets/images/svg/right-tik.svg" width="16" height="16" alt="Yes"
+                                            class="green-filter">
+                                    </div>
+                                </div>
+                                <div class="feature-comparison-item text-center">
+                                    <span class="font-14 regular text-muted">Limited</span>
+                                </div>
+                            </div>
+
+                            <div class="feature-comparison-grid feature-comparison-row">
+                                <div class="feature-comparison-item font-16 regular text-dark">Team Collaboration</div>
+                                <div class="feature-comparison-item text-center">
+                                    <div
+                                        class="feature-check-green d-inline-flex align-items-center justify-content-center">
+                                        <img src="assets/images/svg/right-tik.svg" width="16" height="16" alt="Yes"
+                                            class="green-filter">
+                                    </div>
+                                </div>
+                                <div class="feature-comparison-item text-center">
+                                    <span class="feature-cross-text font-22 text-muted">×</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="final-cta-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-10 text-center scroll-animate">
+                        <h2 class="final-cta-title font-36 medium textColor mb-3">
+                            Start <span class="hero-highlight themeColor"> Managing </span> Your Social Media <span
+                                class="hero-highlight themeColor"> Smarter </span>
+                        </h2>
+                        <p class="final-cta-desc font-18 regular textLightColor mb-4 line-height-26">
+                            Join thousands of marketers and creators who are already using Ranax Social.
+                        </p>
+                        <div class="d-flex gap-3 justify-content-center flex-wrap">
+                            <a href="/signup"
+                                class="hero-btn-primary bg-white border-0 themeColor font-16 semibold">Get Started
+                                Free</a>
+                            <a href="#demo" class="final-cta-btn-secondary font-16 semibold">Book a Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+  <?php include __DIR__ . "/partials/footer.php"; ?>
+  <?php include __DIR__ . "/partials/scripts.php"; ?>
+</body>
+</html>

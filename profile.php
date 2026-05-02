@@ -1,0 +1,622 @@
+﻿<?php
+$pageTitle = 'Profile - Ranax Social';
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <?php include __DIR__ . "/partials/head.php"; ?>
+</head>
+<body>
+
+    <div class="page-scroll-area">
+        <!-- Navbar -->
+        <header class="navbar-container py-3">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center">
+                    <a href="/" class="nav-logo">
+                        <img src="assets/images/svg/logo.svg" alt="Ranax Social Logo" />
+                    </a>
+                    <!-- Auth Buttons -->
+                    <div class="d-flex gap-3 align-items-center">
+                        <a href="#"
+                            class="d-flex align-items-center gap-2 font-14 medium textColor text-decoration-none profile-nav-btn">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M8.25 3H3C2.60218 3 2.22064 3.15804 1.93934 3.43934C1.65804 3.72064 1.5 4.10218 1.5 4.5V15C1.5 15.3978 1.65804 15.7794 1.93934 16.0607C2.22064 16.342 2.60218 16.5 3 16.5H13.5C13.8978 16.5 14.2794 16.342 14.5607 16.0607C14.842 15.7794 15 15.3978 15 15V9.75"
+                                    stroke="#111827" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M13.875 1.87498C14.1734 1.57661 14.5777 1.40918 15 1.40918C15.4223 1.40918 15.8266 1.57661 16.125 1.87498C16.4234 2.17336 16.5908 2.57766 16.5908 2.99998C16.5908 3.42231 16.4234 3.82661 16.125 4.12498L9 11.25L6 12L6.75 9L13.875 1.87498Z"
+                                    stroke="#111827" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            Edit Profile
+                        </a>
+                        <a href="#"
+                            class="d-flex align-items-center gap-2 font-14 medium textColor text-decoration-none profile-nav-btn">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6.75 15.75H3.75C3.35218 15.75 2.97064 15.592 2.68934 15.3107C2.40804 15.0294 2.25 14.6478 2.25 14.25V3.75C2.25 3.35218 2.40804 2.97064 2.68934 2.68934C2.97064 2.40804 3.35218 2.25 3.75 2.25H6.75"
+                                    stroke="#111827" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M12 12.75L15.75 9L12 5.25" stroke="#111827" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M15.75 9H6.75" stroke="#707070" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="main-content p-sm-4 px-2 py-4">
+            <div class="container">
+                <div class="col-md-10 m-auto">
+                    <!-- Profile Header -->
+                    <div class="mb-4">
+                        <div class="d-flex align-items-center gap-4 mb-4">
+                            <div class="profile-avatar-large">
+                                <img src="assets/images/svg/avtar.svg" alt="Profile">
+                            </div>
+                            <div class="d-flex align-items-baseline gap-sm-4 gap-1 flex-wrap">
+                                <div>
+                                    <h2 class="font-30 bold mb-0 textColor">Rahul singh</h2>
+                                    <p class="font-16 regular mb-0 text-gray-light">Rahulsingh@email.com</p>
+                                </div>
+                                <span class="profile-status-badge d-flex align-items-center gap-1 font-14 medium">
+                                    <img src="assets/images/svg/check.svg">
+                                    Active Subscription
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Tabs -->
+                        <div class="profile-tabs-wrapper d-flex flex-wrap gap-2">
+                            <button class="profile-tab active">Profile Info</button>
+                            <button class="profile-tab">Billing</button>
+                        </div>
+                    </div>
+                    <!-- Profile Tab Content -->
+                    <div id="profileTabContent">
+                        <div class="row">
+                            <!-- Left Column -->
+                            <div class="col-md-8 mb-4">
+                                <!-- Profile Completion -->
+                                <div class="profile-card p-4 shadow-sm rounded-4 mb-4">
+                                    <h3 class="font-18 semibold mb-3 textColor">Profile Completion: 60 %</h3>
+                                    <div class="profile-progress-bar mb-3">
+                                        <div class="profile-progress-fill" style="width: 60%"></div>
+                                    </div>
+                                    <button class="hero-btn-primary p-2 w-100">Complete Profile</button>
+                                </div>
+
+                                <!-- Profile Form -->
+                                <div class="profile-card p-4 shadow-sm rounded-4">
+                                    <h3 class="font-24 bold mb-4 textColor">Profile Information</h3>
+
+                                    <form class="profile-information">
+                                        <div class="row g-3 mb-3">
+                                            <div class="col-md-6">
+                                                <label class="font-14 medium grayColor mb-2">Full Name</label>
+                                                <input type="text" class="login-input w-100 py-2 rounded-3">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="font-14 medium grayColor mb-2">Phone Number</label>
+                                                <input type="tel" class="login-input w-100 py-2 rounded-3">
+                                            </div>
+                                        </div>
+
+                                        <div class="row g-3 mb-3">
+                                            <div class="col-md-6">
+                                                <label class="font-14 medium grayColor mb-2">WhatsApp Number</label>
+                                                <input type="tel" class="login-input w-100 py-2 rounded-3">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="font-14 medium grayColor mb-2">Company Name</label>
+                                                <input type="text" class="login-input w-100 py-2 rounded-3">
+                                            </div>
+                                        </div>
+
+                                        <div class="row g-3 mb-3">
+                                            <div class="col-md-6">
+                                                <label class="font-14 medium grayColor mb-2">Address</label>
+                                                <input type="text" class="login-input w-100 py-2 rounded-3">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="font-14 medium grayColor mb-2">Email</label>
+                                                <input type="email" class="login-input w-100 py-2 rounded-3">
+                                            </div>
+                                        </div>
+
+                                        <div class="row g-3 mb-4">
+                                            <div class="col-md-6">
+                                                <label class="profile-label">Company Size</label>
+                                                <select
+                                                    class="form-select profile-select-input font-14 medium w-100  rounded-3">
+                                                    <option>1-10 employees</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="profile-label">Timezone</label>
+                                                <select
+                                                    class="form-select profile-select-input font-14 medium w-100  rounded-3">
+                                                    <option>PST (UTC-8)</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex justify-content-end">
+                                            <button type="submit" class="hero-btn-primary py-2 w-100">Save
+                                                Changes</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <!-- Right Column -->
+                            <div class="col-md-4">
+
+                                <!-- Upload -->
+                                <div class="profile-card mb-4 p-4 shadow-sm rounded-4">
+                                    <div class="profile-upload-image">
+                                        <img id="profileImage" src="assets/images/png/user-profile.avif" alt="Profile">
+                                    </div>
+                                    <input type="file" id="fileInput" accept="image/*" class="hidden-input">
+                                    <button type="button"
+                                        class="profile-btn-upload d-flex justify-content-center gap-2 align-items-center font-16 medium textColor w-100"
+                                        id="uploadBtn">
+                                        Upload New
+                                        <svg width="20" height="20" viewBox="0 0 18 18" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" class="me-2">
+                                            <path
+                                                d="M15.75 11.25V14.25C15.75 14.6478 15.592 15.0294 15.3107 15.3107C15.0294 15.592 14.6478 15.75 14.25 15.75H3.75C3.35218 15.75 2.97064 15.592 2.68934 15.3107C2.40804 15.0294 2.25 14.6478 2.25 14.25V11.25"
+                                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M12.75 6L9 2.25L5.25 6" stroke="currentColor" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M9 2.25V11.25" stroke="currentColor" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+
+                                    </button>
+                                </div>
+
+                                <!-- Quick Info -->
+                                <div class="profile-card mb-4 p-4 shadow-sm rounded-4">
+                                    <h3 class="font-18 semibold mb-3 textColor">Quick Info</h3>
+                                    <div class="profile-info-row d-flex justify-content-between align-items-center">
+                                        <span class="font-14 regular text-gray-light">Plan</span>
+                                        <span class="profile-info-value">Professional</span>
+                                    </div>
+                                    <div class="profile-info-row d-flex justify-content-between align-items-center">
+                                        <span class="font-14 regular text-gray-light">Channels Connected</span>
+                                        <span class="profile-info-value">5</span>
+                                    </div>
+                                    <div class="profile-info-row d-flex justify-content-between align-items-center">
+                                        <span class="font-14 regular text-gray-light">Member Since</span>
+                                        <span class="profile-info-value">Jan 2026</span>
+                                    </div>
+                                </div>
+
+                                <!-- Actions -->
+                                <div class="profile-card mb-4 p-4 shadow-sm rounded-4 d-flex flex-column gap-3">
+                                    <button
+                                        class="profile-action-link  bg-transparent font-14 medium textColor w-100  d-flex align-items-center gap-2">
+                                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9 1.5V16.5M1.5 9H16.5" stroke="currentColor" stroke-width="2.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        Connect Account
+                                    </button>
+                                    <button
+                                        class="profile-action-link  bg-transparent font-14 medium textColor w-100  d-flex align-items-center gap-2">
+                                        <svg width="18" height="18" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M8.66699 6.66667V2L2.66699 9.33333H7.33366V14L13.3337 6.66667H8.66699Z"
+                                                stroke="#020817" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+
+                                        Upgrade Plan
+                                    </button>
+                                    <button
+                                        class="profile-action-link  bg-transparent font-14 medium textColor w-100 d-flex align-items-center gap-2">
+                                        <img src="assets/images/svg/download-invoice.svg">
+                                        Download Invoice
+                                    </button>
+                                </div>
+
+                                <!-- Complete Profile -->
+                                <div class="profile-card  p-4 shadow-sm rounded-4">
+                                    <h3 class="font-18 semibold mb-3 textColor">Complete Profile</h3>
+                                    <div class="profile-progress-bar mb-2">
+                                        <div class="profile-progress-fill" style="width: 60%"></div>
+                                    </div>
+                                    <p class="font-14 regular text-gray-light mb-3">60 % complete</p>
+                                    <button class="hero-btn-primary py-2 w-100">Continue</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Billing Tab Content -->
+                    <div id="billingTabContent" class="tab-content-hidden">
+                        <div class="row">
+                            <div class="col-md-12 m-auto">
+                                <h3 class="font-24 bold mb-2 textColor">Billing</h3>
+                                <p class="font-14 regular text-gray-light mb-4">Manage your subscription, payments, and
+                                    invoices</p>
+
+                                <!-- Current Plan Card -->
+                                <div class="profile-card p-4 shadow-sm rounded-4">
+                                    <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+                                        <div>
+                                            <h4 class="font-20 semibold textColor mb-2">Professional</h4>
+                                            <div class="d-flex align-items-baseline  mb-3">
+                                                <span class="font-24 regular primaryColor">₹999</span>
+                                                <span class="font-14 regular textLightColor">/month</span>
+                                            </div>
+                                            <div class="d-flex">
+                                                <div class="d-flex align-items-center gap-2 mb-3 status-badge">
+                                                    <span class="greenColor font-14 medium">● Active</span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="font-14 regular textLightColor mb-0">Next Billing Date</p>
+                                                <p class="font-18 regular textColor mb-0">February 15, 2024</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex gap-2">
+                                            <button class="hero-btn-primary py-2 px-3 font-14 medium rounded-3">Upgrade
+                                                Plan</button>
+                                            <button class="font-14 medium cancel-btn py-2 px-3 rounded-3">Cancel
+                                                Plan</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Usage Section -->
+                                <div class="profile-card p-4 shadow-sm rounded-4 mt-4">
+                                    <h4 class="font-18 semibold mb-4 textColor">Usage</h4>
+                                    <div class="row g-4">
+                                        <!-- Channels Used -->
+                                        <div class="col-md-4">
+                                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                                <p class="font-14 regular text-gray-light mb-0">Channels Used</p>
+                                                <p class="font-14 regular textColor mb-0">3 / 5</p>
+                                            </div>
+                                            <div class="profile-progress-bar mb-2">
+                                                <div class="profile-progress-fill" style="width: 60%"></div>
+                                            </div>
+                                        </div>
+                                        <!-- Posts Used -->
+                                        <div class="col-md-4">
+                                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                                <p class="font-14 regular text-gray-light mb-0">Posts Used</p>
+                                                <p class="font-14 regular textColor mb-0">120 / ∞</p>
+                                            </div>
+                                            <div class="profile-progress-bar">
+                                                <div class="profile-progress-fill" style="width: 40%"></div>
+                                            </div>
+                                        </div>
+                                        <!-- Team Members -->
+                                        <div class="col-md-4">
+                                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                                <p class="font-14 regular text-gray-light mb-0">Team Members</p>
+                                                <p class="font-14 regular textColor mb-0">3 / 10</p>
+                                            </div>
+
+                                            <div class="profile-progress-bar">
+                                                <div class="profile-progress-fill" style="width: 30%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Payment Method Card -->
+                                <div class="profile-card p-4 shadow-sm rounded-4 mt-4">
+                                    <h4 class="font-18 semibold mb-4 textColor">Payment Method</h4>
+                                    <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="visa-card d-flex justify-content-center align-items-center">
+                                                <p class="font-12 semibold primaryColor mb-0">VISA</p>
+                                            </div>
+                                            <div>
+                                                <p class="font-18 medium textColor mb-0">Visa •••• 4242</p>
+                                                <p class="font-14 regular text-gray-light mb-0">Expires 12/25</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex gap-2">
+                                            <button class="font-14 medium cancel-btn py-2 px-3 rounded-3">Change
+                                                Method</button>
+                                            <button class="hero-btn-primary py-2 px-3 rounded-3 font-14 medium">Add New
+                                                Method</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Invoices Card -->
+                                <div class="profile-card p-4 shadow-sm rounded-4 mt-4">
+                                    <div class="row g-2 mb-3">
+                                        <div class="col-md-6">
+                                            <h4 class="font-18 semibold mb-0 textColor">Invoices</h4>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="d-flex gap-2">
+                                                <input type="text"
+                                                    class="login-input bg-white py-2 px-3 rounded-3 light font-14 w-100"
+                                                    placeholder="Search invoices...">
+                                                <select
+                                                    class="form-select profile-select-input font-14 medium rounded-3 select-status">
+                                                    <option>All Status</option>
+                                                    <option>Paid</option>
+                                                    <option>Pending</option>
+                                                    <option>Failed</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="table-responsive">
+                                        <table class="table table-hover mb-0">
+                                            <thead>
+                                                <tr class="table-header-border">
+                                                    <th class="font-14 semibold textColor pb-3">Invoice ID</th>
+                                                    <th class="font-14 semibold textColor pb-3">Date</th>
+                                                    <th class="font-14 semibold textColor pb-3">Plan</th>
+                                                    <th class="font-14 semibold textColor pb-3">Amount</th>
+                                                    <th class="font-14 semibold textColor pb-3">Status</th>
+                                                    <th class="font-14 semibold textColor pb-3">Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="table-row-border">
+                                                    <td class="font-14 semibold textColor py-3">INV-001</td>
+                                                    <td class="font-14 regular textColor py-3">Jan 15, 2024</td>
+                                                    <td class="font-14 regular textColor py-3">Professional</td>
+                                                    <td class="font-14 semibold textColor py-3">₹999</td>
+                                                    <td class="py-3"><span
+                                                            class=" table-badge table-badge-paid font-12">Paid</span>
+                                                    </td>
+                                                    <td class="py-3">
+                                                        <div class="d-flex gap-2">
+                                                            <button class="btn btn-sm icon-btn">
+                                                                <svg width="18" height="18" viewBox="0 0 24 24"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                    <polyline points="7 10 12 15 17 10"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                    <line x1="12" y1="15" x2="12" y2="3"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </button>
+                                                            <button class="btn btn-sm icon-btn">
+                                                                <svg width="18" height="18" viewBox="0 0 24 24"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                        d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                    <circle cx="12" cy="12" r="3" stroke="currentColor"
+                                                                        stroke-width="2" stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="table-row-border">
+                                                    <td class="font-14 semibold textColor py-3">INV-002</td>
+                                                    <td class="font-14 regular textColor py-3">Dec 15, 2023</td>
+                                                    <td class="font-14 regular textColor py-3">Professional</td>
+                                                    <td class="font-14 semibold textColor py-3">₹999</td>
+                                                    <td class="py-3"><span
+                                                            class=" table-badge table-badge-paid font-12">Paid</span>
+                                                    </td>
+                                                    <td class="py-3">
+                                                        <div class="d-flex gap-2">
+                                                            <button class="btn btn-sm icon-btn">
+                                                                <svg width="18" height="18" viewBox="0 0 24 24"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                    <polyline points="7 10 12 15 17 10"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                    <line x1="12" y1="15" x2="12" y2="3"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </button>
+                                                            <button class="btn btn-sm icon-btn">
+                                                                <svg width="18" height="18" viewBox="0 0 24 24"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                        d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                    <circle cx="12" cy="12" r="3" stroke="currentColor"
+                                                                        stroke-width="2" stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="table-row-border">
+                                                    <td class="font-14 semibold textColor py-3">INV-003</td>
+                                                    <td class="font-14 regular textColor py-3">Nov 15, 2023</td>
+                                                    <td class="font-14 regular textColor py-3">Professional</td>
+                                                    <td class="font-14 semibold textColor py-3">₹999</td>
+                                                    <td class="py-3"><span
+                                                            class=" table-badge table-badge-paid font-12">Paid</span>
+                                                    </td>
+                                                    <td class="py-3">
+                                                        <div class="d-flex gap-2">
+                                                            <button class="btn btn-sm icon-btn">
+                                                                <svg width="18" height="18" viewBox="0 0 24 24"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                    <polyline points="7 10 12 15 17 10"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                    <line x1="12" y1="15" x2="12" y2="3"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </button>
+                                                            <button class="btn btn-sm icon-btn">
+                                                                <svg width="18" height="18" viewBox="0 0 24 24"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                        d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                    <circle cx="12" cy="12" r="3" stroke="currentColor"
+                                                                        stroke-width="2" stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="table-row-border">
+                                                    <td class="font-14 semibold textColor py-3">INV-004</td>
+                                                    <td class="font-14 regular textColor py-3">Oct 15, 2023</td>
+                                                    <td class="font-14 regular textColor py-3">Professional</td>
+                                                    <td class="font-14 semibold textColor py-3">₹999</td>
+                                                    <td class="py-3"><span
+                                                            class=" table-badge table-badge-pending font-12">Pending</span>
+                                                    </td>
+                                                    <td class="py-3">
+                                                        <div class="d-flex gap-2">
+                                                            <button class="btn btn-sm icon-btn">
+                                                                <svg width="18" height="18" viewBox="0 0 24 24"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                    <polyline points="7 10 12 15 17 10"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                    <line x1="12" y1="15" x2="12" y2="3"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </button>
+                                                            <button class="btn btn-sm icon-btn">
+                                                                <svg width="18" height="18" viewBox="0 0 24 24"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                        d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                    <circle cx="12" cy="12" r="3" stroke="currentColor"
+                                                                        stroke-width="2" stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="font-14 semibold textColor py-3">INV-005</td>
+                                                    <td class="font-14 regular textColor py-3">Sep 15, 2023</td>
+                                                    <td class="font-14 regular textColor py-3">Professional</td>
+                                                    <td class="font-14 semibold textColor py-3">₹999</td>
+                                                    <td class="py-3"><span
+                                                            class=" table-badge table-badge-failed font-12">Failed</span>
+                                                    </td>
+                                                    <td class="py-3">
+                                                        <div class="d-flex gap-2">
+                                                            <button class="btn btn-sm icon-btn">
+                                                                <svg width="18" height="18" viewBox="0 0 24 24"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                    <polyline points="7 10 12 15 17 10"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                    <line x1="12" y1="15" x2="12" y2="3"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </button>
+                                                            <button class="btn btn-sm icon-btn">
+                                                                <svg width="18" height="18" viewBox="0 0 24 24"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                        d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                    <circle cx="12" cy="12" r="3" stroke="currentColor"
+                                                                        stroke-width="2" stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <!-- Bootstrap JS -->
+    
+    <!-- jQuery -->
+    
+    <!-- Custom JS -->
+    
+
+    
+
+  <?php include __DIR__ . "/partials/scripts.php"; ?>
+</body>
+</html>

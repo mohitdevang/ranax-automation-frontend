@@ -1,0 +1,14 @@
+<?php
+/** @var string $pageTitle */
+$pageTitle = $pageTitle ?? 'Ranax Social Media';
+?>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title><?php echo htmlspecialchars($pageTitle, ENT_QUOTES, 'UTF-8'); ?></title>
+<!-- Custom Css -->
+<link href="assets/css/style.css" rel="stylesheet">
+<!-- Bootstrap Css -->
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<!-- Font Css -->
+<link href="assets/css/stylesheet.css" rel="stylesheet">
+
