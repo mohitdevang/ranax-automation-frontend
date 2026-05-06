@@ -15,6 +15,6 @@ include_once __DIR__ . '/config.php';
 
 <script>
   // Centralized config (from `partials/config.php`)
-  window.RS_BASE_URL = @json($rsBaseUrl);
+  window.RS_BASE_URL = <?php echo json_encode($rsBaseUrl, JSON_UNESCAPED_SLASHES); ?>;
 </script>
 
