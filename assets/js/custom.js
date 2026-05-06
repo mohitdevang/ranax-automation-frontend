@@ -152,3 +152,23 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+
+// Frontend signup page: redirect into backend registration flow.
+// The backend owns OTP + draft lifecycle + payment flow; this page is marketing UI only.
+document.addEventListener('DOMContentLoaded', function () {
+  var form = document.getElementById('rsSignupForm');
+  if (!form) return;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    try {
+      // Preserve pricing preselect params (plan/billing/channels) if present.
+      var qs = window.location.search || '';
+      var base = (window.RS_BASE_URL || (window.location.origin + '/ranax-automation-backend')).replace(/\/+$/, '');
+      window.location.href = base + '/register' + qs;
+    } catch (err) {
+      window.location.href = (window.location.origin + '/ranax-automation-backend/register');
+    }
+  });
+});

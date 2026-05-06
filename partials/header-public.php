@@ -39,7 +39,7 @@ function rs_url(string $path): string {
           <!-- Auth Buttons -->
           <div class="d-flex gap-2 align-items-center mt-3 mt-lg-0 ms-lg-3">
             <a href="<?php echo rs_url('login'); ?>" class="nav-login-btn font-14 semibold">Login</a>
-            <a href="<?php echo rs_url('signup'); ?>" class="nav-signup-btn font-14 semibold">Sign up</a>
+            <a href="<?php echo rs_base_url('register'); ?>" class="nav-signup-btn font-14 semibold">Sign up</a>
           </div>
         </nav>
       </div>

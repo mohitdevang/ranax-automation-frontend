@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 $pageTitle = 'Pricing - Ranax Social';
 ?>
 <!DOCTYPE html>
@@ -45,7 +45,7 @@ $pageTitle = 'Pricing - Ranax Social';
                                                 type="button">
                                                 <span class="font-24 lh-1">−</span>
                                             </button>
-                                            <span class="font-24 semibold textColor text-center"
+                                            <span id="rsChannelsSelected" class="font-24 semibold textColor text-center"
                                                 style="min-width: 35px;">1</span>
                                             <button
                                                 class="channel-btn d-flex align-items-center justify-content-center cursor-pointer"
@@ -80,343 +80,18 @@ $pageTitle = 'Pricing - Ranax Social';
                             </div>
                         </div>
 
-                        <!-- Pricing Cards -->
+                        <!-- Pricing Cards (rendered dynamically from API only) -->
                         <div class="tab-content" id="billingTabContent">
                             <!-- Monthly Pricing -->
                             <div class="tab-pane fade show active" id="monthly" role="tabpanel"
                                 aria-labelledby="monthly-tab">
-                                <div class="row g-4 gy-4 justify-content-center">
-                                    <!-- Starter Plan -->
-                                    <div class="col-12 col-md-6 col-lg-4">
-                                        <div class="pricing-card h-100" style="border:1px solid #F5BB5C;">
-                                            <div class="pricing-header">
-                                                <div class="d-flex flex-column align-items-start">
-                                                    <h4 class="plan-name font-24 regular textColor mb-0">Starter</h4>
-                                                    <div class="plan-price mb-2">
-                                                        <span class="font-36 regular grayColor">$29</span>
-                                                        <span class="font-16 regular grayColor">/month</span>
-                                                    </div>
-                                                    <p class=" font-14 regular grayColor mb-4 line-height-24">Perfect
-                                                        for freelancers and small teams</p>
-                                                </div>
-                                                <a href="/plan-purchase"
-                                                    class="pricing-btn w-100 d-flex justify-content-center align-items-center font-16 regular bgYellowColor text-white border-0">Start
-                                                    Free
-                                                    Trial</a>
-                                            </div>
-                                            <div class="pricing-features">
-                                                <ul class="list-unstyled starter-list mb-0">
-                                                    <li class="feature-item d-flex align-items-start mb-3">
-                                                        <img src="assets/images/svg/tik-mark.svg" alt="Check"
-                                                            class="feature-check me-3">
-                                                        <span class="font-16 regular textLightColor">3 social
-                                                            accounts</span>
-                                                    </li>
-                                                    <li class="feature-item d-flex align-items-start mb-3">
-                                                        <img src="assets/images/svg/tik-mark.svg" alt="Check"
-                                                            class="feature-check me-3">
-                                                        <span class="font-16 regular textLightColor">Basic
-                                                            analytics</span>
-                                                    </li>
-                                                    <li class="feature-item d-flex align-items-start mb-3">
-                                                        <img src="assets/images/svg/tik-mark.svg" alt="Check"
-                                                            class="feature-check me-3">
-                                                        <span class="font-16 regular textLightColor">Up to 2 team
-                                                            members</span>
-                                                    </li>
-                                                    <li class="feature-item d-flex align-items-start mb-3">
-                                                        <img src="assets/images/svg/tik-mark.svg" alt="Check"
-                                                            class="feature-check me-3">
-                                                        <span class="font-16 regular textLightColor">50 posts per
-                                                            month</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Professional Plan (Featured) -->
-                                    <div class="col-12 col-md-6 col-lg-4">
-                                        <div class="pricing-card pricing-card-featured h-100">
-                                            <div class="pricing-header">
-                                                <div class="d-flex flex-column align-items-start">
-                                                    <h4 class="plan-name font-24 regular text-white mb-0">Professional
-                                                    </h4>
-                                                    <div class="plan-price mb-2">
-                                                        <span class="font-36 regular text-white">$99</span>
-                                                        <span class="font-16 regular text-white">/month</span>
-                                                    </div>
-                                                    <p class=" font-14 regular whiteLightColor mb-4 line-height-24">For
-                                                        growing brands and agencies</p>
-                                                </div>
-                                              <a href="/plan-purchase"
-                                                    class="pricing-btn w-100 d-flex justify-content-center align-items-center font-16 regular bg-white greenColor border-0">Start
-                                                    Free
-                                                    Trial</a>
-                                            </div>
-                                            <div class="pricing-features">
-                                                <ul class="list-unstyled mb-0">
-                                                    <li class="feature-item d-flex align-items-start mb-3">
-                                                        <img src="assets/images/svg/tik-mark.svg" alt="Check"
-                                                            class="feature-check me-3">
-                                                        <span class="font-16 regular text-white">10 social
-                                                            accounts</span>
-                                                    </li>
-                                                    <li class="feature-item d-flex align-items-start mb-3">
-                                                        <img src="assets/images/svg/tik-mark.svg" alt="Check"
-                                                            class="feature-check me-3">
-                                                        <span class="font-16 regular text-white">Advanced
-                                                            analytics</span>
-                                                    </li>
-                                                    <li class="feature-item d-flex align-items-start mb-3">
-                                                        <img src="assets/images/svg/tik-mark.svg" alt="Check"
-                                                            class="feature-check me-3">
-                                                        <span class="font-16 regular text-white">Up to 10 team
-                                                            members</span>
-                                                    </li>
-                                                    <li class="feature-item d-flex align-items-start mb-3">
-                                                        <img src="assets/images/svg/tik-mark.svg" alt="Check"
-                                                            class="feature-check me-3">
-                                                        <span class="font-16 regular text-white">Unlimited posts</span>
-                                                    </li>
-                                                    <li class="feature-item d-flex align-items-start mb-3">
-                                                        <img src="assets/images/svg/tik-mark.svg" alt="Check"
-                                                            class="feature-check me-3">
-                                                        <span class="font-16 regular text-white">Content calendar</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Enterprise Plan -->
-                                    <div class="col-12 col-md-6 col-lg-4">
-                                        <div class="pricing-card h-100" style="border:1px solid #6E508E;">
-                                            <div class="pricing-header">
-                                                <div class="d-flex flex-column align-items-start">
-                                                    <h4 class="plan-name font-24 regular textColor mb-0">Enterprise</h4>
-                                                    <div class="plan-price mb-2">
-                                                        <span class="font-36 regular grayColor">Custom</span>
-
-                                                    </div>
-                                                    <p class=" font-14 regular grayColor mb-4 line-height-24">For large
-                                                        organizations</p>
-                                                </div>
-                                                <a href="/plan-purchase"
-                                                    class="pricing-btn w-100 d-flex justify-content-center align-items-center font-16 regular bgPurpleColor border-0 text-white">Start
-                                                    Free
-                                                    Trial</a>
-                                            </div>
-                                            <div class="pricing-features">
-                                                <ul class="list-unstyled enterprise-list mb-0">
-                                                    <li class="feature-item d-flex align-items-start mb-3">
-                                                        <img src="assets/images/svg/tik-mark.svg" alt="Check"
-                                                            class="feature-check me-3">
-                                                        <span class="font-16 regular textLightColor">Unlimited
-                                                            accounts</span>
-                                                    </li>
-                                                    <li class="feature-item d-flex align-items-start mb-3">
-                                                        <img src="assets/images/svg/tik-mark.svg" alt="Check"
-                                                            class="feature-check me-3">
-                                                        <span class="font-16 regular textLightColor">Custom
-                                                            analytics</span>
-                                                    </li>
-                                                    <li class="feature-item d-flex align-items-start mb-3">
-                                                        <img src="assets/images/svg/tik-mark.svg" alt="Check"
-                                                            class="feature-check me-3">
-                                                        <span class="font-16 regular textLightColor">Unlimited team
-                                                            members</span>
-                                                    </li>
-                                                    <li class="feature-item d-flex align-items-start mb-3">
-                                                        <img src="assets/images/svg/tik-mark.svg" alt="Check"
-                                                            class="feature-check me-3">
-                                                        <span class="font-16 regular textLightColor">Unlimited
-                                                            posts</span>
-                                                    </li>
-                                                    <li class="feature-item d-flex align-items-start mb-3">
-                                                        <img src="assets/images/svg/tik-mark.svg" alt="Check"
-                                                            class="feature-check me-3">
-                                                        <span class="font-16 regular textLightColor">API access</span>
-                                                    </li>
-                                                    <li class="feature-item d-flex align-items-start mb-3">
-                                                        <img src="assets/images/svg/tik-mark.svg" alt="Check"
-                                                            class="feature-check me-3">
-                                                        <span class="font-16 regular textLightColor">Dedicated
-                                                            support</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <div id="pricingPlansError" class="alert alert-warning d-none mb-3" role="alert"></div>
+                                <div class="row g-4 gy-4 justify-content-center" id="pricingMonthlyPlans"></div>
                             </div>
 
                             <!-- Annual Pricing -->
                             <div class="tab-pane fade" id="annual" role="tabpanel" aria-labelledby="annual-tab">
-                                <div class="row g-4 gy-4 justify-content-center">
-                                    <!-- Starter Plan -->
-                                    <div class="col-12 col-md-6 col-lg-4">
-                                        <div class="pricing-card h-100" style="border:1px solid #F5BB5C;">
-                                            <div class="pricing-header">
-                                                <div class="d-flex flex-column align-items-start">
-                                                    <h4 class="plan-name font-24 regular textColor mb-0">Starter</h4>
-                                                    <div class="plan-price mb-2">
-                                                        <span class="font-36 regular grayColor">$29</span>
-                                                        <span class="font-16 regular grayColor">/month</span>
-                                                    </div>
-                                                    <p class=" font-14 regular grayColor mb-4 line-height-24">Perfect
-                                                        for freelancers and small teams</p>
-                                                </div>
-                                                <a href="/plan-purchase"
-                                                    class="pricing-btn w-100 d-flex justify-content-center align-items-center font-16 regular bgYellowColor text-white border-0">Start
-                                                    Free
-                                                    Trial</a>
-                                            </div>
-                                            <div class="pricing-features">
-                                                <ul class="list-unstyled starter-list mb-0">
-                                                    <li class="feature-item d-flex align-items-start mb-3">
-                                                        <img src="assets/images/svg/tik-mark.svg" alt="Check"
-                                                            class="feature-check me-3">
-                                                        <span class="font-16 regular textLightColor">3 social
-                                                            accounts</span>
-                                                    </li>
-                                                    <li class="feature-item d-flex align-items-start mb-3">
-                                                        <img src="assets/images/svg/tik-mark.svg" alt="Check"
-                                                            class="feature-check me-3">
-                                                        <span class="font-16 regular textLightColor">Basic
-                                                            analytics</span>
-                                                    </li>
-                                                    <li class="feature-item d-flex align-items-start mb-3">
-                                                        <img src="assets/images/svg/tik-mark.svg" alt="Check"
-                                                            class="feature-check me-3">
-                                                        <span class="font-16 regular textLightColor">Up to 2 team
-                                                            members</span>
-                                                    </li>
-                                                    <li class="feature-item d-flex align-items-start mb-3">
-                                                        <img src="assets/images/svg/tik-mark.svg" alt="Check"
-                                                            class="feature-check me-3">
-                                                        <span class="font-16 regular textLightColor">50 posts per
-                                                            month</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Professional Plan (Featured) -->
-                                    <div class="col-12 col-md-6 col-lg-4">
-                                        <div class="pricing-card pricing-card-featured h-100">
-                                            <div class="pricing-header">
-                                                <div class="d-flex flex-column align-items-start">
-                                                    <h4 class="plan-name font-24 regular text-white mb-0">Professional
-                                                    </h4>
-                                                    <div class="plan-price mb-2">
-                                                        <span class="font-36 regular text-white">$99</span>
-                                                        <span class="font-16 regular text-white">/month</span>
-                                                    </div>
-                                                    <p class=" font-14 regular whiteLightColor mb-4 line-height-24">For
-                                                        growing brands and agencies</p>
-                                                </div>
-                                                <a href="/plan-purchase"
-                                                    class="pricing-btn w-100 d-flex justify-content-center align-items-center font-16 regular bg-white greenColor border-0">Start
-                                                    Free
-                                                    Trial</a>
-                                            </div>
-                                            <div class="pricing-features">
-                                                <ul class="list-unstyled mb-0">
-                                                    <li class="feature-item d-flex align-items-start mb-3">
-                                                        <img src="assets/images/svg/tik-mark.svg" alt="Check"
-                                                            class="feature-check me-3">
-                                                        <span class="font-16 regular text-white">10 social
-                                                            accounts</span>
-                                                    </li>
-                                                    <li class="feature-item d-flex align-items-start mb-3">
-                                                        <img src="assets/images/svg/tik-mark.svg" alt="Check"
-                                                            class="feature-check me-3">
-                                                        <span class="font-16 regular text-white">Advanced
-                                                            analytics</span>
-                                                    </li>
-                                                    <li class="feature-item d-flex align-items-start mb-3">
-                                                        <img src="assets/images/svg/tik-mark.svg" alt="Check"
-                                                            class="feature-check me-3">
-                                                        <span class="font-16 regular text-white">Up to 10 team
-                                                            members</span>
-                                                    </li>
-                                                    <li class="feature-item d-flex align-items-start mb-3">
-                                                        <img src="assets/images/svg/tik-mark.svg" alt="Check"
-                                                            class="feature-check me-3">
-                                                        <span class="font-16 regular text-white">Unlimited posts</span>
-                                                    </li>
-                                                    <li class="feature-item d-flex align-items-start mb-3">
-                                                        <img src="assets/images/svg/tik-mark.svg" alt="Check"
-                                                            class="feature-check me-3">
-                                                        <span class="font-16 regular text-white">Content calendar</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Enterprise Plan -->
-                                    <div class="col-12 col-md-6 col-lg-4">
-                                        <div class="pricing-card h-100" style="border:1px solid #6E508E;">
-                                            <div class="pricing-header">
-                                                <div class="d-flex flex-column align-items-start">
-                                                    <h4 class="plan-name font-24 regular textColor mb-0">Enterprise</h4>
-                                                    <div class="plan-price mb-2">
-                                                        <span class="font-36 regular grayColor">Custom</span>
-
-                                                    </div>
-                                                    <p class=" font-14 regular grayColor mb-4 line-height-24">For large
-                                                        organizations</p>
-                                                </div>
-                                                <a href="/plan-purchase"
-                                                    class="pricing-btn w-100 d-flex justify-content-center align-items-center font-16 regular bgPurpleColor border-0 text-white">Start
-                                                    Free
-                                                    Trial</a>
-                                            </div>
-                                            <div class="pricing-features">
-                                                <ul class="list-unstyled enterprise-list mb-0">
-                                                    <li class="feature-item d-flex align-items-start mb-3">
-                                                        <img src="assets/images/svg/tik-mark.svg" alt="Check"
-                                                            class="feature-check me-3">
-                                                        <span class="font-16 regular textLightColor">Unlimited
-                                                            accounts</span>
-                                                    </li>
-                                                    <li class="feature-item d-flex align-items-start mb-3">
-                                                        <img src="assets/images/svg/tik-mark.svg" alt="Check"
-                                                            class="feature-check me-3">
-                                                        <span class="font-16 regular textLightColor">Custom
-                                                            analytics</span>
-                                                    </li>
-                                                    <li class="feature-item d-flex align-items-start mb-3">
-                                                        <img src="assets/images/svg/tik-mark.svg" alt="Check"
-                                                            class="feature-check me-3">
-                                                        <span class="font-16 regular textLightColor">Unlimited team
-                                                            members</span>
-                                                    </li>
-                                                    <li class="feature-item d-flex align-items-start mb-3">
-                                                        <img src="assets/images/svg/tik-mark.svg" alt="Check"
-                                                            class="feature-check me-3">
-                                                        <span class="font-16 regular textLightColor">Unlimited
-                                                            posts</span>
-                                                    </li>
-                                                    <li class="feature-item d-flex align-items-start mb-3">
-                                                        <img src="assets/images/svg/tik-mark.svg" alt="Check"
-                                                            class="feature-check me-3">
-                                                        <span class="font-16 regular textLightColor">API access</span>
-                                                    </li>
-                                                    <li class="feature-item d-flex align-items-start mb-3">
-                                                        <img src="assets/images/svg/tik-mark.svg" alt="Check"
-                                                            class="feature-check me-3">
-                                                        <span class="font-16 regular textLightColor">Dedicated
-                                                            support</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <div class="row g-4 gy-4 justify-content-center" id="pricingAnnualPlans"></div>
                             </div>
                         </div>
                     </div>
@@ -1484,5 +1159,7 @@ $pageTitle = 'Pricing - Ranax Social';
 
   <?php include __DIR__ . "/partials/footer.php"; ?>
   <?php include __DIR__ . "/partials/scripts.php"; ?>
+  <script src="assets/js/plans-api.js"></script>
+  <script src="assets/js/pricing-dynamic.js"></script>
 </body>
 </html>

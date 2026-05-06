@@ -24,7 +24,7 @@ $pageTitle = 'Integrations - Ranax Social';
                             your social media — all in one place.
                         </p>
                         <div class="d-flex gap-3 mb-4">
-                            <a href="/signup" class="hero-btn-primary font-16 semibold line-height-26">Start Free
+                            <a href="<?php echo rs_base_url('register'); ?>" class="hero-btn-primary font-16 semibold line-height-26">Start Free
                                 Trial</a>
                             <a href="#demo"
                                 class="hero-btn-secondary d-flex justify-content-center align-items-center font-16 semibold">Watch
@@ -382,7 +382,7 @@ $pageTitle = 'Integrations - Ranax Social';
                             Join thousands of marketers and creators who are already using Ranax Social.
                         </p>
                         <div class="d-flex gap-3 justify-content-center flex-wrap">
-                            <a href="/signup"
+                            <a href="<?php echo rs_app_url('register'); ?>"
                                 class="hero-btn-primary bg-white border-0 themeColor font-16 semibold">Get Started
                                 Free</a>
                             <a href="#demo" class="final-cta-btn-secondary font-16 semibold">Book a Demo</a>

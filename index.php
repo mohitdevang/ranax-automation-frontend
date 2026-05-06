@@ -23,7 +23,7 @@ $pageTitle = 'Ranax Social Media';
               Plan, schedule, publish, monitor, and analyze your social media campaigns with Ranax Social.
             </p>
             <div class="d-flex gap-3 mb-4">
-              <a href="/signup" class="hero-btn-primary font-16 semibold line-height-26">Start Free Trial</a>
+              <a href="<?php echo rs_base_url('register'); ?>" class="hero-btn-primary font-16 semibold line-height-26">Start Free Trial</a>
               <a href="#demo" class="hero-btn-secondary d-flex justify-content-center align-items-center font-16 semibold">Watch Demo</a>
             </div>
             <p class="hero-trust font-14 regular textLightColor mb-0">
@@ -241,7 +241,7 @@ $pageTitle = 'Ranax Social Media';
             <p class="cta-desc font-18 regular  mb-4 position-relative line-height-26">
               Start your 14-day free trial today. No credit card required and setup takes just seconds.
             </p>
-            <a href="/signup" class="hero-btn-primary font-16 semibold bgThemeColor" style="border:1px solid #FFFFFF;">Start Free
+            <a href="<?php echo rs_base_url('register'); ?>" class="hero-btn-primary font-16 semibold bgThemeColor" style="border:1px solid #FFFFFF;">Start Free
               Trial</a>
           </div>
         </div>
@@ -521,7 +521,7 @@ $pageTitle = 'Ranax Social Media';
               Join thousands of marketers and creators who are already using Ranax Social.
             </p>
             <div class="d-flex gap-3 justify-content-center flex-wrap">
-              <a href="/signup" class="hero-btn-primary bg-white border-0 themeColor font-16 semibold">Get Started
+              <a href="<?php echo rs_base_url('register'); ?>" class="hero-btn-primary bg-white border-0 themeColor font-16 semibold">Get Started
                 Free</a>
               <a href="#demo" class="final-cta-btn-secondary font-16 semibold">Book a Demo</a>
             </div>

@@ -73,7 +73,7 @@ $pageTitle = 'New Password - Ranax Social';
                     <!-- Sign Up Link -->
                     <div class="text-center mt-3">
                         <p class="font-16 regular textColor mb-2">
-                            Don't have an account? <a href="/signup" class="semibold themeColor"> Sign
+                            Don't have an account? <a href="<?php echo rs_base_url('register'); ?>" class="semibold themeColor"> Sign
                                 up here</a>
                         </p>
                         <p class="font-12 regular textLightColor mb-0">

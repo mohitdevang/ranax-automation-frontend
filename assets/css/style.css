@@ -776,6 +776,28 @@ a {
   position: relative;
 }
 
+/* IMPORTANT:
+   "Featured" plan should not stay green when user selects another plan.
+   We keep the "Most Popular" badge, but only show the green featured background
+   when the plan is actually selected. */
+.pricing-card-featured:not(.rs-plan-selected) {
+  background: var(--whiteColor) !important;
+  border: 1px solid #E5E7EB !important;
+}
+.pricing-card-featured:not(.rs-plan-selected) .pricing-header {
+  border-bottom-color: rgba(17, 24, 39, 0.08) !important;
+}
+.pricing-card-featured:not(.rs-plan-selected) .text-white {
+  color: var(--textcolor) !important;
+}
+.pricing-card-featured:not(.rs-plan-selected) .whiteLightColor {
+  color: var(--textLightColor) !important;
+}
+.pricing-card-featured:not(.rs-plan-selected) .pricing-btn {
+  background: #F2B85C !important; /* matches non-featured CTA style */
+  color: var(--whiteColor) !important;
+}
+
 .pricing-card-featured::before {
   content: "Most Popular";
   position: absolute;
@@ -794,6 +816,41 @@ a {
 .pricing-card-featured:hover {
   transform: scale(1.05) translateY(-8px);
   box-shadow: 0 20px 60px rgba(237, 111, 173, 0.25);
+}
+
+/* Pricing plan selection highlight */
+.rs-plan-selected {
+  background: #059669;
+  border: 1px solid #059669;
+  outline: 2px solid rgba(5, 150, 105, 0.25);
+  box-shadow: 0 14px 38px rgba(5, 150, 105, 0.18);
+}
+.pricing-card-featured.rs-plan-selected {
+  outline-color: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.18);
+}
+
+/* When selected, force "featured" look even for non-featured cards */
+.rs-plan-selected .pricing-header {
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+.rs-plan-selected .textColor,
+.rs-plan-selected .grayColor,
+.rs-plan-selected .black {
+  color: #ffffff !important;
+}
+.rs-plan-selected .textLightColor {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+.rs-plan-selected .whiteLightColor {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+.rs-plan-selected .pricing-btn {
+  background: #ffffff !important;
+  color: #059669 !important;
+}
+.rs-plan-selected .feature-check {
+  filter: brightness(10);
 }
 
 .pricing-header {
